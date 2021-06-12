@@ -61,6 +61,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 ## 📄 | Licença
 
 ![MIT](https://img.shields.io/github/license/flarum-lang/brazilian?label=Licen%C3%A7a&style=for-the-badge)
+
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/flarum-lang/brazilian/blob/main/LICENSE) para detalhes.
 
 ## 🌐 | Links
