@@ -55,11 +55,12 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 
 ## 📌| Versão
 
-![enter image description here](https://img.shields.io/github/v/release/flarum-lang/brazilian?label=VERS%C3%83O&style=for-the-badge)
+![Versão](https://img.shields.io/github/v/release/flarum-lang/brazilian?label=VERS%C3%83O&style=for-the-badge)
 
 
 ## 📄 | Licença
 
+![MIT](https://img.shields.io/github/license/flarum-lang/brazilian?label=Licen%C3%A7a&style=for-the-badge)
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/flarum-lang/brazilian/blob/main/LICENSE) para detalhes.
 
 ## 🌐 | Links
