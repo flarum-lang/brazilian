@@ -10,7 +10,7 @@ validation:
   array: O :attribute deve ser uma array.
   attributes:
     content: conteúdo
-    email: email
+    email: e-mail
     name_plural: nome plural
     name_singular: nome singular
     password: senha
@@ -34,7 +34,7 @@ validation:
   digits_between: O :attribute deve estar entre :min e :max dígitos.
   dimensions: O :attribute tem dimensões inválidas de imagem.
   distinct: O campo :attribute tem um valor duplicado.
-  email: O :attribute deve ser um endereço de email válido.
+  email: O :attribute deve ser um endereço de e-mail válido.
   exists: O :attribute selecionado ja existe.
   file: O :attribute deve ser um arquivo.
   filled: O campo :attribute é exigido.
