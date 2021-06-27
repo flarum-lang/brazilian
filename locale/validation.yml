@@ -1,4 +1,3 @@
----
 validation:
   accepted: O :attribute deve ser aceito.
   active_url: O :attribute não é uma URL válida.
