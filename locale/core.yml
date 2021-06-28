@@ -15,6 +15,7 @@ core:
       custom_styles_heading: 'Estilos personalizados'
       custom_styles_text: 'Personalize a aparência do seu fórum adicionando seu próprio código Less / CSS a ser aplicado sobre os estilos padrão do Flarum.'
       dark_mode_label: 'Modo escuro'
+      description: 'Personalize as cores, logotipos e outras variáveis do seu fórum.'
       edit_css_button: 'Editar CSS personalizado'
       edit_footer_button: '=> core.ref.custom_footer_title'
       edit_header_button: '=> core.ref.custom_header_title'
@@ -23,9 +24,11 @@ core:
       favicon_text: 'Carregue uma imagem para ser exibida como ícone de atalho do fórum.'
       logo_heading: Logotipo
       logo_text: 'Carregue uma imagem para ser exibida no lugar do título do fórum.'
+      title: Aparência
     basics:
       all_discussions_label: '=> core.ref.all_discussions'
       default_language_heading: 'Idioma padrão'
+      description: 'Defina o título, idioma e outras configurações básicas do fórum.'
       display_name_heading: 'Nome de exibição do usuário'
       display_name_text: 'Selecione o driver que deve ser usado para os nomes de exibição dos usuários. Por padrão, o nome de usuário é mostrado.'
       forum_description_heading: 'Descrição do Fórum'
@@ -36,10 +39,13 @@ core:
       show_language_selector_label: 'Mostrar seletor de idioma'
       slug_driver_heading: 'Slug Driver: {model}'
       slug_driver_text: 'Selecione o driver que será utilizado para o slugging deste modelo.'
+      title: Básico
       welcome_banner_heading: 'Banner de boas-vindas'
       welcome_banner_text: 'Configure o texto exibido no banner na página Todas as discussões. Use isso para receber convidados no seu fórum.'
     dashboard:
       clear_cache_button: 'Limpar cache'
+      description: 'Resumo do seu fórum.'
+      title: Dashboard
       tools_button: Ferramentas
     edit_css:
       customize_text: 'Personalize a aparência do seu fórum adicionando seu próprio código Less / CSS a ser aplicado sobre os <a>estilos padrão</a>do Flarum.'
@@ -67,6 +73,7 @@ core:
       title: '=> core.ref.custom_header_title'
     email:
       addresses_heading: Endereços
+      description: 'Configure o driver, as configurações e os endereços que seu fórum usará para enviar e-mail.'
       driver_heading: 'Escolha um driver'
       driver_label: Criptografia
       from_label: Remetente
@@ -89,33 +96,69 @@ core:
       send_test_mail_text: 'Isso enviará um e-mail usando a configuração acima para o seu e-mail, {email}.'
       ses_heading: 'Configurações do SES'
       smtp_heading: 'Configurações SMTP'
+      title: '=> core.ref.email'
+    extension:
+      confirm_uninstall: 'A desinstalação removerá todas as entradas e ativos do banco de dados relacionados à extensão. Você tem certeza que quer continuar?'
+      disabled: Disabilitar
+      enable_to_see: 'Ative a extensão para visualizar e alterar as configurações.'
+      enabled: Habilitar
+      info_links:
+        discuss: Discussão
+        documentation: Documentação
+        donate: Doar
+        source: Fonte
+        support: Suporte
+        website: Website
+      no_permissions: 'Esta extensão não tem permissões.'
+      no_settings: 'Esta extensão não tem configurações.'
+      open_modal: 'Abrir configurações'
+      permissions_title: Permissões
+      uninstall_button: Desinstalar
     extensions:
       add_button: 'Adicionar extensão'
       settings_button: '=> core.ref.settings'
       uninstall_button: Desinstalar
     header:
+      get_help: 'Obter Ajuda'
       log_out_button: '=> core.ref.log_out'
     loading:
       title: 'Por favor, espere...'
     nav:
-      appearance_button: Aparência
-      basics_button: Basico
-      dashboard_button: 'Painel de controle'
+      appearance_button: '=> core.admin.appearance.title'
+      appearance_title: '=> core.admin.appearance.description'
+      basics_button: '=> core.admin.basics.title'
+      basics_title: '=> core.admin.basics.description'
+      categories:
+        authentication: Autenticação
+        core: 'Configurações Gerais'
+        discussion: Discussão
+        feature: Recursos
+        formatting: Formatação
+        language: Idiomas
+        moderation: Moderação
+        other: 'Outras Extensões'
+        theme: Temas
+      dashboard_button: '=> core.admin.dashboard.title'
+      dashboard_title: '=> core.admin.dashboard.description'
       email_button: '=> core.ref.email'
-      permissions_button: Permissões
-      permissions_title: 'Configure quem pode ver o conteúdo.'
+      email_title: '=> core.admin.email.description'
+      permissions_button: '=> core.admin.permissions.title'
+      permissions_title: '=> core.admin.permissions.description'
       search_placeholder: 'Buscar extensão'
       userlist_button: '=> core.admin.users.title'
       userlist_title: '=> core.admin.users.description'
     permissions:
-      allow_post_editing_label: 'Permitir edição pós'
+      allow_post_editing_label: 'Permitir edição de postagem'
       allow_renaming_label: 'Permitir renomeação'
       create_heading: Criar
       delete_discussions_forever_label: 'Excluir discussões para sempre'
       delete_discussions_label: 'Excluir discussões'
       delete_posts_forever_label: 'Excluir postagens para sempre'
       delete_posts_label: 'Excluir postagens'
+      description: 'Configure quem pode ver e fazer o quê.'
       edit_posts_label: 'Editar postagens'
+      edit_users_credentials_label: 'Editar credenciais de usuário'
+      edit_users_groups_label: 'Editar grupos de usuário'
       edit_users_label: 'Editar usuários'
       global_heading: Global
       moderate_heading: Moderar
@@ -129,7 +172,7 @@ core:
       sign_up_label: Inscrever-se
       start_discussions_label: 'Iniciar discussões'
       title: Permissões
-      view_forum_label: 'Ver forum (discussões e usuários)'
+      view_forum_label: 'Ver fórum (discussões e usuários)'
       view_hidden_groups_label: 'Ver emblemas de grupo ocultos'
       view_last_seen_at_label: 'Ver a última vez que o usuário visualizou'
       view_post_ips_label: 'Exibir endereços IP da postagem'
@@ -143,10 +186,11 @@ core:
       signup_closed_button: Fechadas
       signup_open_button: Abrir
     settings:
+      saved_message: 'Suas alterações foram salvas.'
       submit_button: '=> core.ref.save_changes'
     upload_image:
       remove_button: '=> core.ref.remove'
-      upload_button: 'Escolha uma imagem ...'
+      upload_button: 'Escolha uma imagem...'
     users:
       description: 'Uma lista detalhada de todos os usuários do fórum.'
       grid:
@@ -157,13 +201,13 @@ core:
             tooltip: 'Editar {username}'
           email:
             title: '=> core.ref.email'
-            visibility_hide: 'Ocultar email'
-            visibility_show: 'Mostrar email'
+            visibility_hide: 'Ocultar e-mail'
+            visibility_show: 'Mostrar e-mail'
           group_badges:
             no_badges: Nenhum
             title: Grupos
           join_time:
-            title: 'Se uniu'
+            title: Entrou
           user_id:
             title: ID
           username:
@@ -228,7 +272,7 @@ core:
       submit_button: Responder
       view_button: Ver
     discussion_controls:
-      cannot_reply_button: 'Sem permissão.'
+      cannot_reply_button: 'Sem permissão'
       cannot_reply_text: 'Você não tem permissão para responder a esta discussão.'
       delete_button: '=> core.ref.delete'
       delete_confirmation: 'Tem certeza de que deseja excluir esta discussão?'
@@ -406,7 +450,7 @@ core:
       kilo_text: K
       mega_text: M
     series:
-      glue_text: ','
+      glue_text: ', '
       three_text: '{first}, {second}, e {third}'
       two_text: '{first} e {second}'
     username:
@@ -460,7 +504,7 @@ core:
     content:
       javascript_disabled_message: 'Este site é melhor visualizado em um navegador moderno com JavaScript ativado.'
       load_error_message: 'Ocorreu um erro ao tentar carregar a versão completa deste site. Tente atualizar essa página para corrigir o erro.'
-      loading_text: Carregando...
+      loading_text: '=> core.ref.loading'
     discussion:
       next_page_button: '=> core.ref.next_page'
       previous_page_button: '=> core.ref.previous_page'
