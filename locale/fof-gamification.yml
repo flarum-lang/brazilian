@@ -9,11 +9,27 @@ core:
       votes_button: 'Votos positivos'
 fof-gamification:
   forum:
+    mod_item: 'Ver eleitores'
+    modal:
+      downvotes_label: 'Desaprovadores:'
+      title: Votadores
+      upvotes_label: 'Apoiadores:'
     nav:
       name: Ranking
+    notification:
+      downvote: '{username} votou negativamente em sua postagem'
+      prefrences:
+        vote: 'Quando um dos meus posts é votado para cima/para baixo'
+      upvote: '{username} votou positivamente em sua postagem'
     ranking:
       amount: Pontos
       name: Usuário
       rank: Classificação
+    user:
+      card:
+        points: '{count, plural, one { {count} point} outro {{count} points}}'
+      rank: '{rank}'
     vote_title: 'Mostrar quem votou'
+    voters:
+      none: 'Ainda não há votadores'
     votes: Votos
