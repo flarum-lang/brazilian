@@ -75,20 +75,19 @@ core:
       addresses_heading: Endereços
       description: 'Configure o driver, as configurações e os endereços que seu fórum usará para enviar e-mail.'
       driver_heading: 'Escolha um driver'
-      driver_label: Criptografia
       from_label: Remetente
       mail_encryption_label: Criptografia
       mail_host_label: Host
-      mail_mailgun_domain_label: Dominio
+      mail_mailgun_domain_label: Domínio
       mail_mailgun_region_label: Região
-      mail_mailgun_secret_label: 'Secret key'
+      mail_mailgun_secret_label: 'Chave Secreta'
       mail_password_label: '=> core.ref.password'
       mail_port_label: Porta
       mail_ses_key_label: Chave
       mail_ses_region_label: Região
       mail_ses_secret_label: Secret
       mail_username_label: '=> core.ref.username'
-      mailgun_heading: 'Configurações de Mailgun'
+      mailgun_heading: 'Configurações do Mailgun'
       not_sending_message: 'Flarum atualmente não envia e-mails. Isso pode ocorrer devido ao driver selecionado ou a erros de configuração.'
       send_test_mail_button: Enviar
       send_test_mail_heading: 'Enviar teste de e-mail'
@@ -225,13 +224,13 @@ core:
     invalid_username_message: 'O nome de usuário pode conter apenas letras, números e traços.'
   email:
     activate_account:
-      body: "Olá {username}!\nAlguém (esperamos que você!) se cadastrou em {forum} com este endereço de e-mail.\nSe foi você mesmo, basta clicar no link abaixo e sua conta será ativada:\n{url}\nSe você não se cadastrou, por favor ignore este e-mail.\n"
+      body: "Olá {username}!\n\nAlguém (esperamos que você!) se cadastrou em {forum} com este endereço de e-mail.\n\nSe foi você mesmo, basta clicar no link abaixo e sua conta será ativada:\n{url}\n\nSe você não se cadastrou, por favor ignore este e-mail.\n"
       subject: 'Ative sua nova conta'
     confirm_email:
-      body: "Olá {username}!\nAlguém (esperamos que você!) alterou o endereço de e-mail em {forum} para este aqui.\nSe foi você mesmo, basta clicar no link abaixo e seu e-mail será confirmado:\n{url}\nSe você não solicitou isso, por favor ignore este e-mail.\n"
+      body: "Olá {username}!\n\nAlguém (esperamos que você!) alterou o endereço de e-mail em {forum} para este aqui.\n\nSe foi você mesmo, basta clicar no link abaixo e seu e-mail será confirmado:\n{url}\n\nSe você não solicitou isso, por favor ignore este e-mail.\n"
       subject: 'Confirme seu novo endereço de e-mail'
     reset_password:
-      body: "Olá {username}!\nAlguém (esperamos que você!) enviou uma solicitação de redefinição de senha para sua conta em {forum}.\nSe foi você mesmo, clique no link abaixo para redefinir sua senha:\n{url}\nSe você não quiser alterar sua senha, basta ignorar este e-mail e nada irá acontecer.\n"
+      body: "Olá {username}!\n\nAlguém (esperamos que você!) enviou uma solicitação de redefinição de senha para sua conta em {forum}.\n\nSe foi você mesmo, clique no link abaixo para redefinir sua senha:\n{url}\n\nSe você não quiser alterar sua senha, basta ignorar este e-mail e nada irá acontecer.\n"
       subject: '=> core.ref.reset_your_password'
     send_test:
       body: "Olá, {username}!\n\nEste é um e-mail de teste para confirmar se a configuração de e-mail do Flarum está funcionando corretamente.\n\nSe foi você, este e-mail significa que sua configuração funciona!\n\nSe não foi você, ignore este e-mail.\n"
