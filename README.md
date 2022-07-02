@@ -47,7 +47,7 @@ Para realizar a atualização da extensão, utilize os comandos abaixo:
 
 Contribua com a tradução Português do Brasil acessando o link e se registrando na plataforma abaixo:
 
-* [Gitlocalize](http://google.com) - Plataforma para moderação de traduções.
+* [Weblate](https://weblate.rob006.net/projects/flarum/) - Plataforma para moderação de traduções.
 
 ## 🖇️ | Erros/Bugs
 
