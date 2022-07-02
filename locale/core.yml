@@ -99,7 +99,7 @@ core:
       title: '=> core.ref.email'
     extension:
       configure_scopes: Configurações
-      confirm_purge: 'A limpeza removerá todas as entradas de banco de dados e ativos relacionados à extensão. Isso não vai desinstalar a extensão; que deve ser feito via Composer. Tem certeza que quer continuar?'
+      confirm_purge: 'A limpeza removerá todas as entradas do banco de dados e ativos relacionados à extensão. Isso não vai desinstalar a extensão; que deve ser feito via Composer. Tem certeza que quer continuar?'
       confirm_uninstall: 'A desinstalação removerá todas as entradas e ativos do banco de dados relacionados à extensão. Você tem certeza que quer continuar?'
       disabled: Desabilitar
       enable_to_see: 'Ative a extensão para visualizar e alterar as configurações.'
@@ -474,6 +474,8 @@ core:
       without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Página # - {forumName}}}'
     modal:
       close: Fechar
+    nav:
+      drawer_button: 'Abrir Gaveta de Navegação'
     number_suffix:
       kilo_text: K
       mega_text: M
@@ -540,6 +542,8 @@ core:
         name: 'Nome da extensão'
         package_name: 'Nome do Pacote'
         version: Versão
+      info:
+        caption: 'Informações do Aplicativo'
       title: Administração
     confirm_email:
       submit_button: '=> core.ref.confirm_email'
