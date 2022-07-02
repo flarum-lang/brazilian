@@ -1,3 +1,8 @@
+> **This language pack is searching for a maintainer!**
+>
+> This language pack is maintained by the community. Anyone can translate through [Weblate](https://weblate.rob006.net/languages/pt_BR/flarum/) and no one verifies contributed translations. 
+  If you want to help maintain this package, you can contact us in [this discussion](https://discuss.flarum.org/d/27519-the-flarum-language-project).
+
 # Português do Brasil
 
 Extensão para Tradução do **[Flarum](https://flarum.org)** para **Português do Brasil**.
@@ -22,7 +27,7 @@ Utilize os comandos abaixo para realizar a instalação da extensão Português 
 Utilize o comando:
 
 ```
-composer require flarum-lang/brazilian
+composer require flarum-lang/brazilian:dev-master
 ```
 
 Em seguida:
