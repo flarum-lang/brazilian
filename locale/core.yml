@@ -151,7 +151,7 @@ core:
       email_title: '=> core.admin.email.description'
       permissions_button: '=> core.admin.permissions.title'
       permissions_title: '=> core.admin.permissions.description'
-      search_placeholder: 'Buscar extensão'
+      search_placeholder: 'Buscar Extensão'
       userlist_button: '=> core.admin.users.title'
       userlist_title: '=> core.admin.users.description'
     permissions:
