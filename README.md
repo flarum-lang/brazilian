@@ -53,6 +53,55 @@ Contribua com a tradução Português do Brasil acessando o link e se registrand
 
 Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/flarum-lang/brazilian/issues/new) e escreva os detalhes sobre o erro .
 
+
+## Translation status for Flarum core
+
+| Component | Status |
+| --- | --- |
+| [Core](https://github.com/flarum/flarum-core) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pt_BR/core/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/core/pt_BR/) |
+| Validation | [![Translation status](https://weblate.rob006.net/widgets/flarum/pt_BR/validation/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/validation/pt_BR/) |
+
+
+## Translation status for official extensions
+
+<!-- flarum-extensions-list-start -->
+
+| Extension | Status |
+| --- | --- |
+
+<!-- flarum-extensions-list-stop -->
+
+
+## Translation status for Friends of Flarum extensions
+
+<!-- fof-extensions-list-start -->
+
+| Extension | Status |
+| --- | --- |
+
+<!-- fof-extensions-list-stop -->
+
+
+## Translation status for community extensions
+
+<!-- various-extensions-list-start -->
+
+| Extension | Status |
+| --- | --- |
+
+<!-- various-extensions-list-stop -->
+
+
+## Translation status for premium extensions
+
+<!-- premium-extensions-list-start -->
+
+| Extension | Status |
+| --- | --- |
+
+<!-- premium-extensions-list-stop -->
+
+
 ## 📌| Versão
 
 ![Versão](https://img.shields.io/github/v/release/flarum-lang/brazilian?label=VERS%C3%83O&style=for-the-badge)
