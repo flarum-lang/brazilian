@@ -2,6 +2,22 @@ CHANGELOG
 =========
 
 
+1.1.1 (2022-10-19)
+------------------
+
+**Alterações gerais**:
+
+* Updated Flarum core translations.
+
+
+**Updated translations for extensions**:
+
+* [`flarum/subscriptions`](https://github.com/flarum/subscriptions)
+
+
+All changes: [1.1.0...1.1.1](https://github.com/flarum-lang/brazilian/compare/1.1.0...1.1.1).
+
+
 1.1.0 (2022-08-31)
 ------------------
 
