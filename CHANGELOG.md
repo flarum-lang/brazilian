@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.2.0 (2022-10-20)
+------------------
+
+**Added support for new extensions**:
+
+* [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover)
+
+
+All changes: [1.1.2...1.2.0](https://github.com/flarum-lang/brazilian/compare/1.1.2...1.2.0).
+
+
 1.1.2 (2022-10-20)
 ------------------
 
