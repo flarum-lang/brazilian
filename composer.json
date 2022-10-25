@@ -8,17 +8,35 @@
       "language",
       "locale",
       "português",
-      "extensao"
+      "extensao",
+      "flarum",
+      "package"
    ],
    "license":"MIT",
    "authors": [
-      {
-         "name":"Ramon Guilherme",
-         "email":"ramonguilherme@outlook.com",
-         "homepage":"https://ramonguilherme.com.br"
-      }
+    {
+        "name": "Kassius Mercurius",
+        "email": "kassivs@gmail.com",
+        "homepage": "https://www.kassius.org",
+        "role": "Creator"
+    },
+        
+    {
+        "name": "Santiago Testa Biali",
+        "email": "santiago.t.biali@gmail.com",
+        "github": "https://github.com/santiagobiali",
+        "role": "Creator"
+    },
+    {
+        "name": "Ramon Guilherme",
+        "email": "ramon@ramonguilherme.com.br",
+        "github": "https://github.com/ram0ng1",
+        "homepage": "https://ramonguilherme.com.br",
+        "role": "Maintainer"
+    }
    ],
    "support": {
+      "email": "ramon@ramonguilherme.com.br",
       "issues":"https://github.com/flarum-lang/brazilian/issues",
       "source":"https://github.com/flarum-lang/brazilian",
       "forum": "https://discuss.flarum.org/d/18543"
