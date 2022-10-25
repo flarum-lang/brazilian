@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 
+1.2.1 (2022-10-25)
+------------------
+
+**Traduções atualizadas para extensões**:
+
+* [`flarum/akismet`](https://github.com/flarum/akismet)
+* [`flarum/statistics`](https://github.com/flarum/statistics)
+
+
+Todas as alterações: [1.2.0...1.2.1](https://github.com/flarum-lang/brazilian/compare/1.2.0...1.2.1).
+
+
 1.2.0 (2022-10-20)
 ------------------
 
