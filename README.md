@@ -54,15 +54,15 @@ Contribua com a tradução Português do Brasil acessando o link e se registrand
 Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/flarum-lang/brazilian/issues/new) e escreva os detalhes sobre o erro .
 
 
-## Translation status for Flarum core
+## 🚀 | Tradução Flarum/core
 
-| Component | Status |
+| componente | Status |
 | --- | --- |
 | [Core](https://github.com/flarum/flarum-core) | [![Translation status](https://weblate.rob006.net/widgets/flarum/pt_BR/core/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/core/pt_BR/) |
 | Validation | [![Translation status](https://weblate.rob006.net/widgets/flarum/pt_BR/validation/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/validation/pt_BR/) |
 
 
-## Translation status for official extensions
+## 🚀 | Tradução extensões oficiais flarum
 
 <!-- flarum-extensions-list-start -->
 
@@ -87,7 +87,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 <!-- flarum-extensions-list-stop -->
 
 
-## Translation status for Friends of Flarum extensions
+## 🚀 | Tradução para extensões Friends of Flarum
 
 <!-- fof-extensions-list-start -->
 
@@ -114,7 +114,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 <!-- fof-extensions-list-stop -->
 
 
-## Translation status for community extensions
+## 🚀 | Tradução para extensões da comunidade
 
 <!-- various-extensions-list-start -->
 
@@ -154,7 +154,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 <!-- various-extensions-list-stop -->
 
 
-## Translation status for premium extensions
+## 🚀 | Tradução de extensões premium
 
 <!-- premium-extensions-list-start -->
 
