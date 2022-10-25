@@ -15,10 +15,11 @@
    "license":"MIT",
    "authors": [
     {
-        "name": "Kassius Mercurius",
-        "email": "kassivs@gmail.com",
-        "homepage": "https://www.kassius.org",
-        "role": "Creator"
+        "name": "Ramon Guilherme",
+        "email": "ramon@ramonguilherme.com.br",
+        "github": "https://github.com/ram0ng1",
+        "homepage": "https://ramonguilherme.com.br",
+        "role": "Maintainer"
     },
         
     {
@@ -28,11 +29,10 @@
         "role": "Creator"
     },
     {
-        "name": "Ramon Guilherme",
-        "email": "ramon@ramonguilherme.com.br",
-        "github": "https://github.com/ram0ng1",
-        "homepage": "https://ramonguilherme.com.br",
-        "role": "Maintainer"
+        "name": "Kassius Mercurius",
+        "email": "kassivs@gmail.com",
+        "homepage": "https://www.kassius.org",
+        "role": "Creator"
     }
    ],
    "support": {
