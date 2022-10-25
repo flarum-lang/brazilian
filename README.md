@@ -110,6 +110,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | [`fof/stopforumspam`](https://github.com/FriendsOfFlarum/stopforumspam) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-stopforumspam/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-stopforumspam/pt_BR/) |
 | [`fof/terms`](https://github.com/FriendsOfFlarum/terms) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-terms/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-terms/pt_BR/) |
 | [`fof/upload`](https://github.com/FriendsOfFlarum/upload) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-upload/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-upload/pt_BR/) |
+| [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-user-bio/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-user-bio/pt_BR/) |
 
 <!-- fof-extensions-list-stop -->
 
