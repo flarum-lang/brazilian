@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.3.0 (2022-10-26)
+------------------
+
+**Adicionado suporte para novas extensões**:
+
+* [`fof/user-bio`](https://github.com/FriendsOfFlarum/user-bio)
+
+
+Todas as alterações: [1.2.1...1.3.0](https://github.com/flarum-lang/brazilian/compare/1.2.1...1.3.0).
+
+
 1.2.1 (2022-10-25)
 ------------------
 
