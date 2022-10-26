@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 
+1.3.1 (2022-10-26)
+------------------
+
+**Traduções atualizadas para extensões**:
+
+* [`fof/terms`](https://github.com/FriendsOfFlarum/terms)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+
+
+Todas as alterações: [1.3.0...1.3.1](https://github.com/flarum-lang/brazilian/compare/1.3.0...1.3.1).
+
+
 1.3.0 (2022-10-26)
 ------------------
 
