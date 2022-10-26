@@ -24,7 +24,7 @@ fof-terms:
       name-help: 'Este nome será mostrado ao lado da caixa de seleção e como o título do modal de atualização.'
       terms-updated-at: 'Atualizado em'
       terms-updated-at-help: "A data da última atualização de termos. Definir esse valor exigirá que todos os usuários que aceitaram antes dessa data aceitem novamente. Deve estar no passado (caso contrário, os usuários nunca conseguiriam aceitar após a data e passar do modal).\n"
-      terms-updated-at-placeholder: 'YYYY-MM-DD (hh:mm:ss)'
+      terms-updated-at-placeholder: 'DD-MM-YYYY (hh:mm:ss)'
       update-message: 'Atualizar Mensagem'
       update-message-help: 'Uma mensagem para mostrar aos usuários existentes que ainda não aceitaram os termos mais recentes.'
       url: URL
@@ -47,10 +47,10 @@ fof-terms:
       updated-at: 'Os termos foram atualizados em {date}'
       updated-recently: 'Os termos foram atualizados desde sua última visita'
     signup:
-      i-accept: 'Aceito a <a>{policy}</a>'
-      must-accept: 'A {policy} deve ser aceita.'
+      i-accept: 'Aceito <a>{policy}</a>'
+      must-accept: '{policy} deve ser aceita.'
     state-modal:
-      accepted-at: 'Aceito {data}'
+      accepted-at: 'Aceito {date}'
       not-accepted: 'Não aceito'
       title: 'O estado de aceite dos termos do usuário {username}'
     update-alert:

@@ -30,7 +30,9 @@ fof-upload:
       validation-passed: Passou
     labels:
       aws-s3:
+        acl: 'Lista de controle de acesso (ACL)'
         advanced_title: 'Configurações avançadas de armazenamento S3'
+        endpoint: Endpoint
         key: Chave
         region: Região
         title: 'Configurações de armazenamento do AWS S3'
@@ -77,6 +79,7 @@ fof-upload:
         toggle: 'Imagens de marca d''água'
     pane:
       description: 'Configure serviços e preferências de upload.'
+      title: Upload
     permissions:
       delete_uploads_of_others_label: 'Excluir uploads de usuários'
       download_label: 'Baixar arquivos'
@@ -99,6 +102,10 @@ fof-upload:
       text-preview_description: "Insere uma visualização (primeiras 5 linhas) do arquivo de texto, com a opção de expandir para revelar todo o conteúdo do arquivo.\n"
     upload_methods:
       aws-s3: S3/Compatível
+      imgur: Imgur
+      local: Local
+      ovh-svfs: 'OVH SVFS'
+      qiniu: QiNiu
   api:
     upload_errors:
       could_not_detect_mime: 'Não foi possível detectar o tipo MIME deste arquivo, tente novamente.'
@@ -109,8 +116,10 @@ fof-upload:
       attach: Anexar
       cancel: Cancelar
       media: 'Minha mídia'
+      upload: Upload
       user_uploads: 'Upload do usuário'
     file_list:
+      confirm_selection_btn: '{fileCount, plural, =0 {Nenhum selecionado} one {Seleciona um arquivo} other {Selecione os arquivos}}'
       empty: 'Não há arquivos para mostrar.'
       hide_file:
         btn_a11y_label: 'Ocultar "{fileName}" do gerenciador de mídia'
