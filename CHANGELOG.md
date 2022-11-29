@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.4.0 (2022-11-29)
+------------------
+
+**Adicionado suporte para as novas extensões**:
+
+* [`clarkwinkelmann/flarum-ext-emojionearea`](https://github.com/clarkwinkelmann/flarum-ext-emojionearea)
+
+
+Todas as alterações: [1.3.1...1.4.0](https://github.com/flarum-lang/brazilian/compare/1.3.1...1.4.0).
+
+
 1.3.1 (2022-10-26)
 ------------------
 
