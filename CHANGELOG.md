@@ -2,6 +2,22 @@ CHANGELOG
 =========
 
 
+1.4.1 (2023-01-08)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+**Traduções atualizadas para extensões**:
+
+* [`flarum/mentions`](https://github.com/flarum/mentions)
+
+
+Todas as alterações: [1.4.0...1.4.1](https://github.com/flarum-lang/brazilian/compare/1.4.0...1.4.1).
+
+
 1.4.0 (2022-11-29)
 ------------------
 
