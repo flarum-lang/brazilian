@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.4.2 (2023-01-08)
+------------------
+
+**Traduções atualizadas para extensões**:
+
+* [`fof/oauth`](https://github.com/FriendsOfFlarum/oauth)
+
+
+Todas as alterações: [1.4.1...1.4.2](https://github.com/flarum-lang/brazilian/compare/1.4.1...1.4.2).
+
+
 1.4.1 (2023-01-08)
 ------------------
 
