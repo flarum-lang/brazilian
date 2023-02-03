@@ -2,6 +2,19 @@ CHANGELOG
 =========
 
 
+1.5.0 (XXXX-XX-XX)
+------------------
+
+**Adicionado suporte para as novas extensões**:
+
+* [`fof/discussion-thumbnail`](https://github.com/FriendsOfFlarum/discussion-thumbnail)
+* [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+* [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+
+
+Todas as alterações: [1.4.2...1.5.0](https://github.com/flarum-lang/brazilian/compare/1.4.2...1.5.0).
+
+
 1.4.2 (2023-01-08)
 ------------------
 
