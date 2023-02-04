@@ -8,8 +8,14 @@ CHANGELOG
 **Adicionado suporte para as novas extensões**:
 
 * [`fof/discussion-thumbnail`](https://github.com/FriendsOfFlarum/discussion-thumbnail)
+* [`fof/doorman`](https://github.com/FriendsOfFlarum/doorman)
 * [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
+* [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
+* [`fof/frontpage`](https://github.com/FriendsOfFlarum/frontpage)
 * [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+* [`fof/sitemap`](https://github.com/FriendsOfFlarum/sitemap)
+* [`fof/socialprofile`](https://github.com/FriendsOfFlarum/socialprofile)
+* [`fof/subscribed`](https://github.com/FriendsOfFlarum/subscribed)
 
 
 Todas as alterações: [1.4.2...1.5.0](https://github.com/flarum-lang/brazilian/compare/1.4.2...1.5.0).
