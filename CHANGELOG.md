@@ -5,17 +5,39 @@ CHANGELOG
 1.5.0 (XXXX-XX-XX)
 ------------------
 
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
 **Adicionado suporte para as novas extensões**:
 
+* [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer)
 * [`fof/discussion-thumbnail`](https://github.com/FriendsOfFlarum/discussion-thumbnail)
 * [`fof/doorman`](https://github.com/FriendsOfFlarum/doorman)
 * [`fof/follow-tags`](https://github.com/FriendsOfFlarum/follow-tags)
 * [`fof/forum-statistics-widget`](https://github.com/FriendsOfFlarum/forum-statistics-widget)
 * [`fof/frontpage`](https://github.com/FriendsOfFlarum/frontpage)
 * [`fof/reactions`](https://github.com/FriendsOfFlarum/reactions)
+* [`fof/recaptcha`](https://github.com/FriendsOfFlarum/recaptcha)
 * [`fof/sitemap`](https://github.com/FriendsOfFlarum/sitemap)
 * [`fof/socialprofile`](https://github.com/FriendsOfFlarum/socialprofile)
 * [`fof/subscribed`](https://github.com/FriendsOfFlarum/subscribed)
+* [`fof/user-directory`](https://github.com/FriendsOfFlarum/user-directory)
+
+
+**Traduções atualizadas para extensões**:
+
+* [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`flarum/mentions`](https://github.com/flarum/mentions)
+* [`flarum/statistics`](https://github.com/flarum/statistics)
+* [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
+* [`fof/gamification`](https://github.com/FriendsOfFlarum/gamification)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+* [`fof/prevent-necrobumping`](https://github.com/FriendsOfFlarum/prevent-necrobumping)
+* [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog)
+* [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support)
 
 
 Todas as alterações: [1.4.2...1.5.0](https://github.com/flarum-lang/brazilian/compare/1.4.2...1.5.0).
