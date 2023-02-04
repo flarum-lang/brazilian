@@ -17,6 +17,15 @@ fof-gamification:
         converted: 'Todas as {number} curtidas foram convertidas com sucesso'
         converting: 'Suas curtidas estão sendo convertidas. Atualize seu site após alguns minutos para ver o processo concluído. (O tempo de conversão pode demorar um pouco dependendo do total de curtidas no fórum)'
         help: 'Converta suas curtidas anteriores de flarum-ext-likes em upvotes, bem como calcule o calor de todas as discussões atuais.'
+      groups:
+        add: 'Adicionar nova regra'
+        column:
+          group: Grupo
+          maxPoints: 'Máximo de pontos (inclusive)'
+          minPoints: 'Pontos mínimos (inclusive)'
+        delete: 'Excluir regra'
+        help: "Os grupos selecionados serão automaticamente adicionados ou removidos conforme necessário quando o número de pontos de um usuário mudar. Se você fez alterações na configuração, execute o comando <code>php flarum fof:gamification:assign-groups</code> para atualizar os usuários existentes. Se você deseja excluir uma regra e remover todos os usuários do grupo, defina os valores mínimo e máximo para uma string vazia, salve as configurações e execute o comando de linha de comando. Por fim, você pode excluir a regra totalmente das configurações.\n"
+        title: 'Grupos atribuídos automaticamente'
       rankings:
         blocked:
           help: 'Esses usuários não serão mostrados na página de classificação. Os nomes de usuário devem ser separados por uma vírgula seguida de um espaço.'
@@ -38,6 +47,7 @@ fof-gamification:
         title: Classificações
       save_settings: 'Salvar configurações'
       votes:
+        allow_self_votes: 'Os usuários podem votar em suas próprias postagens'
         alternate_layout: 'Use o layout de votação alternativo na lista de discussões'
         alternate_post_layout: 'Use o layout de votação alternativo nas postagens'
         auto_upvote: 'Auto upvote posts quando postados'
@@ -88,6 +98,7 @@ fof-gamification:
       card:
         points: '{count, plural, one { {count} ponto} other {{count} pontos}}'
       rank: '{rank}'
+      votes_link: Votos
     vote_title: 'Mostrar quem votou'
     voters:
       label: Eleitores

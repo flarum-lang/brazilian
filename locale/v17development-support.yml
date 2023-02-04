@@ -40,6 +40,9 @@ v17development-flarum-support:
     knowledge_base: 'Base de Conhecimento'
     modals:
       audit_log:
+        article_created: 'Artigo foi criado'
+        loading_auditlog: 'Carregando registro de auditoria'
+        no_more_events: 'Não foram encontrados mais eventos'
         title: 'Registro de auditoria do artigo'
     not_found:
       description: 'Desculpe, este artigo ou categoria não existe aqui.'
@@ -80,7 +83,7 @@ v17development-flarum-support:
       finished: 'Obrigado! Seu feedback foi salvo.'
       helful_article: 'Esse artigo foi útil?'
       helful_support: 'Você está satisfeito com a forma como lidamos com seu ticket?'
-      score: Classificação
+      score: Pontuação
       switch_sort_score:
         description: 'Mostrar apenas os artigos que receberam feedback, classificando o artigo com a pontuação mais baixa.'
         label: 'Mostrar artigos com pontuação baixa a alta'
@@ -91,4 +94,4 @@ v17development-flarum-support:
         invalid_points: 'Avaliação inválida. Por favor, tente novamente.'
         missing_article_id: 'ID do artigo ausente ou inválido'
         neutral_emoji_disabled: 'O emoji neutro foi desativado.'
-    support_tickets: 'Ticket de Suporte'
+    support_tickets: 'Tickets de Suporte'

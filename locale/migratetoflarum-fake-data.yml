@@ -13,7 +13,9 @@ migratetoflarum-fake-data:
       generate-replies: 'Gerar respostas fakes'
   lib:
     generator:
+      bulk-mode: 'Modo em massa'
       bulk-mode-description: 'Gera um único valor aleatório e o reutiliza para cada entrada'
+      date: 'Fonte de Dados'
       date-interval-placeholder: 'Intervalo (padrão: 1 segundo)'
       date-start-placeholder: 'Data de início (padrão: agora)'
       discussion-count: 'Número de dicussões e serem criadas'
@@ -22,6 +24,6 @@ migratetoflarum-fake-data:
       discussion-tags-random: Aleatório
       post-count: 'Número de posts a serem ciados'
       refresh: 'Fechar e atualizar a página'
-      reset: 'Geração completa! Clique para redefinir'
+      reset: 'Geração completa! Clique para redefinir o formulário'
       send: 'Gerar dados'
       user-count: 'Número de usuários a serem criados'
