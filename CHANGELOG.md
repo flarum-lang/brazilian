@@ -29,6 +29,7 @@ CHANGELOG
 **Traduções atualizadas para extensões**:
 
 * [`askvortsov/flarum-moderator-warnings`](https://github.com/askvortsov1/flarum-moderator-warnings)
+* [`datlechin/flarum-signup-button`](https://github.com/datlechin/flarum-signup-button)
 * [`flarum/mentions`](https://github.com/flarum/mentions)
 * [`flarum/statistics`](https://github.com/flarum/statistics)
 * [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu)
@@ -36,6 +37,8 @@ CHANGELOG
 * [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
 * [`fof/prevent-necrobumping`](https://github.com/FriendsOfFlarum/prevent-necrobumping)
 * [`fof/upload`](https://github.com/FriendsOfFlarum/upload)
+* [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views)
+* [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data)
 * [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog)
 * [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support)
 
