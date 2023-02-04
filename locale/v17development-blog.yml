@@ -48,7 +48,7 @@ v17development-flarum-blog:
     category_empty: 'Não há postagens no blog nesta categoria.'
     comment_section:
       comments: Comentários
-      locked: 'A seção de comentários está desabilitada para esse artigo.'
+      locked: 'A seção de comentários está desabilitada para esse artigo'
     compose:
       write_article: 'Escrever artigo'
     composer:

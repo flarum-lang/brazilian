@@ -26,7 +26,7 @@ fof-upload:
       not-available: 'Sem resultado'
       select: 'Selecione um arquivo abaixo para inspecionar os valores que serão usados. O arquivo não será salvo.'
       title: 'Inspecionar MIME'
-      validation-failed: 'Falhou: {erro}'
+      validation-failed: 'Falhou: {error}'
       validation-passed: Passou
     labels:
       aws-s3:

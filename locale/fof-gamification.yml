@@ -20,7 +20,7 @@ fof-gamification:
       rankings:
         blocked:
           help: 'Esses usuários não serão mostrados na página de classificação. Os nomes de usuário devem ser separados por uma vírgula seguida de um espaço.'
-          placeholder: 'CDK2020, Ralkage, AngelAvila'
+          placeholder: 'admin, user1, user2'
           title: 'Usuários ignorados'
         custom_image_1: 'Imagem em 1º lugar'
         custom_image_2: 'Imagem em 2º lugar'
@@ -86,7 +86,7 @@ fof-gamification:
       rank: Classificação
     user:
       card:
-        points: '{count, plural, one { {count} point} outro {{count} points}}'
+        points: '{count, plural, one { {count} ponto} other {{count} pontos}}'
       rank: '{rank}'
     vote_title: 'Mostrar quem votou'
     voters:

@@ -64,7 +64,7 @@ v17development-flarum-support:
     return_to_home: 'Voltar para a página inicial da base de conhecimento'
     search:
       back_to_search_results: 'Voltar para os resultados de busca'
-      no_results: 'Não foi possível encontrar nada com o termo ''{searchterm}''.'
+      no_results: 'Não foi possível encontrar nada com o termo {searchterm}.'
       search_knowledge_base: 'Pesquisar na base de conhecimento'
       searched_for: 'Você pesquisou por {searchterm}, houve {results} resultados.'
       searching: Pesquisando

@@ -28,7 +28,7 @@ flarum-mentions:
     notifications:
       group_mentioned_text: '{username} mencionou um grupo do qual você é membro'
       others_text: '=> core.ref.some_others'
-      post_mentioned_text: '{username}  {count, plural, one {respondeu} other {responderam}}'
+      post_mentioned_text: '{username} {count, plural, one {respondeu} other {responderam}}'
       user_mentioned_text: '{username} mencionou você'
     post:
       mentioned_by_self_text: '{users} {count, plural, one {respondeu} other {responderam}}.'
