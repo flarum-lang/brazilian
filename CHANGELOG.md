@@ -2,6 +2,22 @@ CHANGELOG
 =========
 
 
+1.5.1 (XXXX-XX-XX)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+**Traduções atualizadas para extensões**:
+
+* [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support)
+
+
+Todas as alterações: [1.5.0...1.5.1](https://github.com/flarum-lang/brazilian/compare/1.5.0...1.5.1).
+
+
 1.5.0 (2023-02-05)
 ------------------
 
