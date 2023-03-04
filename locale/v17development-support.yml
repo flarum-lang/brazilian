@@ -32,6 +32,8 @@ v17development-flarum-support:
       article_public: '{username} alterou a permissão do artigo para público'
     ask_a_question_on_forums: 'Faça uma pergunta no fórum'
     ask_your_question_on_forum: 'Faça sua pergunta no fórum'
+    composer:
+      compose_article: 'Escrever artigo'
     create: Criar
     discard: Descartar
     hero:
@@ -39,6 +41,16 @@ v17development-flarum-support:
       help_question: 'Em que podemos ajudá-lo?'
     knowledge_base: 'Base de Conhecimento'
     modals:
+      article_ratings:
+        article_not_rated: 'Este artigo ainda não foi avaliado.'
+        confirm_delete_rating: 'Tem certeza de que deseja excluir esta classificação?'
+        feedback: Opinião
+        loading_ratings: 'Carregando avaliações'
+        no_ratings_found: 'Nenhuma classificação encontrada que corresponda aos seus critérios de pesquisa'
+        rated_on: 'Classificado em'
+        rating: Avaliação
+        title: 'Classificações do artigo'
+        username: '=> core.ref.username'
       audit_log:
         article_created: 'Artigo foi criado'
         loading_auditlog: 'Carregando registro de auditoria'
@@ -62,6 +74,7 @@ v17development-flarum-support:
         change_icon: 'Alterar ícone'
         edit_description: 'Editar descrição'
         new_article: 'Novo artigo'
+        recount_articles: 'Recontar artigos'
         rename_category: 'Renomear categoria'
     reopen: reabrir
     return_to_home: 'Voltar para a página inicial da base de conhecimento'
@@ -95,3 +108,7 @@ v17development-flarum-support:
         missing_article_id: 'ID do artigo ausente ou inválido'
         neutral_emoji_disabled: 'O emoji neutro foi desativado.'
     support_tickets: 'Tickets de Suporte'
+    utils:
+      redirect:
+        link: '<a>Clique aqui</a> se a página não redirecionar você'
+        title: 'Redirecionando você para nosso artigo da Base de Conhecimento...'
