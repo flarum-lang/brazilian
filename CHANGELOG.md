@@ -2,6 +2,25 @@ CHANGELOG
 =========
 
 
+1.5.4 (2023-12-08)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+**Traduções atualizadas para extensões**:
+
+* [`flarum/likes`](https://github.com/flarum/likes)
+* [`flarum/lock`](https://github.com/flarum/lock)
+* [`flarum/nicknames`](https://github.com/flarum/nicknames)
+* [`flarum/subscriptions`](https://github.com/flarum/subscriptions)
+
+
+Todas as alterações: [1.5.3...1.5.4](https://github.com/flarum-lang/brazilian/compare/1.5.3...1.5.4).
+
+
 1.5.3 (2023-03-18)
 ------------------
 
