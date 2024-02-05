@@ -1,5 +1,9 @@
 # Português do Brasil
 
+## ⚠️ | *Aviso de Tradução*
+
+*Este repositório é mantido por uma única pessoa, que **não é um tradutor profissional**. Embora tenhamos feito o nosso melhor para garantir a precisão, podem ocorrer erros de tradução. Pedimos desculpas por qualquer confusão que isso possa causar e agradecemos a sua compreensão. Se você encontrar algum erro ou problema de tradução, sinta-se à vontade para abrir [uma solicitação aqui](https://weblate.rob006.net/projects/flarum/). Obrigado por sua colaboração!* 
+
 Extensão para Tradução do **[Flarum](https://flarum.org)** para **Português do Brasil**.
 ## 🚀 | Começando
 
