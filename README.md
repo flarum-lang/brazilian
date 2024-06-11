@@ -178,8 +178,8 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 
 | Extensão | Status |
 | --- | --- |
-| [`justoverclock/website-live-screenshot`](https://extiverse.com/extension/justoverclock/website-live-screenshot) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/justoverclock-website-live-screenshot/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/justoverclock-website-live-screenshot/pt_BR/) |
-| [`v17development/flarum-support`](https://extiverse.com/extension/v17development/flarum-support) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/v17development-support/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-support/pt_BR/) |
+| [`justoverclock/website-live-screenshot`](https://flarum.org/extension/justoverclock/website-live-screenshot) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/justoverclock-website-live-screenshot/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/justoverclock-website-live-screenshot/pt_BR/) |
+| [`v17development/flarum-support`](https://flarum.org/extension/v17development/flarum-support) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/v17development-support/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-support/pt_BR/) |
 
 <!-- premium-extensions-list-stop -->
 
