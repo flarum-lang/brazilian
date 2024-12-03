@@ -27,6 +27,7 @@ fof-polls:
         heading: 'Configurações de Imagem'
         help: 'Essas configurações controlam as configurações de imagem para enquetes.'
   forum:
+    answers: Respostas
     composer_discussion:
       add_poll: 'Adicionar enquete'
       edit_poll: '=> fof-polls.forum.moderation.edit'
@@ -51,7 +52,20 @@ fof-polls:
       delete_confirm: 'Tem certeza de que deseja excluir esta enquete?'
       edit: 'Editar enquete'
     no_permission: 'Você não tem permissão para votar'
+    poll:
+      cannot_change_vote: 'Você não pode alterar seu voto após votar.'
+      cannot_start_poll_button: 'Não é possível iniciar a enquete'
+      start_poll_button: 'Iniciar Enquete Global'
+      submit_button: Voto
+    poll_controls:
+      delete_confirmation: 'Tem certeza de que deseja excluir esta enquete?'
+      delete_label: '=> core.ref.delete'
+      delete_success_message: 'Enquete excluída com sucesso.'
+      edit_label: '=> core.ref.edit'
+      view_label: '=> core.ref.view'
     poll_ended: 'Esta enquete terminou.'
+    poll_never_ends: 'Enquete nunca termina'
+    polls_count: '{count, plural, one { {count} voto} other {{count} votos}}'
     public_poll: 'Veja quem votou'
     tooltip:
       badge: Enquete
