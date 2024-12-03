@@ -12,7 +12,20 @@ fof-polls:
       view_results_without_voting: 'Ver resultados sem votar'
       vote: 'Vote nas enquetes'
     settings:
+      allow_image_uploads: 'Permitir o envio de imagens para enquetes e suas opções'
+      allow_image_uploads_help: 'Se ativado, os usuários poderão enviar imagens juntamente com a URL da imagem (se ativado para as opções, sempre estará ativado para a própria enquete).'
       allow_option_image: 'Permitir que a URL de uma imagem seja fornecida para cada opção da enquete'
+      enable_global_polls: 'Ativar enquetes globais'
+      enable_global_polls_help: 'Enquetes globais não estão vinculadas a uma postagem específica e podem ser acessadas a partir de uma página dedicada de enquetes.'
+      general:
+        heading: 'Ajustes Gerais'
+        help: 'Essas configurações controlam os recursos básicos da extensão de Enquetes.'
+      global_polls:
+        heading: 'Enquetes Globais'
+        help: 'Essas configurações controlam o recurso global de enquetes.'
+      image:
+        heading: 'Configurações de Imagem'
+        help: 'Essas configurações controlam as configurações de imagem para enquetes.'
   forum:
     composer_discussion:
       add_poll: 'Adicionar enquete'
