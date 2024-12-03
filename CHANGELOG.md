@@ -5,6 +5,11 @@ CHANGELOG
 1.6.0 (XXXX-XX-XX)
 ------------------
 
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
 **Adicionado suporte para as novas extensões**:
 
 * [`nearata/flarum-ext-embed-video`](https://github.com/Nearata/flarum-ext-embed-video)
