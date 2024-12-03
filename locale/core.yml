@@ -266,6 +266,8 @@ core:
       title: '=> core.ref.users'
       total_users: 'Total de usuários: {count}'
   api:
+    invalid_filter_type:
+      must_be_numeric_message: 'O filtro {filter} deve ser numérico.'
     invalid_username_message: 'O nome de usuário pode conter apenas letras, números e traços.'
   email:
     activate_account:
