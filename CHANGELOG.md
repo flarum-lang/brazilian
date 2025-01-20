@@ -2,6 +2,42 @@ CHANGELOG
 =========
 
 
+1.6.0 (2025-01-20)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+**Adicionado suporte para as novas extensões**:
+
+* [`nearata/flarum-ext-embed-video`](https://github.com/Nearata/flarum-ext-embed-video)
+* [`nearata/flarum-ext-maintenance-mode`](https://github.com/Nearata/flarum-ext-maintenance-mode)
+* [`nearata/flarum-ext-minecraft-avatars`](https://github.com/Nearata/flarum-ext-minecraft-avatars)
+* [`nearata/flarum-ext-password-strength-enforcer`](https://github.com/Nearata/flarum-ext-password-strength-enforcer)
+* [`nearata/flarum-ext-related-discussions`](https://github.com/Nearata/flarum-ext-related-discussions)
+* [`nearata/flarum-ext-tags-color-generator`](https://github.com/Nearata/flarum-ext-tags-color-generator)
+* [`nearata/flarum-ext-twofactor`](https://github.com/Nearata/flarum-ext-twofactor)
+* [`neoncube/flarum-private-messages`](https://github.com/neoncube2/flarum-private-messages)
+* `nodeloc-ignore-hidden-tags`
+* [`nodeloc/lottery`](https://github.com/nodeloc/lottery)
+* [`nodeloc/flarum-ext-my-emoji`](https://github.com/nodeloc/flarum-ext-my-emoji)
+* [`nodeloc/flarum-ext-referral`](https://github.com/nodeloc/flarum-ext-referral)
+* [`nodeloc/telegram`](https://github.com/nodeloc/telegram)
+* [`nodeloc/whisper`](https://github.com/nodeloc/whisper)
+* [`nomiscz/flarum-ext-auth-steam`](https://github.com/NomisCZ/flarum-ext-auth-steam)
+* [`nomiscz/flarum-ext-auth-wechat`](https://github.com/NomisCZ/flarum-ext-auth-wechat)
+
+
+**Traduções atualizadas para extensões**:
+
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+
+
+Todas as alterações: [1.5.4...1.6.0](https://github.com/flarum-lang/brazilian/compare/1.5.4...1.6.0).
+
+
 1.5.4 (2023-12-08)
 ------------------
 
