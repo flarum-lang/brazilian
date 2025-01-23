@@ -74,8 +74,10 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | --- | --- |
 | [`flarum/akismet`](https://github.com/flarum/akismet) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-akismet/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-akismet/pt_BR/) |
 | [`flarum/approval`](https://github.com/flarum/approval) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-approval/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-approval/pt_BR/) |
+| [`flarum/bbcode`](https://github.com/flarum/bbcode) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-bbcode/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-bbcode/pt_BR/) |
 | [`flarum/emoji`](https://github.com/flarum/emoji) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-emoji/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-emoji/pt_BR/) |
 | [`flarum/flags`](https://github.com/flarum/flags) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-flags/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-flags/pt_BR/) |
+| [`flarum/gdpr`](https://github.com/flarum/gdpr) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-gdpr/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-gdpr/pt_BR/) |
 | [`flarum/likes`](https://github.com/flarum/likes) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-likes/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-likes/pt_BR/) |
 | [`flarum/lock`](https://github.com/flarum/lock) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-lock/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-lock/pt_BR/) |
 | [`flarum/markdown`](https://github.com/flarum/markdown) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/flarum-markdown/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/flarum-markdown/pt_BR/) |
