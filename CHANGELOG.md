@@ -2,6 +2,18 @@ CHANGELOG
 =========
 
 
+1.7.0 (2025-01-23)
+------------------
+
+**Adicionado suporte para as novas extensões**:
+
+* [`flarum/bbcode`](https://github.com/flarum/bbcode)
+* [`flarum/gdpr`](https://github.com/flarum/gdpr)
+
+
+Todas as alterações: [1.6.0...1.7.0](https://github.com/flarum-lang/brazilian/compare/1.6.0...1.7.0).
+
+
 1.6.0 (2025-01-20)
 ------------------
 
