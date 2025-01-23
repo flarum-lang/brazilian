@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.7.1 (2025-01-23)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+Todas as alterações: [1.7.0...1.7.1](https://github.com/flarum-lang/brazilian/compare/1.7.0...1.7.1).
+
+
 1.7.0 (2025-01-23)
 ------------------
 
