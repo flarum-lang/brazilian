@@ -10,7 +10,10 @@ fof-recaptcha:
       help_text: 'Obtenha suas credenciais do Google reCAPTCHA <a>aqui</a>.'
       secret_key_label: 'Chave Secreta'
       site_key_label: 'Chave do Site'
+      type_help: 'Esta extensão suporta apenas o reCAPTCHA v2. O tipo selecionado deve corresponder ao tipo das suas credenciais do reCAPTCHA.'
       type_label: 'Tipo reCAPTCHA'
+    test:
+      reload_button: Recarregar
   forum:
     error: 'Ocorreu um erro ao enviar o reCAPTCHA. Tente novamente.'
 validation:
