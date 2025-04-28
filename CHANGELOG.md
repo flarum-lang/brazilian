@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.7.2 (2025-04-28)
+------------------
+
+**Traduções atualizadas para extensões**:
+
+* [`fof/recaptcha`](https://github.com/FriendsOfFlarum/recaptcha)
+
+
+Todas as alterações: [1.7.1...1.7.2](https://github.com/flarum-lang/brazilian/compare/1.7.1...1.7.2).
+
+
 1.7.1 (2025-01-23)
 ------------------
 
