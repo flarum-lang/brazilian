@@ -2,6 +2,23 @@ CHANGELOG
 =========
 
 
+1.7.4 (XXXX-XX-XX)
+------------------
+
+**Alterações gerais**:
+
+* Traduções do flarum/core atualizadas.
+
+
+**Adicionado suporte para as novas extensões**:
+
+* [`fof/discussion-templates`](https://github.com/FriendsOfFlarum/discussion-templates)
+* [`fof/moderator-warnings`](https://github.com/FriendsOfFlarum/moderator-warnings)
+
+
+Todas as alterações: [1.7.3...1.7.4](https://github.com/flarum-lang/brazilian/compare/1.7.3...1.7.4).
+
+
 1.7.3 (2025-12-05)
 ------------------
 
