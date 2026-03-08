@@ -56,6 +56,9 @@
       "flarum-locale": {
          "code":"pt-BR",
          "title":"Português Brasileiro"
+      },
+      "branch-alias": {
+         "dev-main": "1.x-dev"
       }
    }
 }
