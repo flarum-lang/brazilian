@@ -26,7 +26,7 @@ Utilize os comandos abaixo para realizar a instalação da extensão Português 
 Utilize o comando:
 
 ```
-composer require flarum-lang/brazilian
+composer require "flarum-lang/brazilian:*"
 ```
 
 Em seguida:
