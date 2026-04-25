@@ -140,7 +140,6 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | Extensão | Status |
 | --- | --- |
 | [`acpl/mobile-tab`](https://github.com/android-com-pl/mobile-tab) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/acpl-mobile-tab/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/acpl-mobile-tab/pt_BR/) |
-| [`afrux/top-posters-widget`](https://github.com/afrux/top-posters-widget) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/afrux-top-posters-widget/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/afrux-top-posters-widget/pt_BR/) |
 | [`archlinux-de/flarum-click-image`](https://github.com/archlinux-de/flarum-click-image) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/archlinux-de-click-image/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/archlinux-de-click-image/pt_BR/) |
 | [`askvortsov/flarum-categories`](https://github.com/askvortsov1/flarum-categories) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/askvortsov-categories/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-categories/pt_BR/) |
 | [`askvortsov/flarum-checklist`](https://github.com/askvortsov1/flarum-checklist) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/askvortsov-checklist/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/askvortsov-checklist/pt_BR/) |
