@@ -137,6 +137,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | Extensão | Status |
 | --- | --- |
 | [`datlechin/flarum-signup-button`](https://github.com/datlechin/flarum-signup-button) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/datlechin-signup-button/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/datlechin-signup-button/pt_BR/) |
+| [`michaelbelgium/flarum-discussion-views`](https://github.com/MichaelBelgium/flarum-discussion-views) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/michaelbelgium-discussion-views/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/michaelbelgium-discussion-views/pt_BR/) |
 | [`migratetoflarum/fake-data`](https://github.com/migratetoflarum/fake-data) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/migratetoflarum-fake-data/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/migratetoflarum-fake-data/pt_BR/) |
 | [`ralkage/flarum-hcaptcha`](https://github.com/Ralkage/flarum-hcaptcha) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/ralkage-hcaptcha/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/ralkage-hcaptcha/pt_BR/) |
 | [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/sycho-profile-cover/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/sycho-profile-cover/pt_BR/) |
