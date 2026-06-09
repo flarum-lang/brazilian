@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+2.0.3 (XXXX-XX-XX)
+------------------
+
+**Adicionado suporte para as novas extensões**:
+
+* [`fof/doorman`](https://github.com/FriendsOfFlarum/doorman)
+
+
+Todas as alterações: [2.0.2...2.0.3](https://github.com/flarum-lang/brazilian/compare/2.0.2...2.0.3).
+
+
 2.0.2 (2026-05-26)
 ------------------
 
