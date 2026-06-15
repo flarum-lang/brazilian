@@ -170,7 +170,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | [`ralkage/flarum-hcaptcha`](https://github.com/Ralkage/flarum-hcaptcha) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/ralkage-hcaptcha/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/ralkage-hcaptcha/pt_BR/) |
 | [`serakoi/flarum-hideprofile`](https://github.com/Serakoi/flarum-hideprofile) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/serakoi-hideprofile/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/serakoi-hideprofile/pt_BR/) |
 | [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/sycho-profile-cover/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/sycho-profile-cover/pt_BR/) |
-| [`v17development/flarum-blog`](https://github.com/v17development/flarum-blog) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/v17development-blog/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-blog/pt_BR/) |
+| [`v17development/flarum-blog`](https://github.com/FriendsOfFlarum/blog) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/v17development-blog/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-blog/pt_BR/) |
 
 <!-- various-extensions-list-stop -->
 
