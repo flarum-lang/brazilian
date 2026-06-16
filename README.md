@@ -100,6 +100,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | Extensão | Status |
 | --- | --- |
 | [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-best-answer/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-best-answer/pt_BR/) |
+| [`fof/blog`](https://github.com/FriendsOfFlarum/blog) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-blog/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-blog/pt_BR/) |
 | [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-byobu/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-byobu/pt_BR/) |
 | [`fof/custom-footer`](https://github.com/FriendsOfFlarum/custom-footer) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-custom-footer/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-custom-footer/pt_BR/) |
 | [`fof/default-group`](https://github.com/FriendsOfFlarum/default-group) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/fof-default-group/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/fof-default-group/pt_BR/) |
@@ -170,7 +171,6 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | [`ralkage/flarum-hcaptcha`](https://github.com/Ralkage/flarum-hcaptcha) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/ralkage-hcaptcha/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/ralkage-hcaptcha/pt_BR/) |
 | [`serakoi/flarum-hideprofile`](https://github.com/Serakoi/flarum-hideprofile) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/serakoi-hideprofile/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/serakoi-hideprofile/pt_BR/) |
 | [`sycho/flarum-profile-cover`](https://github.com/SychO9/flarum-profile-cover) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/sycho-profile-cover/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/sycho-profile-cover/pt_BR/) |
-| [`v17development/flarum-blog`](https://github.com/FriendsOfFlarum/blog) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum/pt_BR/v17development-blog/svg-badge.svg)](https://weblate.rob006.net/projects/flarum/v17development-blog/pt_BR/) |
 
 <!-- various-extensions-list-stop -->
 
