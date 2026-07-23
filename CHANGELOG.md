@@ -7,6 +7,7 @@ CHANGELOG
 
 **Adicionado suporte para as novas extensões**:
 
+* [`fof/blog`](https://github.com/FriendsOfFlarum/blog)
 * [`fof/doorman`](https://github.com/FriendsOfFlarum/doorman)
 
 
