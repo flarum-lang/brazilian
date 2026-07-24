@@ -100,6 +100,7 @@ Caso encontre um erro ou bug abra uma solicitação  [aqui](https://github.com/f
 | Extensão | Status |
 | --- | --- |
 | [`fof/best-answer`](https://github.com/FriendsOfFlarum/best-answer) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/fof-best-answer/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/fof-best-answer/pt_BR/) |
+| [`fof/blog`](https://github.com/FriendsOfFlarum/blog) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/fof-blog/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/fof-blog/pt_BR/) |
 | [`fof/byobu`](https://github.com/FriendsOfFlarum/byobu) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/fof-byobu/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/fof-byobu/pt_BR/) |
 | [`fof/default-group`](https://github.com/FriendsOfFlarum/default-group) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/fof-default-group/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/fof-default-group/pt_BR/) |
 | [`fof/discussion-templates`](https://github.com/FriendsOfFlarum/discussion-templates) | [![Status da tradução](https://weblate.rob006.net/widgets/flarum2/pt_BR/fof-discussion-templates/svg-badge.svg)](https://weblate.rob006.net/projects/flarum2/fof-discussion-templates/pt_BR/) |
