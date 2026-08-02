@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+1.7.5 (2026-08-02)
+------------------
+
+**Adicionado suporte para as novas extensões**:
+
+* [`fof/blog`](https://github.com/FriendsOfFlarum/blog)
+
+
+Todas as alterações: [1.7.4...1.7.5](https://github.com/flarum-lang/brazilian/compare/1.7.4...1.7.5).
+
+
 1.7.4 (2026-03-08)
 ------------------
 
