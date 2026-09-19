@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+2.0.4 (XXXX-XX-XX)
+------------------
+
+**Traduções atualizadas para extensões**:
+
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+
+
+Todas as alterações: [2.0.3...2.0.4](https://github.com/flarum-lang/brazilian/compare/2.0.3...2.0.4).
+
+
 2.0.3 (2026-08-02)
 ------------------
 
