@@ -39,7 +39,7 @@ fof-polls:
       edit_title: 'Editar enquete'
       image_option_placeholder: 'URL da imagem (opcional)'
       include_question: 'Você deve incluir uma pergunta'
-      max: 'Você pode ter no máximo 10 respostas'
+      max: 'Você pode ter no máximo {max} respostas'
       min: 'Você deve incluir um mínimo de 2 respostas'
       no_voters: 'Sem votos'
       option_placeholder: Resposta
