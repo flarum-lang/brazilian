@@ -5,6 +5,11 @@ CHANGELOG
 1.7.6 (XXXX-XX-XX)
 ------------------
 
+**General changes**:
+
+* Updated Flarum core translations (1 changed).
+
+
 **Updated translations for extensions**:
 
 * [`flarum/suspend`](https://github.com/flarum/suspend) (1 changed)
