@@ -5,14 +5,14 @@ CHANGELOG
 1.7.6 (XXXX-XX-XX)
 ------------------
 
-**Traduções atualizadas para extensões**:
+**Updated translations for extensions**:
 
-* [`flarum/suspend`](https://github.com/flarum/suspend)
-* [`flarum/tags`](https://github.com/flarum/tags)
-* [`fof/polls`](https://github.com/FriendsOfFlarum/polls)
+* [`flarum/suspend`](https://github.com/flarum/suspend) (1 changed)
+* [`flarum/tags`](https://github.com/flarum/tags) (1 changed)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls) (1 changed)
 
 
-Todas as alterações: [1.7.5...1.7.6](https://github.com/flarum-lang/brazilian/compare/1.7.5...1.7.6).
+All changes: [1.7.5...1.7.6](https://github.com/flarum-lang/brazilian/compare/1.7.5...1.7.6).
 
 
 1.7.5 (2026-08-02)
