@@ -5,6 +5,11 @@ CHANGELOG
 2.0.4 (XXXX-XX-XX)
 ------------------
 
+**General changes**:
+
+* Updated Flarum core translations (1 changed).
+
+
 **Updated translations for extensions**:
 
 * [`fof/polls`](https://github.com/FriendsOfFlarum/polls) (1 changed)
