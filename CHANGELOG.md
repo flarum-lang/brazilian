@@ -2,6 +2,22 @@ CHANGELOG
 =========
 
 
+2.0.4 (2026-09-20)
+------------------
+
+**General changes**:
+
+* Updated Flarum core translations (1 changed).
+
+
+**Updated translations for extensions**:
+
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls) (1 changed)
+
+
+All changes: [2.0.3...2.0.4](https://github.com/flarum-lang/brazilian/compare/2.0.3...2.0.4).
+
+
 2.0.3 (2026-08-02)
 ------------------
 
