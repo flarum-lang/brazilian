@@ -2,6 +2,24 @@ CHANGELOG
 =========
 
 
+1.7.6 (2026-09-20)
+------------------
+
+**General changes**:
+
+* Updated Flarum core translations (1 changed).
+
+
+**Updated translations for extensions**:
+
+* [`flarum/suspend`](https://github.com/flarum/suspend) (1 changed)
+* [`flarum/tags`](https://github.com/flarum/tags) (1 changed)
+* [`fof/polls`](https://github.com/FriendsOfFlarum/polls) (1 changed)
+
+
+All changes: [1.7.5...1.7.6](https://github.com/flarum-lang/brazilian/compare/1.7.5...1.7.6).
+
+
 1.7.5 (2026-08-02)
 ------------------
 
