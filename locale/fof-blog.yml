@@ -2,69 +2,103 @@
 # Use https://weblate.rob006.net/projects/flarum2/fof-blog/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-audit:
+  lib:
+    browser:
+      article:
+        approved: 'Aprovou o artigo do blog {discussion}'
+        created: 'Criou o artigo do blog {discussion}'
+        featured: 'Destacou o artigo do blog {discussion}'
+        unfeatured: 'Removeu o destaque do artigo do blog {discussion}'
+        updated: 'Atualizou os metadados do artigo do blog {discussion}'
 fof-blog:
   admin:
     blog: Blog
     permissions:
-      approve_posts: 'Pode aprovar artigos do blog'
-      auto_approve_posts: 'Postar artigos sem aprovação'
-      write_articles: 'Escrever e editar artigos de blog'
+      approve_posts: 'Aprovar artigos do blog'
+      auto_approve_posts: 'Publicar artigos sem aprovação'
+      write_articles: 'Escrever e editar artigos do blog'
     settings:
       add_hero_label: 'Mostrar banner de boas-vindas'
-      add_hero_text: 'Mostrar banner de boas-vindas nas páginas do blog, caso ainda não tenha sido fechado.'
-      add_sidebar_nav_label: 'Adicionar à navegação da barra lateral'
-      add_sidebar_nav_text: 'Inclua um link para o blog no menu de navegação da barra lateral.'
+      add_hero_text: 'Mostra o banner de boas-vindas nas páginas do blog, se ainda não tiver sido fechado.'
+      add_sidebar_nav_label: 'Adicionar à navegação lateral'
+      add_sidebar_nav_text: 'Inclui um link para o blog no menu de navegação da barra lateral.'
       allow_comments_label: 'Permitir comentários'
-      allow_comments_text: 'Por padrão, permite comentários nas postagens do blog. Quando desativado, pode ser ativado individualmente por postagem no blog. <b>Observação:</b> alterar essa configuração não afetará postagens de blog pré-existentes.'
+      allow_comments_text: 'Por padrão, permite comentários nos posts do blog. Quando desativado, pode ser ativado individualmente por post do blog. <b>Nota:</b> alterar esta configuração não afeta posts do blog já existentes.'
       blog_heading: Blog
       categories_heading: Categorias
+      categories_modal:
+        close: Fechar
+        description: 'Selecione uma ou mais tags que serão consideradas tags do blog.'
+        no_tags: 'No momento, você não tem tags.'
+        tag_name_column: 'Nome da tag'
+        visit_blog: 'Visite seu blog.'
       default_article_image_label: 'Imagem padrão do artigo'
-      default_article_image_text: 'Selecione uma imagem de artigo padrão para exibir quando nenhuma imagem estiver definida.'
-      featured_count_label: 'Máximo de publicações em destaque'
-      featured_count_text: 'Quantas postagens devem ser exibidas em uma grande grade no topo de uma página de blog?'
-      hide_on_discussion_list_label: 'Não mostrar na lista de discussão'
-      hide_on_discussion_list_text: 'Oculte as postagens do blog da lista de discussões.'
+      default_article_image_text: 'Selecione uma imagem padrão para exibir em artigos sem imagem definida.'
+      featured_count_label: 'Máx. de Posts em Destaque'
+      featured_count_text: 'Quantos posts devem ser exibidos em uma grade grande no topo de uma página do blog?'
+      hide_on_discussion_list_label: 'Não mostrar na lista de discussões'
+      hide_on_discussion_list_text: 'Oculta os posts do blog da lista de discussões.'
       hide_tags_in_taglist_label: 'Ocultar tags na lista de tags'
       hide_tags_in_taglist_text: 'Quando ativada, esta extensão ocultará as tags do blog da sua página inicial.'
       no_categories_selected: 'Nenhuma categoria selecionada'
       redirects_heading: Redirecionamentos
-      require_review_label: 'As postagens do blog exigem revisão'
-      require_review_text: 'Ao postar um artigo, ele não ficará visível diretamente e precisa ser revisado por um moderador.'
-      select_categories_button: 'Selecione as categorias do blog'
+      redirects_options:
+        both: 'Redirecionar artigos e tags'
+        discussions_only: 'Redirecionar apenas artigos'
+        none: 'Não redirecionar'
+        tags_only: 'Redirecionar apenas tags'
+      redirects_text: 'Redireciona as URLs originais de discussões e tags para as equivalentes no blog.'
+      require_review_label: 'Posts do blog exigem revisão'
+      require_review_text: 'Ao publicar um artigo, ele não ficará visível imediatamente e precisará ser revisado por um moderador.'
+      select_categories_button: 'Selecionar categorias do blog'
       selected_category_count: '{count, plural, one {Você tem # categoria selecionada} other {Você tem # categorias selecionadas}}'
       show_tag_hierarchy_label: 'Mostrar hierarquia de tags'
-      show_tag_hierarchy_text: 'Adicione espaçamento às categorias filhas e dê uma hierarquia à lista de categorias.'
+      show_tag_hierarchy_text: 'Adiciona espaçamento às categorias filhas e dá uma hierarquia à lista de categorias.'
   forum:
     article:
-      slug: Lesma
-      summary: Sumário
+      slug: Slug
+      summary: Resumo
       title: Título
+    article_settings:
+      fields:
+        highlight:
+          helper_text: 'Dá a este post uma imagem grande na página de visão geral do blog.'
+          title: 'Post em destaque'
+        image:
+          helper_text: 'Melhor resolução de imagem para redes sociais: 1200x630'
+          title: 'Imagem do artigo'
+        summary:
+          helper_text: 'Este resumo ficará visível na página de visão geral do blog e será usado para fins de SEO.'
+          placeholder: 'Digite um resumo'
+          title: 'Resumo do artigo'
+      title: 'Configurações do post do blog'
     blog: Blog
     categories: Categorias
-    category_empty: 'Não há postagens no blog nesta categoria.'
+    category_empty: 'Não há posts do blog nesta categoria.'
     comment_section:
       comments: Comentários
-      locked: 'A seção de comentários está desabilitada para esse artigo'
+      locked: 'A seção de comentários está desativada para este artigo'
     compose:
       write_article: 'Escrever artigo'
     composer:
-      comment_section: 'A seção de comentários não está disponível ao compor um artigo.'
+      comment_section: 'A seção de comentários não está disponível ao escrever um artigo.'
       edit_categories: 'Editar categorias'
-      enter_message_here: 'Insira sua mensagem aqui'
-      no_blog_tags_selected: 'Nenhuma das tags que você selecionou é uma tag de blog. Selecione pelo menos um.'
+      enter_message_here: 'Digite sua mensagem aqui'
+      no_blog_tags_selected: 'Nenhuma das tags selecionadas é uma tag do blog. Selecione pelo menos uma.'
       no_title: 'Sem título'
       nothing_to_preview: 'Nada para visualizar'
-      post_article: 'Postar artigo'
-      post_without_blog_info: 'Tem certeza de que deseja postar esta postagem no blog? Você ainda não inseriu um resumo ou imagem do blog.'
-      select_category: 'Selecionar uma categoria'
+      post_article: 'Publicar artigo'
+      post_without_blog_info: 'Tem certeza de que deseja publicar este post do blog? Você ainda não informou um resumo ou uma imagem do blog.'
+      select_category: 'Selecionar categoria'
       update_settings: 'Atualizar configurações do blog'
       view: Visualizar
       write: Escrever
-    forum_nav: 'Navegação do fórum'
-    hidden: Escondido
-    no_more_posts: 'Não há mais postagens no blog.'
+    forum_nav: 'Navegação do Fórum'
+    hidden: Oculto
+    no_more_posts: 'Sem mais posts no blog.'
     read_more: 'Ler mais'
-    recent_posts: 'Postagens recentes do blog'
+    recent_posts: 'Posts recentes do blog'
     return_to_overview: 'Voltar à visão geral do blog '
     review_article:
       approve_article: 'Aprovar artigo'
@@ -74,11 +108,11 @@ fof-blog:
     tools:
       approve_article: 'Aprovar artigo'
       article_settings: 'Configurações do artigo'
-      delete_forever: 'Apagar para sempre'
-      disable_comments: 'Desabilitar comentários'
+      delete_forever: 'Excluir para sempre'
+      disable_comments: 'Desativar comentários'
       edit_article: 'Editar artigo'
-      enable_comments: 'Habilitar comentários'
-      hide_article: 'Esconder artigo'
+      enable_comments: 'Ativar comentários'
+      hide_article: 'Ocultar artigo'
       recover_article: 'Recuperar artigo'
       rename_article: 'Renomear artigo'
       update_category: 'Atualizar categorias'
@@ -87,4 +121,8 @@ fof-blog:
         link: '<a>Clique aqui</a> se a página não redirecionar você'
         title: 'Redirecionando você para nosso artigo no blog...'
     validation:
-      missing_id: 'ID ausente'
+      missing_id: 'ID Ausente'
+  lib:
+    gambits:
+      blog:
+        key: blog

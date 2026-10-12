@@ -5,24 +5,74 @@
 fof-links:
   admin:
     edit_link:
-      delete_link_button: 'Apagar Link'
-      delete_link_confirmation: 'Você tem certeza que quer apagar esse link?'
+      delete_link_button: 'Excluir link'
+      delete_link_confirmation: 'Tem certeza de que deseja excluir “{title}”?'
+      icon_additional_text: 'Se quiser usar um ícone de marca, o prefixo é <code>fab fa-</code>.'
       icon_label: '=> core.ref.icon'
       icon_text: '=> core.ref.icon_text'
       internal_link: 'É um link interno?'
-      open_newtab: 'Abrir link em uma nova aba'
+      open_newtab: 'Abrir em uma nova aba'
+      options_label: Opções
       submit_button: '=> core.ref.save_changes'
       title: '=> fof-links.ref.create_link'
+      title_child: 'Novo link abaixo de {parent}'
       title_label: '=> fof-links.ref.title'
       title_placeholder: '=> fof-links.ref.title'
+      type:
+        external:
+          help: 'Abre um endereço fora deste fórum.'
+          label: 'Leva a outro site'
+        heading: 'O que este link faz'
+        internal:
+          help: 'Abre sem recarregar a página.'
+          label: 'Leva a uma página deste fórum'
+        label:
+          help: 'Exibido como um rótulo. Use para dar nome a um grupo de links.'
+          label: 'Não leva a lugar nenhum'
       url_description: 'Deixe em branco para mostrar como um rótulo.'
+      url_help:
+        external: 'O endereço completo, incluindo <code>https://</code>.'
+        internal: 'A parte do endereço depois de {baseUrl}, começando com uma barra.'
       url_label: '=> fof-links.ref.url'
       url_placeholder: '=> fof-links.ref.url'
+      url_placeholder.external: 'https://example.com'
+      url_placeholder.internal: /tags
+      use_rel_me: 'Adicionar um atributo <code>rel="me"</code>'
+      use_rel_me_help: 'Permite que o site de destino do link verifique que este fórum é seu.'
+      visibility:
+        guest-only:
+          help: 'Usuários autenticados não verão este link. A permissão acima deve estar definida como {everyone}.'
+          label: 'Mostrar apenas para {guest}'
+        help: 'Um novo link é visível apenas para usuários {admin}. Ajuste a permissão para ampliar isso.'
+        help-disabled: 'Salve o link antes de escolher quem pode vê-lo.'
+        label: 'Quem pode ver'
     links:
+      add_child_accessible_label: 'Adicionar um link abaixo de {title}'
+      audience_everyone: 'Visível para todos'
       create_button: '=> fof-links.ref.create_link'
+      description: 'Eles aparecem na navegação do fórum, na ordem em que estão listados aqui.'
+      edit_accessible_label: 'Editar {title}'
+      flag:
+        guest_only: 'Apenas convidados'
+        new_tab: 'Nova aba'
+        rel_me: 'rel="me"'
       links: '=> fof-links.ref.links'
+      moved: '{title} movido para a posição {position} de {total}.'
+      moved_under: '{title} movido para abaixo de {parent}, posição {position} de {total}.'
+      no_url: 'Sem link, exibido como rótulo'
+      preconfigured: 'Os links deste fórum foram pré-configurados no código e não podem ser editados aqui.'
+      reorder_accessible_label: 'Reordenar {title}. Use as setas para mover para cima, para baixo, para dentro do link acima ou para fora.'
+      reorder_help: 'Arraste um link pela alça para reordená-lo, ou solte-o sobre outro para aninhá-lo abaixo. Com uma alça em foco, as setas do teclado fazem o mesmo.'
+      reorder_loading: 'Preparando a lista para reordenação…'
+    settings:
+      heading: Configurações
+      show_icons_only_on_tablet: 'Mostrar apenas ícones em telas de tablet'
+      show_icons_only_on_tablet_help: 'Oculta os títulos dos links entre 768px e 991px de largura, onde a navegação tem menos espaço. Os títulos continuam sendo anunciados por leitores de tela.'
+  forum:
+    header:
+      toggle_dropdown_accessible_label: 'Mostrar os links abaixo de {title}'
   ref:
-    create_link: 'Criar link'
+    create_link: 'Criar Link'
     links: Links
     title: Título
     url: URL

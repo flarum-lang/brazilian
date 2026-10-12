@@ -2,6 +2,12 @@
 # Use https://weblate.rob006.net/projects/flarum2/flarum-lock/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        locked: 'Trancou a discussão {discussion}'
+        unlocked: 'Destrancou a discussão {discussion}'
 flarum-lock:
   admin:
     permissions:
@@ -15,7 +21,12 @@ flarum-lock:
     notifications:
       discussion_locked_text: '{username} trancou'
     post_stream:
-      discussion_locked_text: '{username} trancou esta discussão.'
-      discussion_unlocked_text: '{username} destrancou esta discussão.'
+      discussion_locked_text: '{username} trancou a discussão {time}.'
+      discussion_unlocked_text: '{username} destrancou a discussão {time}.'
     settings:
-      notify_discussion_locked_label: 'Alguém tranca uma discussão que eu comecei'
+      notify_discussion_locked_label: 'Alguém tranca uma discussão que iniciei'
+  lib:
+    gambits:
+      discussions:
+        locked:
+          key: trancada

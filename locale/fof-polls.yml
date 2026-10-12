@@ -2,69 +2,225 @@
 # Use https://weblate.rob006.net/projects/flarum2/fof-polls/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-audit:
+  lib:
+    browser:
+      poll:
+        created: 'Criou a enquete {title}'
+        deleted: 'Excluiu a enquete {title}'
+        published: 'Publicou a enquete {title}'
+        unpublished: 'Despublicou a enquete {title}'
+        updated: 'Atualizou a enquete {title}'
+        voted: 'Votou na enquete {title}'
+      poll_group:
+        created: 'Criou o grupo de enquetes {name}'
+        deleted: 'Excluiu o grupo de enquetes {name}'
+        updated: 'Atualizou o grupo de enquetes {name}'
 fof-polls:
   admin:
     permissions:
       change_vote: 'Mudar voto'
       moderate: 'Editar e remover enquetes'
-      self_edit: 'Permitir que os usuários editem suas próprias enquetes'
-      start: 'Iniciar uma enquete'
+      moderate_group: 'Editar e remover grupos de enquetes'
+      self_edit: 'Editar as enquetes criadas (requer permissão de editar posts)'
+      self_post_edit: 'Editar *todas* as enquetes nos próprios posts (requer permissão de editar posts)'
+      start: 'Iniciar enquete'
+      start_global: 'Iniciar enquete global'
+      start_group: 'Criar grupos de enquetes'
+      upload_images: 'Enviar imagens para enquetes'
+      view_group: 'Ver grupos de enquetes'
       view_results_without_voting: 'Ver resultados sem votar'
-      vote: 'Vote nas enquetes'
+      vote: 'Votar em enquetes'
     settings:
+      discussion_polls:
+        heading: 'Enquetes de Discussão'
+        help: 'Essas configurações controlam as enquetes anexadas a posts de discussões.'
+      enable_discussion_polls: 'Ativar enquetes de discussão'
+      enable_discussion_polls_help: 'Quando ativado, os usuários podem criar enquetes em posts de discussões. Desative se quiser usar apenas enquetes globais.'
       enable_global_polls: 'Ativar enquetes globais'
-      enable_global_polls_help: 'Enquetes globais não estão vinculadas a uma postagem específica e podem ser acessadas a partir de uma página dedicada de enquetes.'
+      enable_global_polls_help: 'Enquetes globais não estão vinculadas a um post específico e podem ser acessadas em uma página própria de enquetes.'
+      enabled_poll_groups: 'Ativar grupos de enquetes'
+      enabled_poll_groups_help: 'Os grupos de enquetes permitem agrupar enquetes globais e exibi-las em uma página própria.'
       general:
-        heading: 'Ajustes Gerais'
-        help: 'Essas configurações controlam os recursos básicos da extensão de Enquetes.'
+        heading: 'Configurações Gerais'
+        help: 'Essas configurações controlam os recursos básicos da extensão de enquetes.'
       global_polls:
         heading: 'Enquetes Globais'
-        help: 'Essas configurações controlam o recurso global de enquetes.'
+        help: 'Essas configurações controlam o recurso de enquetes globais.'
       image:
         heading: 'Configurações de Imagem'
+        help: 'Configure os limites de upload e as dimensões das imagens. As imagens são convertidas automaticamente para WebP e variantes responsivas são geradas.'
+      image_dimensions_help: 'As dimensões base das imagens armazenadas. Variantes HiDPI (@2x, @3x) são geradas automaticamente quando a imagem original é grande o bastante.'
+      image_height: 'Redimensionar altura da imagem (px)'
+      image_width: 'Redimensionar largura da imagem (px)'
+      max_image_upload_size: 'Tamanho máximo de upload de imagem (KB)'
+      max_image_upload_size_help: 'O tamanho máximo de arquivo para upload de imagens, em kilobytes. As imagens são convertidas automaticamente para WebP e redimensionadas após o upload, então o tamanho final armazenado costuma ser bem menor. O padrão é 10240 KB (10 MB).'
+      max_options: 'Número máximo de opções por enquete'
+      options_color_blend: 'Mesclar cores do texto nas opções da enquete'
+      options_color_blend_help: 'Usa a mistura de cores para deixar as opções da enquete mais legíveis. Desative se este recurso causar problemas na aparência do seu fórum, reduzindo a legibilidade.'
   forum:
     answers: Respostas
+    compose:
+      add_title: 'Adicionar Enquete'
+      continue_editing: 'Continuar Editando'
+      draft_saved: 'Rascunho salvo'
+      edit_title: 'Editar Enquete'
+      polls_manager: 'Gerenciador de Enquetes'
+      polls_preview: 'Ver Enquete'
+      publish: Publicar
+      save_as_draft: 'Salvar como rascunho'
+      schedule: Agendar
+      schedule_datetime_label: 'Publicar em'
+      schedule_publication: 'Agendar publicação'
+      schedule_publication_edit: 'Editar publicação agendada'
+      schedule_submit: Agendar
+      submit: Enviar
+      success: 'Enquete salva com sucesso.'
+      update_draft: 'Atualizar rascunho'
     composer_discussion:
-      add_poll: 'Adicionar enquete'
+      add_poll: '=> fof-polls.forum.moderation.add'
       edit_poll: '=> fof-polls.forum.moderation.edit'
-    days_remaining: 'Enquete termina em {time}.'
+      no_permission_alert: 'Você não tem permissão para iniciar uma enquete.'
+    days_remaining: 'Enquete termina {time}.'
+    max_votes_allowed: 'A enquete permite votar em {max, plural, one {# opção} other {# opções}}.'
     modal:
-      add_option_label: 'Adicionar uma opção'
-      add_title: 'Adicionar enquete'
-      date_placeholder: 'Data de término da enquete (opcional)'
-      edit_title: 'Editar enquete'
-      image_option_placeholder: 'URL da imagem (opcional)'
+      add_option_label: 'Adicionar Opção'
+      add_title: 'Adicionar Enquete'
+      allow_change_vote_label: 'Permitir que os usuários alterem o voto'
+      allow_multiple_votes_label: 'Permitir votar em várias opções'
+      date_clear: 'Limpar data final'
+      date_placeholder: 'Data final da enquete (Opcional)'
+      delete: '=> core.ref.delete'
+      edit_title: 'Editar Enquete'
+      empty_answers: '{count, plural, one {# resposta está vazia — preencha-a ou remova-a.} other {# respostas estão vazias — preencha-as ou remova-as.}}'
+      error: '=> core.lib.error.generic_message'
+      hide_votes_label: 'Ocultar votos até o fim da enquete'
+      hide_votes_label_help: 'O usuário que iniciou a enquete sempre poderá ver os votos.'
+      image_option_placeholder: 'URL da Imagem (opcional)'
       include_question: 'Você deve incluir uma pergunta'
       max: 'Você pode ter no máximo {max} respostas'
+      max_votes_help: 'Defina 0 para permitir que os usuários votem em todas as opções.'
+      max_votes_label: 'Máximo de votos por usuário'
       min: 'Você deve incluir um mínimo de 2 respostas'
-      no_voters: 'Sem votos'
+      no_voters: 'Sem Votos'
       option_placeholder: Resposta
       options_label: Respostas
-      public_poll_label: 'Permitir que as pessoas vejam quem votou'
+      poll_image:
+        alt_help_text: 'Este texto é obrigatório quando há uma imagem; ele será exibido se a imagem não carregar.'
+        alt_label: 'Texto Alternativo da Imagem'
+        help: 'Envie uma imagem para ser exibida junto à enquete (opcional).'
+        label: 'Imagem da Enquete'
+        url_deprecated: 'Esta enquete usa uma URL de imagem externa. URLs externas estão obsoletas e serão removidas em uma versão futura. Reenvie a imagem usando o botão de upload.'
+      poll_option_image:
+        help: 'Envie uma imagem para ser exibida junto à resposta da enquete (opcional).'
+        label: 'Imagem da Resposta da Enquete'
+      public_poll_label: 'Permitir ver quem votou'
       question_placeholder: Pergunta
+      settings_label: Votação
       submit: Enviar
+      subtitle_placeholder: 'Subtítulo/Descrição (opcional)'
+      tooltip:
+        options:
+          add-button: 'Adicionar Resposta'
+          remove-button: 'Remover Resposta'
     moderation:
-      delete: 'Remover enquete'
+      add: 'Adicionar Enquete'
+      delete: 'Remover Enquete'
       delete_confirm: 'Tem certeza de que deseja excluir esta enquete?'
-      edit: 'Editar enquete'
+      edit: 'Editar Enquete'
     no_permission: 'Você não tem permissão para votar'
+    page:
+      nav: Enquetes
+      nav-all: 'Todas as Enquetes Globais'
+      nav-groups: 'Grupos de Enquetes'
     poll:
       cannot_change_vote: 'Você não pode alterar seu voto após votar.'
-      cannot_start_poll_button: 'Não é possível iniciar a enquete'
+      cannot_start_poll_button: 'Impossível Iniciar Enquete'
+      draft_label: Rascunho
+      scheduled_error_tooltip: 'Esta publicação agendada falhou. Abra a enquete para ver o motivo.'
+      scheduled_label: 'Agendada para {date}'
       start_poll_button: 'Iniciar Enquete Global'
-      submit_button: Voto
+      submit_button: Votar
+      total_votes: '{count, plural, one {# voto registrado} other {# votos registrados}}'
     poll_controls:
+      cancel_schedule_label: 'Cancelar publicação agendada'
+      cancel_schedule_success: 'Publicação agendada cancelada.'
       delete_confirmation: 'Tem certeza de que deseja excluir esta enquete?'
+      delete_error_message: 'Algo deu errado ao excluir a enquete.'
       delete_label: '=> core.ref.delete'
       delete_success_message: 'Enquete excluída com sucesso.'
       edit_label: '=> core.ref.edit'
+      edit_schedule_publish_label: 'Editar publicação agendada'
+      publish_label: 'Publicar agora'
+      publish_success: 'Enquete publicada.'
+      schedule_publish_label: 'Agendar publicação'
+      toggle_dropdown_accessible_label: 'Alternar menu de controles da enquete'
+      unpublish_confirmation: 'Voltar esta enquete para rascunho? Ela sairá da vitrine.'
+      unpublish_error_has_votes: 'Não é possível despublicar — a enquete já tem votos. Em vez disso, exclua-a.'
+      unpublish_label: 'Voltar para rascunho'
+      unpublish_success: 'Enquete movida para rascunho.'
       view_label: '=> core.ref.view'
     poll_ended: 'Esta enquete terminou.'
+    poll_form:
+      delete: 'Excluir Enquete'
+      error: 'Ocorreu um erro ao salvar a enquete, contate um administrador.'
+    poll_groups:
+      composer:
+        add_title: 'Adicionar Grupo de Enquetes'
+        delete: 'Excluir Grupo de Enquetes'
+        edit_title: 'Editar Grupo de Enquetes'
+        error: 'Ocorreu um erro ao salvar o grupo de enquetes, contate um administrador.'
+        groups_manager: 'Gerenciador de Grupos de Enquetes'
+        name_label: Nome
+        name_required: 'Um grupo de enquetes precisa de um nome.'
+        save_changes: '=> core.ref.save_changes'
+        success: 'Grupo de enquetes salvo com sucesso.'
+        view_group: 'Ver Grupo de Enquetes'
+      controls:
+        add_poll_label: 'Adicionar Enquete'
+        delete_confirmation: 'Tem certeza de que deseja excluir este grupo de enquetes?'
+        delete_error_message: 'Algo deu errado ao excluir o grupo de enquetes.'
+        delete_label: '=> core.ref.delete'
+        delete_success_message: 'Grupo de enquetes excluído com sucesso.'
+        edit_label: '=> core.ref.edit'
+        view_label: 'Ver Grupo de Enquetes'
+      list_page:
+        add_poll_button: 'Adicionar Enquete ao Grupo'
+        cannot_start_poll_group_button: 'Impossível Iniciar Grupo de Enquetes'
+        empty_text: 'Parece que não há grupos de enquetes aqui.'
+        load_more_button: '=> core.ref.load_more'
+        no_polls: 'Não há enquetes neste grupo.'
+        start_poll_group_button: 'Iniciar Grupo de Enquetes'
+        title: 'Grupos de Enquetes'
     poll_never_ends: 'Enquete nunca termina'
-    polls_count: '{count, plural, one { {count} voto} other {{count} votos}}'
-    public_poll: 'Veja quem votou'
+    polls_count: '{count, plural, one {# voto} other {# votos}}'
+    polls_list:
+      empty_text: 'Parece que não há enquetes da comunidade aqui.'
+      load_more_button: '=> core.ref.load_more'
+      sort_dropdown:
+        least_voted: 'Menos Votadas'
+        most_voted: 'Mais Votadas'
+        newest: 'Mais novas'
+        oldest: 'Mais antigas'
+        sort_dropdown:
+          default: '=> fof-polls.forum.polls_list.sort_dropdown.newest'
+      status_filter:
+        all: Todas
+        draft: Rascunhos
+        published: Publicadas
+    polls_page:
+      title: Enquetes
+    public_poll: 'Ver quem votou'
+    showcase:
+      active-polls: 'Enquetes Ativas'
+      ended-polls: 'Enquetes Encerradas'
+      no-active-polls: 'Não há enquetes ativas no momento.'
+      no-recent-polls: 'Não há enquetes encerradas recentemente no momento.'
     tooltip:
       badge: Enquete
-      votes: '{count, plural, one {# vote} other {# votes} }'
+      votes: '{count, plural, one {# voto} other {# votos}}'
+    upload_image:
+      remove_button: 'Excluir Imagem'
+      upload_button: 'Enviar Imagem'
     votes_modal:
-      title: 'Veja quem votou'
+      title: Votantes

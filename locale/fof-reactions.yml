@@ -5,46 +5,76 @@
 fof-reactions:
   admin:
     page:
+      cdn:
+        default-url: 'Padrão: {url}'
+        help: "Por padrão, servimos os assets das reações pela CDN da Cloudflare. Você também pode especificar qualquer outro endereço de CDN,\nse necessário. <code>[codepoint]</code> será substituído pelo codepoint do emoji.\n\nPor exemplo, para mudar para o Noto Emoji via jsdelivr, você digitaria <code>https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@v2.040/svg/emoji_u[codepoint].svg</code>.\n\nSua CDN deve ser compatível com Emoji/Unicode {emojibase} ou posterior. Use [twemoji] para inserir a versão do Twemoji.\n"
+        label: URL
+        title: CDN
       convert:
         button: 'Converter reações antigas'
-        converted: 'Todas as {number} curtidas foram convertidas com sucesso'
+        converted: 'Todas as {number} curtidas foram convertidas'
         converting: 'Suas reações estão sendo convertidas. Atualize seu site após alguns minutos para ver o processo concluído. (O tempo de conversão pode demorar um pouco, dependendo do número total de reações)'
         help: 'Se você acabou de atualizar sua extensão, suas reações terão que ser convertidas. Se você acabou de instalar esta extensão, pode ignorar esta mensagem.'
       reactions:
-        Helptext: 'Entre o nome (identificador) do emoji ou ícone font-awesome e selecione qual tipo você deseja.'
+        Helptext: 'Digite o nome (identificador) do emoji ou ícone font-awesome e selecione o tipo desejado.'
+        add_reaction_button: 'Adicionar reação'
+        add_reaction_label: 'Adicionar uma nova reação'
+        delete_confirmation: 'Tem certeza de que deseja excluir esta reação? Esta ação não pode ser desfeita.'
+        delete_reaction_button: 'Excluir reação'
+        header:
+          action: Ação
+          display: 'Texto de Exibição'
+          enabled: Ativado
+          identifier: 'Identificador do Ícone/Emoji'
+          preview: Prévia
+          type: Tipo
         help:
           display: Exibição
           identifier: Identificador
         reactions: 'Reações Atuais'
-        title: 'Reações Customizáveis'
+        title: Reações
       settings:
+        allow-anonymous: 'Permitir reações anônimas (de convidados)'
+        allow-anonymous-help: 'Se ativado, convidados e usuários anônimos poderão reagir aos posts. Observe que as reações anônimas não serão vinculadas a um perfil de usuário e serão agregadas na lista de reações.'
         integrations:
           gamification:
-            downvoteHelptext: 'Entre o identificador da reação que você gostaria de converter automaticamente em um voto negativo'
+            downvoteHelptext: 'Digite o identificador da reação que deseja converter automaticamente em voto negativo'
             downvoteLabel: 'Converter reações em votos negativos'
-            legend: Gameficação
-            upvoteHelptext: 'Entre o identificador da reação que você gostaria de converter automaticamente em um voto positivo'
+            legend: Gamificação
+            upvoteHelptext: 'Digite o identificador da reação que deseja converter automaticamente em voto positivo'
             upvoteLabel: 'Converter reações em votos positivos'
           legend: Integrações
           likes:
-            Helptext: 'Entre o identificador da reação que você gostaria de converter automaticamente em uma curtida'
+            Helptext: 'Digite o identificador da reação que deseja converter automaticamente em curtida'
             Label: 'Converter reações em curtidas'
             legend: Curtidas
-          warning: 'A mesma reação <strong>não</strong> pode ser convertida em um like <strong>e</strong> em um voto positivo'
-        react_own_posts_help: 'Quando ativado, sujeito à permissão, os usuários podem reagir às suas próprias postagens no fórum. Para evitar que os usuários reajam em suas próprias postagens, desative essa configuração.'
-        react_own_posts_label: 'Usuários podem reagir às suas próprias postagens'
+          warning: 'A mesma reação <strong>não</strong> pode ser convertida em uma curtida <strong>e</strong> em um voto positivo'
+        react_own_posts_help: 'Quando ativado, sujeito à permissão, os usuários podem reagir aos próprios posts no fórum. Para impedir que os usuários reajam aos próprios posts, desative esta configuração.'
+        react_own_posts_label: 'Usuários podem reagir aos próprios posts'
         save_settings: 'Salvar Alterações'
     permissions:
+      delete_post_reactions_label: 'Excluir reações em posts'
       react_posts_label: 'Reagir a posts'
-      see_reactions_label: 'Veja quem reagiu a posts'
+      see_reactions_label: 'Ver quem reagiu aos posts'
   forum:
-    disabled-reaction: 'Você não pode usar esta reação neste momento, por favor atualize a página'
+    disabled-reaction: 'Você não pode usar esta reação agora, atualize a página'
     mod_item: 'Ver Reações'
     modal:
+      anonymous_count: '{count, plural, one {# usuário anônimo} other {# usuários anônimos}}'
+      confirm_remove_all_reaction_type: 'Tem certeza de que deseja remover todas as reações {reaction} deste post? Esta ação não pode ser desfeita.'
+      confirm_remove_user_reaction: 'Tem certeza de que deseja remover a reação {reaction} de {username} deste post? Esta ação não pode ser desfeita.'
+      load_more: 'Carregar mais'
+      no_reactions: 'Nenhuma reação ainda'
+      others_count: '+ {count, plural, one {# outro} other {# outros}}'
+      remove_all_reaction_type: 'Remover todas as reações {reaction}'
+      remove_user_reaction: 'Remover reação'
       title: Reações
     notification: '{username} reagiu com {reaction} ao seu post'
     react_button_label: Reagir
+    reacted_with_label: '{count, plural, one {{reaction} (# reação)} other {{reaction} (# reações)}}'
     reacting-own-post: 'Você não pode reagir ao seu próprio post'
+    reaction_button_label: 'Reagir com {reaction}'
     settings:
-      notify_post_reacted_label: 'Alguém reagiu a um dos meus posts'
+      notify_post_reacted_label: 'Alguém reage a um dos meus posts'
+    unreact_button_label: 'Remover reação'
     warning: 'Sua reação foi convertida'

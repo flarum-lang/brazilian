@@ -2,14 +2,27 @@
 # Use https://weblate.rob006.net/projects/flarum2/fof-user-bio/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-audit:
+  lib:
+    browser:
+      user:
+        bio_changed: 'Editou a bio de {username}'
 fof-user-bio:
   admin:
     permission:
-      editAny: 'Edite qualquer bio'
+      editAny: 'Editar qualquer bio'
       editOwn: 'Editar a própria bio'
       view: 'Ver bio'
     setting:
+      allowFormatting: 'Permitir formatação na bio'
+      allowFormatting_help: 'Por design, esta formatação é separada da formatação de posts. Se as extensões BBCode e/ou Markdown estiverem ativadas, elas estarão disponíveis para formatar a bio. Imagens e embeds não são permitidos. Extensões que estendem o formatador do Flarum devem adicionar *explicitamente* suporte ao formatador da bio.'
       bioLimit: 'Limite de caracteres da bio'
+      maxLines: 'Máximo de linhas exibidas por vez'
   forum:
+    profile:
+      cancel_button: Cancelar
+      cancel_confirm: 'Tem certeza de que deseja cancelar a edição da sua bio? Você perderá as alterações feitas.'
+      edit_bio_label: 'Editar bio'
+      save_button: Salvar
     userbioPlaceholder: 'Escreva algo sobre você'
-    userbioPlaceholderOtherUser: 'Escreva uma biografia para {username}'
+    userbioPlaceholderOtherUser: 'Escreva uma bio para {username}'

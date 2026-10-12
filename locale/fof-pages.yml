@@ -6,15 +6,15 @@ fof-pages:
   admin:
     badges:
       hidden: Rascunho
-      restricted: Restrito
+      restricted: Restrita
     edit_page:
       content_label: '=> fof-pages.ref.content'
       content_placeholder: '=> fof-pages.ref.content'
-      delete_page_button: 'Apagar página'
-      delete_page_confirmation: 'Tem certeza que deseja apagar essa página?'
+      delete_page_button: 'Excluir página'
+      delete_page_confirmation: 'Tem certeza de que deseja excluir esta página?'
       hidden_label: 'Salvar como rascunho'
-      html_label: 'Habilitar HTML'
-      restricted_label: 'Restringir o acesso (configure quem pode acessar na guia Permissões)'
+      html_label: 'Ativar HTML'
+      restricted_label: 'Restringir o acesso (configure quem pode acessar na aba Permissões)'
       set_as_home_page_confirmation: 'Tem certeza de que deseja definir esta página como sua página inicial?'
       set_as_home_page_done: 'Página inicial atualizada'
       slug_label: '=> fof-pages.ref.slug'
@@ -33,9 +33,9 @@ fof-pages:
     permissions:
       restricted: 'Ver páginas restritas'
   ref:
-    content: Contente
+    content: Conteúdo
     create_page: 'Criar página'
     pages: Páginas
-    slug: Lesma
+    slug: Slug
     title: Título
     url: URL

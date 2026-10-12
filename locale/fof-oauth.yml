@@ -4,15 +4,26 @@
 
 fof-oauth:
   admin:
-    configure_button_label: 'Configurar com FoF OAuth'
+    configure_button_label: 'Configurar com o FoF OAuth'
+    permissions:
+      moderate_user_providers: 'Moderar as contas vinculadas dos usuários'
     settings:
-      only_icons_label: 'Mostrar apenas os ícones do botão de login (layout alternativo)'
+      advanced:
+        heading: Avançado
+        log-oauth-errors-help: 'Se ativado, os erros de OAuth serão registrados no log do Flarum. Isso pode ajudar a depurar problemas de OAuth, mas também pode conter informações sensíveis.'
+        log-oauth-errors-label: 'Registrar erros de OAuth'
+      disable_avatars_help: "Se ativado, o avatar do usuário não será atualizado para o avatar do provedor no cadastro. Isso afeta apenas cadastros futuros e não altera o avatar de usuários existentes.\n"
+      disable_avatars_label: 'Desativar avatares do provedor'
+      oauth_only_help: "Se ativado, os membros não podem mais entrar, cadastrar-se ou redefinir a senha com uma senha; eles usam os provedores ativados. Os administradores mantêm o login por senha, pelo link \"Login do administrador\" no modal de login. Membros existentes sem um provedor vinculado são vinculados no primeiro login por um provedor, se ele confirmar o mesmo endereço de e-mail; qualquer outra pessoa precisará da ajuda de um administrador. Não tem efeito enquanto nenhum provedor estiver ativado. Mantenha \"Cadastrar-se\" definido como \"Aberto\" em Permissões; caso contrário, novos membros também não poderão se cadastrar com um provedor.\n"
+      oauth_only_label: 'Permitir login e cadastro apenas com provedores OAuth'
+      oauth_only_sign_up_closed_warning: 'O cadastro está definido como Fechado em <a>Permissões</a>. O Flarum também usa essa configuração para cadastros por provedores, então ninguém pode se cadastrar enquanto estiver fechado.'
+      only_icons_label: 'Mostrar apenas os ícones dos botões de login (layout alternativo)'
       providers:
-        callback_url_text: 'Se necessário, defina o URL de retorno de chamada como {url}.'
+        callback_url_text: 'Se necessário, defina a URL de callback como {url}.'
         discord:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
           client_secret_label: '=> fof-oauth.ref.settings.client_secret'
-          description: 'Crie um aplicativo em {link}. Adicione o URL de redirecionamento na guia OAuth2.'
+          description: 'Crie um aplicativo em {link}. Adicione a URL de redirecionamento na aba OAuth2.'
         facebook:
           app_id_label: '=> fof-oauth.ref.settings.app_id'
           app_secret_label: '=> fof-oauth.ref.settings.app_secret'
@@ -24,27 +35,45 @@ fof-oauth:
         gitlab:
           client_id_label: '=> fof-oauth.ref.settings.app_id'
           client_secret_label: '=> fof-oauth.ref.settings.app_secret'
-          description: 'Crie um aplicativo em {link}. Dê ao aplicativo o escopo de <code>read_user</code>.'
-          domain_label: 'Domínio GitLab'
+          description: 'Crie um aplicativo em {link}. Dê ao aplicativo o escopo <code>read_user</code>.'
+          domain_label: 'Domínio do GitLab'
         google:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
           client_secret_label: '=> fof-oauth.ref.settings.client_secret'
-          description: 'Criar uma aplicação em {link}.'
+          description: 'Crie um aplicativo em {link}.'
+          hosted_domain_label: 'Domínio Hospedado (G suite/Google Apps for Business, opcional)'
+        group_help: 'Selecione um grupo para atribuir automaticamente aos usuários que se cadastrarem usando este provedor.'
+        group_label: 'Atribuir Grupo'
         linkedin:
           client_id_label: '=> fof-oauth.ref.settings.client_id'
           client_secret_label: '=> fof-oauth.ref.settings.client_secret'
-          description: 'Criar uma aplicação em {link}.'
+          description: 'Crie um aplicativo em {link}.'
+        no_group_label: 'Sem atribuição de grupo'
         twitter:
           api_key_label: 'Chave API'
           api_secret_label: 'Segredo da API'
           description: 'Crie um aplicativo em {link}. Você precisará definir um URL de Termos de Serviço e um URL de Política de Privacidade. Certifique-se de adicionar a permissão de e-mail de solicitação.'
-    settings_accessibility_label: '{name} configurações'
+      update_email_from_provider_help: 'Se ativado, ao entrar com um provedor OAuth cujo e-mail verificado seja diferente do e-mail do usuário no fórum, um link de confirmação é enviado ao novo endereço e um aviso ao atual. O e-mail muda quando o link é acessado. Provedores que não conseguem confirmar que o endereço é verificado, incluindo provedores de terceiros que não foram atualizados para oferecer esse suporte, não alteram o endereço de e-mail.'
+      update_email_from_provider_label: 'Atualizar o endereço de e-mail pelo provedor'
+    settings_accessibility_label: 'Configurações de {name}'
+  email:
+    provider_email_change_notice:
+      body: "Depois que você entrou em {forum} com {provider}, foi solicitada a alteração do endereço de e-mail da sua conta para {new_email}. A alteração entra em vigor quando o novo endereço for confirmado.\n\nSe não foi você, sua conta {provider} pode estar comprometida. Proteja-a e entre em contato com os administradores de {forum}.\n"
+      subject: 'Alteração de Endereço de E-mail Solicitada'
   forum:
+    account_linked:
+      body: 'Sua conta <strong>{username}</strong> em {forum} agora está vinculada a {provider}. De agora em diante, você pode entrar com a senha do fórum ou com {provider}.'
+      dismiss_button: Entendi
+      title: 'Conta vinculada'
     error:
-      bad_verification_code: 'Token de verificação inválido ou expirado. Por favor, tente novamente.'
-      invalid_state: 'Estado inválido. Por favor, tente novamente.'
+      already_linked: 'Esta conta já está vinculada a outro usuário.'
+      bad_verification_code: 'Token de verificação inválido ou expirado. Tente novamente.'
+      invalid_state: 'Estado inválido. Tente novamente.'
     log_in:
-      with_button: 'Logar com {provider}'
+      admin_log_in_link: 'Login do administrador'
+      unverified_email_in_use: '{provider} não confirmou este endereço de e-mail, então não podemos usá-lo para o seu login. Se você já tem uma conta, entre abaixo e depois vincule {provider} nas configurações da sua conta.'
+      unverified_email_in_use_oauth_only: '{provider} não confirmou este endereço de e-mail, então não podemos usá-lo para o seu login. Confirme o endereço com {provider} e tente novamente, ou peça ajuda a um administrador.'
+      with_button: 'Entrar com {provider}'
       with_discord_button: '=> fof-oauth.forum.log_in.with_button'
       with_facebook_button: '=> fof-oauth.forum.log_in.with_button'
       with_github_button: '=> fof-oauth.forum.log_in.with_button'
@@ -61,19 +90,24 @@ fof-oauth:
       linkedin: '=> fof-oauth.lib.providers.linkedin'
       twitter: '=> fof-oauth.lib.providers.twitter'
     signup:
-      username_help: 'Escolha um nome de usuário para ser conhecido aqui'
-    unlink: Remover
+      username_help: 'Escolha o nome de usuário que você usará aqui'
+    unlink: 'Remover vínculo'
     user:
       settings:
         linked-account:
           help: 'Essas contas vinculadas permitem que você entre no fórum usando outros provedores.'
-          identifier-label: '{provider} ID'
-          label: 'Contas conectadas'
-          last-used-label: 'Usado por último'
-          link-created-label: 'Conta conectada'
-          orphaned-account: 'Você já fez login por meio desse provedor anteriormente, mas este fórum desativou o login com esse método desde então.'
-          unlink-confirm: 'Tem certeza de que deseja remover o link com {provider}? Você não poderá mais entrar neste fórum, a menos que faça uma nova autenticação no futuro.'
+          identification-label: 'ID do {provider}'
+          identifier-label: 'ID do {provider}'
+          label: 'Contas vinculadas'
+          last-used-label: 'Último uso'
+          link-created-label: 'Vínculo criado'
+          orphaned-account: 'Você já entrou por este provedor antes, mas desde então este fórum desativou o login por esse método.'
+          unlink-confirm: 'Tem certeza de que deseja remover o vínculo com {provider}? Você não poderá mais entrar neste fórum, a menos que se autentique novamente no futuro.'
   lib:
+    gambits:
+      sso:
+        hint: 'um provedor de login'
+        key: sso
     providers:
       discord: Discord
       facebook: Facebook

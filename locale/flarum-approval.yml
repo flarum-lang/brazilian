@@ -17,3 +17,10 @@ flarum-approval:
       approve_button: Aprovar
   ref:
     awaiting_approval: 'Aguardando aprovação'
+flarum-audit:
+  lib:
+    browser:
+      discussion:
+        approved: 'Aprovou {discussion}'
+      post:
+        approved: 'Aprovou o {post} de {postuser} em {discussion}'

@@ -2,26 +2,46 @@
 # Use https://weblate.rob006.net/projects/flarum2/fof-upload/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-gdpr:
+  lib:
+    data:
+      uploads:
+        anonymize_description: 'Remove a referência ao usuário dos arquivos enviados. Os arquivos em si continuam acessíveis aos usuários que podiam vê-los antes da anonimização.'
+        delete_description: 'Exclui todos os arquivos enviados pelo usuário.'
+        export_description: 'Todos os arquivos enviados pelo usuário.'
 fof-upload:
   admin:
     help_texts:
-      client_extension: "Por padrão, o Upload escolherá uma extensão de arquivo segura com base no tipo MIME.\nPara alguns tipos de arquivo baseados em ZIP ou dados binários, isso pode resultar no uso de extensões genéricas em vez da esperada.\nAqui você pode inserir uma lista separada por vírgulas de extensões de arquivo que serão mantidas na íntegra.\n"
-      composer_buttons: "Por padrão, o botão do gerenciador de mídia e o botão de upload estão visíveis. Você também pode optar por exibir apenas um botão.\n"
-      disable-download-logging: "Desative o registro de todos os downloads feitos por usuários do seu fórum. Mantê-lo ativado permite visualizar o número de downloads e outras métricas no futuro próximo.\n"
-      disable-hotlink-protection: "A proteção de Hotlink impede a abertura de downloads de outros sites. O método atual requer um token csrf e um ID de postagem.\n"
-      download_templates: "Os modelos de download são como os uploads são mostrados em seu fórum, por exemplo, como visualizações, botões. Disponível atualmente:\n"
-      resize: "Escolha se deseja redimensionar suas imagens antes de serem carregadas. Você pode escolher uma largura e altura máximas, em pixels. O processo de redimensionamento mantém a proporção das imagens.\n"
-      s3_acl: "A ACL que deve ser aplicada ao objeto carregado (padrão: privado). Para valores possíveis, consulte https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl\n"
+      client_extension: "Por padrão, o Upload escolhe uma extensão de arquivo segura com base no tipo MIME.\nPara alguns tipos de arquivo baseados em ZIP ou em dados binários, isso pode resultar no uso de extensões genéricas em vez da esperada.\nAqui você pode informar uma lista de extensões de arquivo, separadas por vírgula, que serão mantidas como estão.\n"
+      composer_buttons: "Por padrão, o botão do gerenciador de mídia e o botão de upload ficam visíveis. Você também pode optar por exibir apenas um deles.\n"
+      custom_s3_url: "A URL base pública de onde seus arquivos são servidos — uma CDN ou um domínio personalizado à frente do bucket.\nDeixe em branco para usar a URL padrão do provedor. Deve incluir <code>https://</code>.\n"
+      disable-download-logging: "Desativa o registro de cada download feito pelos usuários do fórum. Mantê-lo ativado permitirá ver o número de downloads e outras métricas em um futuro próximo.\n"
+      disable-hotlink-protection: "A proteção de hotlink impede a abertura de downloads a partir de outros sites. O método atual requer um token csrf e o ID do post.\n"
+      download_templates: "Os modelos de download definem como os uploads são mostrados no fórum, ex.: como prévias ou botões. Disponíveis atualmente:\n"
+      local_cdn: "Opcional. Se você serve <code>assets/files</code> por uma CDN, informe a URL base dela e os links dos arquivos enviados a usarão.\nDeixe em branco para servir os arquivos diretamente do fórum.\n"
+      mime_order: "As regras são avaliadas de cima para baixo e a primeira correspondência vence; por isso, coloque as regras mais específicas acima das gerais.\n"
+      mime_types: "Decida quais arquivos os membros podem enviar, onde cada tipo é armazenado e como aparece em um post.\n"
+      resize: "Escolha se deseja redimensionar suas imagens antes de serem enviadas. Você pode escolher uma largura e uma altura máximas, em pixels. O redimensionamento mantém a proporção das imagens.\n"
+      s3_acl: "Aplicada a cada objeto enviado. Deixe em branco para usar o padrão do provedor (geralmente privado).\nUse <code>public-read</code> se os arquivos precisarem ser lidos diretamente do bucket.\n"
+      s3_acl_unsupported: "{provider} não oferece suporte a ACLs. Controle o acesso público no dashboard do próprio provedor.\n"
       s3_compatible_storage: "As configurações a seguir são necessárias apenas ao usar armazenamento compatível com S3. Se você usa a AWS, pode deixá-los em branco.\n"
-      s3_instance_profile: "Deixe a chave e o segredo vazios para usar credenciais no perfil da instância.\n"
-      watermark: "Escolha se as imagens terão uma marca d'água adicionada durante o upload. As marcas d'água são adicionadas a não-gifs com base nas suas preferências abaixo.\n"
+      s3_endpoint: "A URL da API S3 do provedor — não a URL pública do seu bucket. O Amazon S3 não precisa de uma.\n"
+      s3_instance_profile: "Deixe ambos em branco para usar uma função do IAM (IAM role) — só funciona em EC2, ECS ou EKS.\n"
+      s3_path_style: "Coloca o bucket no caminho da URL em vez do hostname. Exigido por MinIO e Cloudflare R2;\ndefinido automaticamente quando você escolhe um provedor.\n"
+      s3_provider: "Escolher o provedor define o formato do endpoint, o estilo de endereçamento e o suporte a ACL abaixo. Escolha \"Other S3-compatible\"\nse o seu não estiver na lista.\n"
+      storage_configure_another: "Há outros serviços de armazenamento instalados, mas ainda não configurados. Configurar um deles não muda o destino dos arquivos\naté que você o atribua a um tipo de arquivo.\n"
+      storage_intro: "Os serviços que você configurou, ou que algum tipo de arquivo usa, são mostrados aqui. Você pode configurar um serviço\nantes de apontar qualquer tipo de arquivo para ele — atribua-o na aba Arquivos quando estiver tudo pronto.\n"
+      storage_not_installed: 'Procurando Amazon S3, Cloudflare R2 ou Qiniu? Eles precisam de um pacote extra — veja <a>como instalar adaptadores de armazenamento</a>.'
+      thumbnail_quality: "Qualidade de codificação de 1 a 100, aplicada às miniaturas WebP e JPEG. Valores mais altos ficam mais nítidos,\nmas geram arquivos maiores. Miniaturas GIF e PNG não têm perdas e ignoram esta configuração.\nAs miniaturas existentes mantêm a qualidade atual até serem regeneradas com o comando de backfill.\n"
+      thumbnails: "Gera uma miniatura reduzida das imagens no momento do upload. A miniatura é exibida no post;\nclicar nela abre o arquivo original em resolução total em uma nova aba. As miniaturas reduzem\nbastante o consumo de banda e o peso das páginas em fóruns com muitas imagens grandes.\n"
+      watermark: "Escolha se as imagens receberão uma marca d'água durante o upload. As marcas d'água são adicionadas a imagens que não sejam GIF, com base nas preferências abaixo.\n"
     inspect-mime:
-      description: "O FoF Upload usa a biblioteca <a>PHP Mime Detector</a> para tipos MIME comuns e PHP Fileinfo como um substituto.\nO valor MIME retornado por Fileinfo pode ser diferente de servidor para servidor!\n"
-      guessed-extension: 'Extensão de arquivo padrão (se o original não estiver na lista de permissões)'
-      laravel-validation: 'Validação do arquivo Laravel'
-      mime-detector: 'Detector MIME (primário)'
-      mime-fileinfo: 'PHP Fileinfo (retorno)'
-      no-file-selected: 'Nenhum arquivo'
+      description: "O FoF Upload usa a biblioteca <a>PHP Mime Detector</a> para tipos MIME comuns e o PHP Fileinfo como fallback.\nO valor MIME retornado pelo Fileinfo pode variar de servidor para servidor!\n"
+      guessed-extension: 'Extensão de arquivo padrão (se a original não for permitida)'
+      laravel-validation: 'Validação de Arquivo do Laravel'
+      mime-detector: 'Mime Detector (primário)'
+      mime-fileinfo: 'PHP Fileinfo (fallback)'
+      no-file-selected: 'Sem arquivo'
       not-available: 'Sem resultado'
       select: 'Selecione um arquivo abaixo para inspecionar os valores que serão usados. O arquivo não será salvo.'
       title: 'Inspecionar MIME'
@@ -29,103 +49,241 @@ fof-upload:
       validation-passed: Passou
     labels:
       aws-s3:
-        acl: 'Lista de controle de acesso (ACL)'
-        advanced_title: 'Configurações avançadas de armazenamento S3'
+        acl: 'Lista de Controle de Acesso (ACL)'
+        advanced_title: 'Opções avançadas'
+        bucket: Bucket
+        custom_url: 'URL Pública'
         endpoint: Endpoint
-        key: Chave
+        key: 'ID da chave de acesso'
+        provider: Provedor
         region: Região
-        title: 'Configurações de armazenamento do AWS S3'
-        use_path_style_endpoint: 'Use o estilo de caminho do endpoint'
+        secret: 'Chave de acesso secreta'
+        title: 'Armazenamento S3'
+        use_path_style_endpoint: 'Usar endereçamento por caminho'
       client_extension:
-        title: 'Extensões de arquivo fornecidas pelo usuário'
+        placeholder: 'ex.: docx, xlsx, epub'
+        title: 'Extensões informadas pelo usuário'
       composer_buttons:
         options:
           both: Ambos
-          media-btn: 'Apenas botão do gerenciador de mídia'
-          upload-btn: 'Apenas botão de upload'
-        title: 'Botões do Composer'
+          media-btn: 'Só o botão do gerenciador de mídia'
+          upload-btn: 'Só o botão de upload'
+        title: 'Botões do editor'
+      configured_by_environment: 'Suas configurações de armazenamento foram pré-configuradas por variáveis de ambiente.'
       disable-download-logging:
-        title: 'Desativar logging de downloads'
+        title: 'Desativar o registro de downloads'
         toggle: Desativar
       disable-hotlink-protection:
         title: 'Desativar proteção de hotlink'
         toggle: Desativar
       imgur:
-        client_id: 'ID do cliente Imgur'
-        title: 'Configurações de armazenamento de imagens Imgur'
+        client_id: 'ID de cliente do Imgur'
+        deprecated: 'O Imgur não emite mais IDs de cliente de API, então este adaptador está obsoleto e será removido em uma versão futura. Mova esses tipos de arquivo para outro adaptador de armazenamento.'
+        title: 'Configurações do armazenamento Imgur'
         tos: 'É sua responsabilidade garantir que os usuários do fórum cumpram os <a>Termos de serviço</a> do Imgur'
-      inspect-mime: 'Tipo MIME do arquivo de teste'
+      inspect-mime: 'Testar MIME do arquivo'
       local:
-        cdn_url: 'URL de entrega de conteúdo (arquivos de prefixos)'
+        cdn_url: 'URL de Entrega de Conteúdo (prefixo dos arquivos)'
         title: 'Configurações de armazenamento local'
+      mime_presets:
+        archives: 'Arquivos compactados (zip, tar, 7z)'
+        audio: Áudio
+        documents: 'Documentos Word'
+        images: Imagens
+        pdf: 'Documentos PDF'
+        php_ini_values: 'Os valores do seu <code>php.ini</code> são <code>post_max_size={post}</code> e <code>upload_max_filesize={upload}</code>. Garanta que o valor definido aqui fique abaixo desses limites, ou ajuste-os. Se usar <code>Nginx</code>, garanta também que <code>client_max_body_size</code> seja suficiente para o limite máximo escolhido.'
+        spreadsheets: Planilhas
+        title: 'Preferências gerais'
+        video: Vídeo
       preferences:
-        max_file_size: 'Tamanho máximo do arquivo (em kilobytes)'
-        mime_types: 'Configure seu tipo MIME, faça o upload do mapeamento do adaptador'
+        max_file_size: 'Tamanho máximo do arquivo'
+        max_file_size_equivalent: 'Armazenado como <code>{kb}</code> KB ({value}).'
+        mime_add_custom: 'Expressão personalizada…'
+        mime_add_prompt: 'Adicionar tipos de arquivo…'
+        mime_add_subtype: 'Adicionar formato de arquivo'
+        mime_add_subtype_placeholder: 'ex.: webp'
+        mime_advanced_pattern: 'Expressão avançada'
+        mime_column_display: 'Exibido como'
+        mime_column_display_help: 'Como o arquivo aparece em um post — uma prévia no próprio post, um botão de download e assim por diante.'
+        mime_column_pattern: 'Tipo de arquivo'
+        mime_column_pattern_help: 'Os tipos de arquivo aos quais esta regra se aplica, comparados com o tipo MIME do arquivo.'
+        mime_column_permission: 'Rótulo da permissão'
+        mime_column_permission_help: 'Opcional. Dar um nome a um grupo aqui cria uma permissão para você controlar quem pode enviar esses arquivos.'
+        mime_column_storage: 'Armazenado em'
+        mime_column_storage_help: 'Para qual serviço de armazenamento os arquivos deste tipo são enviados.'
+        mime_edit_pattern: 'Editar expressão'
+        mime_move_down: 'Mover para baixo (avaliada depois)'
+        mime_move_up: 'Mover para cima (avaliada antes)'
+        mime_remove_subtype: 'Remover {subtype}'
+        mime_type_add: 'Adicionar este tipo de arquivo'
+        mime_type_permission_placeholder: 'Opcional, ex.: Imagens'
+        mime_type_regex_invalid: 'Regex inválida (ex.: alternativas vazias como ||)'
+        mime_type_regex_placeholder: 'ex.: ^image/(jpeg|png|gif)$'
+        mime_type_remove: 'Remover este tipo de arquivo'
+        mime_types: 'Tipos de arquivo'
+        mime_use_simple: 'Usar editor simples'
         php_ini_values: 'Seus valores de <code>php.ini</code> são <code>post_max_size={post}</code> e <code>upload_max_filesize={upload}</code>. Certifique-se de que o valor definido aqui esteja abaixo desses limites ou ajuste-os de acordo. Se estiver usando <code>Nginx</code>, verifique também se <code>client_max_body_size</code> tem tamanho suficiente para o limite máximo escolhido.'
         title: 'Preferências Gerais'
       qiniu:
+        bucket: Bucket
         key: Chave
         secret: Segredo
-        title: 'Configurações de armazenamento Qiniu'
+        title: 'Configurações do armazenamento Qiniu'
       resize:
         max_width: 'Largura/altura máxima da imagem'
-        title: 'Redimensionamento da imagem'
+        title: 'Redimensionar imagens'
         toggle: 'Redimensionar imagens'
+      storage:
+        configure_another: 'Configurar outro serviço de armazenamento ({count} disponíveis)'
+        hide_unused: 'Ocultar serviços que não estão em uso'
+      svg-sanitizer:
+        allow_animate: 'Permitir animações SVG'
+        allow_animate_help: 'Ativar animações SVG pode introduzir vulnerabilidades de segurança, pois SVGs animados podem conter código malicioso. Ative esta configuração por sua conta e risco e somente se confiar nos seus usuários.'
+        help: 'Configure como os arquivos SVG são processados e sanitizados no upload. Arquivos SVG podem conter scripts potencialmente perigosos e devem ser tratados com cuidado. Os SVGs enviados são sanitizados no upload, e scripts e tags perigosos são removidos.'
+        title: 'Sanitizador de SVG'
+      thumbnails:
+        max_width: 'Largura máxima da miniatura (px)'
+        quality: 'Qualidade da miniatura'
+        title: 'Miniaturas de imagens'
+        toggle: 'Gerar miniaturas no upload'
+        webp_toggle: 'Codificar miniaturas em WebP (recomendado, ~30% menores)'
       watermark:
-        file: 'Carregue sua imagem watermark'
+        file: 'Envie sua imagem de marca d''água'
+        opacity: 'Opacidade da marca d''água (0–100)'
+        padding: 'Distância da borda (px)'
         position: 'Posição da marca d''água'
-        title: 'Imagens de marca d''água'
-        toggle: 'Imagens de marca d''água'
+        size_percent: 'Tamanho da marca d''água (% da largura da imagem)'
+        title: 'Marca d''água em imagens'
+        toggle: 'Aplicar marca d''água'
+    nav:
+      shared-uploads-button: 'Uploads compartilhados'
     pane:
       description: 'Configure serviços e preferências de upload.'
       title: Upload
     permissions:
+      access_shared_label: 'Acessar arquivos compartilhados no gerenciador de mídia'
       delete_uploads_of_others_label: 'Excluir uploads de usuários'
       download_label: 'Baixar arquivos'
+      upload_label: 'Enviar arquivos (permissão base, obrigatória para todos os uploads)'
+      upload_mime_label: 'Enviar {label}'
+      upload_shared_label: 'Enviar arquivos compartilhados'
       view_user_uploads_label: 'Ver uploads de usuários'
+    shared-uploads:
+      description: 'Envie arquivos que podem ser usados por todos os usuários do fórum.'
+      introduction: "Uploads compartilhados são arquivos que podem ser usados por todos os usuários do fórum. Eles não ficam anexados a nenhum post, mas podem ser inseridos em posts pelo gerenciador de mídia.\n\n<strong>Aviso:</strong> uploads compartilhados não são protegidos por nenhuma permissão. Qualquer pessoa com a URL pode vê-los.\n"
+      no-files: 'Nenhum arquivo compartilhado foi enviado ainda.'
+      title: 'Uploads compartilhados'
+      upload-new-button: 'Enviar novo arquivo'
+    tabs:
+      advanced: Avançado
+      files: Arquivos
+      images: Imagens
+      storage: Armazenamento
+      unsaved_changes: 'Esta aba tem alterações não salvas'
+      unsaved_hint: 'Você tem alterações não salvas.'
     templates:
-      bbcode-image: 'Modelo de imagem BBCode'
-      bbcode-image_description: "Mostra a imagem completa em linha usando BBCode. <strong>Você deve ter o flarum/bbcode instalado e habilitado para que isso funcione.</strong> Nenhuma funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
-      file: 'Modelo de download de arquivo padrão'
-      file_description: "Mostra o nome do arquivo e algumas informações gerais. Proxies de downloads através de php, permitindo coleta de estatísticas e proteção de hotlinks.\n"
-      image: 'Modelo de download de imagem padrão'
-      image-preview: 'Modelo de visualização de imagem completo'
-      image-preview_description: "Mostra a imagem completa em linha. Nenhuma funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
-      image_description: "Mostra uma miniatura da imagem e download de proxies através do php. Permitindo a coleta de estatísticas e proteção de hotlink.\n"
+      bbcode-image: 'Modelo de imagem em BBCode'
+      bbcode-image_description: "Mostra a imagem completa no próprio post usando BBCode. <strong>É preciso ter o flarum/bbcode instalado e ativado para que isso funcione.</strong> Sem funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
+      file: 'Modelo padrão de download de arquivo'
+      file_description: "Mostra o nome do arquivo e algumas informações gerais. Os downloads passam pelo PHP, permitindo a coleta de estatísticas e a proteção de hotlink.\n"
+      image: 'Modelo padrão de download de imagem'
+      image-preview: 'Modelo de prévia da imagem completa'
+      image-preview_description: "Mostra a imagem completa no próprio post. Sem funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
+      image_description: "Mostra uma miniatura da imagem, e o download passa pelo PHP, permitindo a coleta de estatísticas e a proteção de hotlink.\n"
       just-url: 'Apenas URL'
-      just-url_description: "Insere apenas o URL. A renderização pode ser feita por outras extensões com capacidade de link automático. Nenhuma funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
-      markdown-image: 'Modelo de imagem Markdown'
-      markdown-image_description: "Mostra a imagem completa em linha usando Markdown. <strong>Você deve ter o flarum/markdown instalado e habilitado para que isso funcione.</strong> Nenhuma funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
-      text-preview: 'Visualização de texto'
-      text-preview_description: "Insere uma visualização (primeiras 5 linhas) do arquivo de texto, com a opção de expandir para revelar todo o conteúdo do arquivo.\n"
+      just-url_description: "Insere apenas a URL. A renderização pode ficar a cargo de outras extensões com link automático. Sem funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
+      markdown-image: 'Modelo de imagem em Markdown'
+      markdown-image_description: "Mostra a imagem completa no próprio post usando Markdown. <strong>É preciso ter o flarum/markdown instalado e ativado para que isso funcione.</strong> Sem funcionalidade de download, nenhuma estatística é coletada e a proteção de hotlink é ignorada.\n"
+      text-preview: 'Prévia de texto'
+      text-preview_description: "Insere uma prévia (primeiras 5 linhas) do arquivo de texto, com a opção de expandir para revelar todo o conteúdo do arquivo.\n"
     upload_methods:
-      aws-s3: S3/Compatível
+      aws-s3: 'S3 ou Compatível'
       imgur: Imgur
       local: Local
       ovh-svfs: 'OVH SVFS'
       qiniu: QiNiu
+    warnings:
+      fileinfo_missing: "A extensão <strong>fileinfo</strong> do PHP não está carregada neste servidor. O FoF Upload continuará funcionando, mas a validação cruzada de tipo MIME fica desativada, o que reduz a proteção contra tipos de arquivo falsificados. Ative a extensão na configuração do PHP para maior segurança.\n"
+      max_file_size_exceeds_php: 'Isso excede o limite efetivo de upload do seu servidor, de <strong>{limit}</strong> (<code>post_max_size={post}</code>, <code>upload_max_filesize={upload}</code>). Uploads maiores que esse limite serão rejeitados pelo PHP, independentemente desta configuração. Reduza este valor ou aumente os limites no seu <code>php.ini</code> (e <code>client_max_body_size</code>, se usar Nginx).'
   api:
     upload_errors:
+      cannot_write_to_disk: 'Falha ao gravar no disco.'
       could_not_detect_mime: 'Não foi possível detectar o tipo MIME deste arquivo, tente novamente.'
-      forbidden_type: 'O upload de arquivos deste tipo não é permitido.'
+      forbidden_type: 'O envio de arquivos deste tipo não é permitido.'
+      max_upload_file_size_form: 'Limite máximo de tamanho de arquivo do formulário atingido.'
+      max_upload_file_size_ini: 'Limite máximo de tamanho de arquivo do php.ini atingido.'
+      mime_permission_denied: 'Você não tem permissão para enviar este tipo de arquivo.'
+      no_file_uploaded: 'Nenhum arquivo enviado.'
+      no_files_made_it_to_upload: 'Envie arquivos de no máximo {max} kb.'
+      no_upload_tmp_folder: 'Sem pasta tmp para o upload de arquivos.'
+      partial_upload: 'Upload parcial.'
       unsupported_type: 'O adaptador de upload não é compatível com o tipo MIME fornecido: {mime}.'
+      upload_blocked_by_php_extension: 'Uma extensão do PHP bloqueou o upload.'
   forum:
     buttons:
       attach: Anexar
       cancel: Cancelar
       media: 'Minha mídia'
+      shared_media: 'Mídia compartilhada'
       upload: Upload
-      user_uploads: 'Upload do usuário'
-    media_manager: 'Gerente de mídia'
+      upload_shared: Compartilhados
+      user_uploads: 'Uploads do usuário'
+    display_name:
+      help: 'Exibido no download no lugar do nome do arquivo. Deixe como está para usar o nome do arquivo.'
+      insert: Inserir
+      title: 'Nomear este download'
+      title_plural: 'Nomear estes downloads'
+      use_file_name: 'Usar nomes de arquivo'
+    media_manager: 'Gerenciador de mídia'
     states:
       error: Erro
-      loading: 'Realizando Upload'
-      unauthorized: 'Você não tem permissão para baixar arquivos'
+      loading: Enviando
+      permission_required: 'Permissão necessária'
+      unauthorized: 'Você não tem permissão para baixar este arquivo'
     text_preview:
-      collapse: 'Recolher visualização'
-      error: "Erro ao visualizar o arquivo. Ele pode ter sido excluído ou o ID do arquivo fornecido é inválido.\n"
-      expand: 'Expandir visualização'
-      no_snippet: '<nenhum snippet de visualização disponível>'
-      no_snippet_preview: '<visualização aparecerá aqui após a postagem>'
+      collapse: 'Recolher prévia'
+      download: 'Baixar arquivo'
+      error: "Erro ao gerar a prévia do arquivo. Ele pode ter sido excluído ou o ID de arquivo informado é inválido.\n"
+      expand: 'Expandir prévia'
+      no_snippet: '<nenhum trecho de prévia disponível>'
+      no_snippet_preview: '<prévia aparecerá aqui após postar>'
     validation:
-      max_size: 'Carregamentos acima de {max} kb não são aceitos.'
+      max_size: 'Uploads acima de {max} kb não são aceitos.'
+  lib:
+    file_list:
+      confirm_selection_btn: '{fileCount, plural, =0 {Nenhum selecionado} one {Selecionar arquivo} other {Selecionar arquivos}}'
+      delete_confirmation: 'Tem certeza de que deseja excluir "{fileName}"?'
+      delete_file_a11y_label: 'Excluir o arquivo "{fileName}"'
+      empty: 'Não há arquivos para mostrar.'
+      hide_file:
+        btn_a11y_label_hide: 'Ocultar "{fileName}" do gerenciador de mídia'
+        btn_a11y_label_show: 'Mostrar "{fileName}" no gerenciador de mídia'
+        hide_confirmation: 'Tem certeza de que deseja ocultar "{fileName}"? Ocultar um arquivo apenas o remove do seu gerenciador de mídia e não afeta os posts existentes.'
+        hide_fail: 'Não foi possível ocultar o arquivo "{fileName}"'
+        hide_success: 'Arquivo oculto'
+        loading: 'Ocultando arquivo...'
+        show_confirmation: 'Tem certeza de que deseja mostrar "{fileName}"? Mostrar um arquivo o torna visível no seu gerenciador de mídia.'
+        show_fail: 'Não foi possível mostrar o arquivo "{fileName}"'
+        show_success: 'Arquivo visível'
+      hide_shared_file:
+        btn_a11y_label_hide: 'Tornar "{fileName}" privado (sem URL pública)'
+        btn_a11y_label_show: 'Tornar "{fileName}" público (com URL pública)'
+        hide_confirmation: 'Tem certeza de que deseja tornar "{fileName}" privado? Tornar um arquivo privado remove a URL pública dele, mas não afeta os posts existentes. Ele também deixa de ficar visível no gerenciador de mídia para usuários não autorizados.'
+        hide_fail: 'Não foi possível tornar o arquivo "{fileName}" privado'
+        hide_success: 'Arquivo tornado privado'
+        loading: 'Tornando o arquivo privado...'
+        show_confirmation: 'Tem certeza de que deseja tornar "{fileName}" público? Tornar um arquivo público o deixa acessível a qualquer pessoa com a URL pública, e qualquer um poderá compartilhá-lo pelo gerenciador de mídia.'
+        show_fail: 'Não foi possível tornar o arquivo "{fileName}" público'
+        show_success: 'Arquivo tornado público'
+      load_error: 'Não foi possível carregar os arquivos. Tente novamente.'
+      load_more_files_btn: 'Carregar mais arquivos'
+      loading: 'Carregando arquivos...'
+      modal_empty_desktop: 'Sua lista de arquivos está vazia. Clique no botão ou arraste um arquivo para cá para enviar.'
+      modal_empty_phone: 'Sua lista de arquivos está vazia. Toque no botão acima para enviar um arquivo.'
+      release_to_upload: 'Solte para enviar'
+      select_file_a11y_label: 'Selecionar o arquivo "{fileName}"'
+    upload-shared-file-modal:
+      dropzone: 'Arraste e solte arquivos aqui ou clique para procurar'
+      hide-from-media-gallery: 'Ocultar da galeria de mídia do usuário'
+      title: 'Novo arquivo compartilhado'
+      upload: Enviar

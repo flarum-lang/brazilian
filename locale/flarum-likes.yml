@@ -7,22 +7,29 @@ flarum-likes:
     permissions:
       like_posts_label: 'Curtir posts'
     settings:
-      like_own_posts_help: 'Quando ativado, sujeito a permissão, os usuários podem ''curtir'' suas próprias postagens no fórum. Para impedir que os usuários coloquem ''curtidas'' em suas próprias postagens, desative essa configuração.'
-      like_own_posts_label: 'Os usuários podem curtir suas próprias postagens'
+      like_own_posts_help: 'Quando ativado, sujeito a permissão, os usuários podem curtir os próprios posts no fórum. Para impedir que os usuários curtam os próprios posts, desative esta configuração.'
+      like_own_posts_label: 'Usuários podem curtir os próprios posts'
   forum:
     notifications:
       others_text: '=> core.ref.some_others'
       post_liked_text: '{username} curtiu seu post'
     post:
       like_link: Curtir
-      liked_by_self_text: '{users} curtiu isso.'
-      liked_by_text: '{users} {count, plural, one {curtiu} other {curtiram}} isso.'
+      liked_by_self_text: '{count, plural, one {{users} curtiu isto} other {{users} curtiram isto}}.'
+      liked_by_text: '{count, plural, one {{users} curtiu isto} other {{users} curtiram isto}}.'
       others_link: '=> core.ref.some_others'
       unlike_link: Descurtir
       you_text: '=> core.ref.you'
     post_likes:
-      title: 'Usuários que Curtiram Isso'
+      load_more_button: '=> core.ref.load_more'
+      title: 'Usuários que Curtiram'
     settings:
       notify_post_liked_label: 'Alguém curte um dos meus posts'
     user:
       likes_link: Curtidas
+  lib:
+    gambits:
+      posts:
+        likedBy:
+          hint: 'O ID ou o nome de usuário'
+          key: curtidoPor

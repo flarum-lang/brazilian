@@ -4,46 +4,180 @@
 
 core:
   admin:
+    advanced:
+      description: 'Configure as opções avançadas do seu fórum.'
+      fontawesome:
+        cdn_url_help: 'URL completa para o arquivo CSS do FontAwesome em uma CDN'
+        cdn_url_label: 'URL da CDN'
+        config_override:
+          help: 'As configurações do FontAwesome estão definidas atualmente no seu arquivo config.php e não podem ser alteradas aqui.'
+          label: 'Sobrescrita de Config'
+        forced_style_help: 'Force todos os ícones a usar um estilo específico do FontAwesome, ex.: "fa-duotone fa-light" ou "fa-regular". Substitui o estilo declarado pelo core e pelas extensões (ícones de marcas nunca são alterados). Sua fonte de ícones precisa fornecer o estilo: os ícones empacotados são do FontAwesome Free, que só cobre algumas centenas de ícones fora do estilo sólido, então forçar qualquer outro estilo deixa a maioria dos ícones em branco. Todos os estilos estão disponíveis com uma CDN ou um Kit do FontAwesome Pro. Deixe em branco para desativar.'
+        forced_style_label: 'Estilo de Ícone Forçado'
+        kit_url_help: 'URL do script do seu FontAwesome Kit (de kit.fontawesome.com)'
+        kit_url_label: 'URL do Kit'
+        preview:
+          button: 'Visualizar Ícones'
+          fa5_fa6_label: 'Aliases FA5/FA6'
+          fa7_label: 'Classes FA7'
+          help: 'Verifique sua configuração do FontAwesome. Um ícone renderizado indica que o nível está disponível; uma caixa quebrada indica que ele não foi carregado.'
+          label: 'Prévia de Ícones'
+          pro_label: 'Apenas Pro'
+        section_label: 'Ícones FontAwesome'
+        source_cdn: CDN
+        source_help: 'Escolha como os ícones FontAwesome são carregados. Local usa fontes empacotadas, CDN carrega de uma CDN, e Kit usa FontAwesome Kits com ícones personalizados.'
+        source_kit: 'FontAwesome Kit'
+        source_label: 'Fonte do Ícone'
+        source_local: 'Local (Empacotado)'
+      maintenance:
+        bisect:
+          begin_button_text: 'Iniciar Bisect'
+          continue_button_text: 'Continuar Bisect'
+          help: 'Ajuda a identificar a extensão que está causando algum problema observado. Coloca o fórum automaticamente em modo de manutenção (baixo) até o fim do processo.'
+          label: 'Bisect de Extensão'
+        bisect_modal:
+          description: "Isso coloca o fórum em modo de manutenção (baixo) até o fim do processo. Em cada etapa, algumas extensões serão desativadas até encontrarmos a que está causando o problema. Não se surpreenda ao ver recursos faltando ou um tema diferente. Mantenha esta página aberta e tente reproduzir o problema após cada etapa em outra página. Você sempre pode voltar a esta página caso a feche por engano.\n"
+          end_button: 'Fechar e ir para a página de extensões'
+          issue_question: 'O problema ainda ocorre?'
+          issue_question_help: 'Tente reproduzir o problema em outra página e responda com base no resultado.'
+          no_button: Não
+          result_description: "O fórum não está mais em modo de manutenção. O Bisect de Extensão terminou. Com base nas suas respostas, a causa do problema é a seguinte extensão:\n"
+          start_button: 'Iniciar bisect'
+          steps_left: 'Etapas restantes: {steps}'
+          stop_button: 'Parar bisect'
+          title: 'Bisect de Extensão'
+          total_steps: 'Isso levará cerca de {steps} etapas.'
+          yes_button: Sim
+        config_override:
+          help: 'Você ainda pode alterar essas configurações aqui, mas elas só terão efeito ao definir <code>offline</code> como <code>0</code> em seu arquivo <code>config.php</code>.'
+          label: 'Seu arquivo <code>config.php</code> está sobrescrevendo essas configurações.'
+        help: 'Coloque seu fórum em modo de manutenção para impedir que usuários o acessem.'
+        options:
+          high: 'Modo de manutenção alto. Ninguém pode acessar o fórum (só pode ser ativado via config.php)'
+          low: 'Modo de manutenção baixo. Administradores podem acessar o fórum.'
+          none: 'Sem manutenção.'
+          safe: 'Modo seguro. Nenhuma extensão é carregada e apenas administradores podem acessar o fórum.'
+        safe_mode_extensions: 'Extensões permitidas durante o modo seguro'
+        safe_mode_extensions_override_help: 'Esta configuração está sobrescrita pela chave <code>safe_mode_extensions</code> no seu arquivo <code>config.php</code>. (<b>{extensions}</b>)'
+        section_label: Manutenção
+      pgsql:
+        search_configuration: 'Configuração de busca a ser usada'
+      queue:
+        backoff_help: 'Tempo de espera antes de tentar novamente um job que falhou. Padrão é 0 segundos.'
+        backoff_label: 'Backoff (segundos)'
+        custom_driver: 'Seu fórum está usando o driver de fila {driver}, fornecido por uma extensão.'
+        memory_help: 'Memória máxima que o worker da fila pode usar antes de reiniciar. Padrão é 128 MB.'
+        memory_label: 'Limite de Memória (MB)'
+        pause_all_label: 'Pausar todas as filas'
+        pause_help: 'Enquanto pausado, os workers param de pegar novos jobs das filas afetadas — os jobs se acumulam até o processamento ser retomado. Jobs que já estão em execução não são afetados.'
+        pause_label: 'Pausar o processamento da fila'
+        pause_queue_label: 'Pausar a fila {queue}'
+        rest_help: 'Tempo de espera entre o processamento de jobs. Padrão é 0 segundos.'
+        rest_label: 'Descanso (segundos)'
+        retries_help: 'Número máximo de tentativas de um job antes de marcá-lo como falho. Padrão é 1.'
+        retries_label: 'Tentativas de Job'
+        section_label: Fila
+        sync_help: 'Para melhor desempenho e experiência do usuário, considere usar o driver de fila do banco de dados. Saiba mais na documentação.'
+        sync_info: 'Seu fórum está usando o driver de fila síncrono. Os jobs são processados imediatamente na thread do processo principal.'
+        timeout_help: 'Tempo máximo que um único job pode rodar antes de expirar. Padrão é 60 segundos.'
+        timeout_label: 'Timeout do Job (segundos)'
+      search:
+        cjk_mode_help: 'Ative se o seu fórum for principalmente em chinês, japonês ou coreano. A busca por palavras do banco de dados não encontra trechos de texto CJK, então isso muda para uma busca por substring, que encontra. Ela é mais lenta em fóruns muito grandes, onde configurar um parser fulltext compatível com CJK no banco de dados (como o parser ngram do MySQL/MariaDB) é uma alternativa mais rápida.'
+        cjk_mode_label: 'Otimizar a busca para idiomas CJK'
+        driver_heading: 'Driver de Busca: {model}'
+        driver_options:
+          default: 'Busca padrão do banco de dados'
+        driver_text: 'Selecione um driver a ser usado para buscar este modelo.'
+        no_other_drivers: 'Nenhum driver de busca disponível ainda. Instale uma extensão de driver de busca para configurá-lo.'
+        section_label: 'Drivers de Busca'
+      title: Avançado
+    announcements:
+      about: 'Últimas notícias e anúncios extraídos da comunidade oficial do Flarum em discuss.flarum.org.'
+      comments_label: '{count, plural, one {# comentário} other {# comentários}}'
+      description: 'Últimas notícias e anúncios da equipe Flarum.'
+      empty: 'Nenhum anúncio encontrado.'
+      hide: 'Ocultar anúncios'
+      load_error: 'Não foi possível carregar os anúncios. Tente novamente mais tarde.'
+      read_more: 'Ler mais'
+      refresh: 'Atualizar anúncios'
+      retry: 'Tentar novamente'
+      show: 'Mostrar anúncios'
+      title: Anúncios
+      view_all: 'Ver todos em discuss.flarum.org'
     appearance:
-      colored_header_label: 'Cabeçalho colorido'
+      allow_user_color_scheme_label: 'Permitir que usuários escolham seu próprio esquema de cores'
+      color_scheme_label: 'Esquema de Cores (padrão)'
+      color_schemes:
+        auto_mode_label: 'Preferência do sistema ou do usuário'
+        dark_hc_mode_label: '=> core.ref.dark_hc_mode_label'
+        dark_mode_label: '=> core.ref.dark_mode_label'
+        light_hc_mode_label: '=> core.ref.light_hc_mode_label'
+        light_mode_label: '=> core.ref.light_mode_label'
+      colored_header_label: 'Cabeçalho Colorido'
       colors_heading: Cores
       colors_primary_label: 'Cor Primária'
       colors_secondary_label: 'Cor Secundária'
       colors_text: 'Escolha duas cores para personalizar seu fórum. A primeira será usada como cor de destaque, enquanto a segunda será usada para estilizar elementos de fundo.'
-      custom_footer_heading: 'Rodapé personalizado'
+      custom_footer_heading: 'Rodapé Personalizado'
       custom_footer_text: '=> core.ref.custom_footer_text'
-      custom_header_heading: 'Cabeçalho personalizado'
+      custom_header_heading: 'Cabeçalho Personalizado'
       custom_header_text: '=> core.ref.custom_header_text'
-      custom_styles_cannot_use_less_features: 'Os recursos @import e data-uri não são permitidos no LESS customizado.'
+      custom_styles_cannot_use_less_features: 'Os recursos @import e data-uri não são permitidos no LESS personalizado.'
       custom_styles_heading: 'Estilos Personalizados'
       custom_styles_text: 'Personalize a aparência do seu fórum adicionando seu próprio código Less/CSS para ser aplicado sobre os estilos padrão do Flarum.'
       description: 'Personalize as cores, logotipos e outras variáveis do seu fórum.'
-      edit_css_button: 'Editar CSS personalizado'
+      edit_css_button: 'Editar CSS Personalizado'
       edit_footer_button: '=> core.ref.custom_footer_title'
       edit_header_button: '=> core.ref.custom_header_title'
+      email_logo_heading: 'Logotipo de e-mail'
+      email_logo_text: 'Envie uma imagem para ser exibida no topo dos e-mails. Ela é salva em um formato que todo cliente de e-mail consegue exibir. Se você não enviar uma, os e-mails usam uma cópia do seu logotipo. Se seus e-mails mostrarem o título do fórum em vez do logotipo, envie o logotipo novamente.'
       enter_hex_message: 'Digite um código de cor hexadecimal.'
       favicon_heading: Favicon
-      favicon_text: 'Carregue uma imagem para ser exibida como ícone do fórum.'
+      favicon_text: 'Envie uma imagem para ser exibida como ícone de atalho do fórum.'
+      logo_dark_mode_heading: 'Logotipo do modo escuro'
+      logo_dark_mode_text: 'Envie um logotipo alternativo para ser exibido quando o modo escuro estiver ativado.'
       logo_heading: Logotipo
-      logo_text: 'Carregue uma imagem para ser exibida no lugar do título do fórum.'
+      logo_text: 'Envie uma imagem para ser exibida no lugar do título do fórum.'
+      show_theme_selector_help: 'Permite que os usuários alternem entre os esquemas de cores disponíveis por um controle no cabeçalho.'
+      show_theme_selector_label: 'Mostrar seletor de tema'
       title: Aparência
     basics:
+      abandoned_extensions_heading: 'Extensões Abandonadas'
+      abandoned_extensions_notify_admins_label: 'Notificar admins por e-mail quando uma extensão recém-abandonada for detectada na verificação semanal'
+      abandoned_extensions_sync_button: 'Verificar Agora'
+      abandoned_extensions_sync_error: 'Falha ao buscar a lista de extensões abandonadas. Tente novamente mais tarde.'
+      abandoned_extensions_sync_success: 'Lista de extensões abandonadas atualizada. Extensões instaladas na lista: {count}.'
+      abandoned_extensions_text: 'O Flarum mantém uma <a>lista comunitária de extensões abandonadas</a>. Quando uma extensão instalada aparece na lista, ela é sinalizada no painel admin.'
       all_discussions_label: '=> core.ref.all_discussions'
-      default_language_heading: 'Idioma padrão'
+      avatar_driver_heading: 'Avatar do Usuário'
+      avatar_driver_options:
+        default: Padrão
+      avatar_driver_text: 'Selecione um driver a ser usado para os avatares dos usuários quando nenhum avatar enviado pelo usuário estiver disponível. Por padrão, nenhum avatar será exibido quando o usuário não tiver enviado um.'
+      default_language_heading: 'Idioma Padrão'
       description: 'Defina o título, idioma e outras configurações básicas do fórum.'
+      display_name_driver_options:
+        username: 'Nome de usuário'
       display_name_heading: 'Nome de Exibição do Usuário'
       display_name_text: 'Selecione o driver que deve ser usado para os nomes de exibição dos usuários. Por padrão, o nome de usuário é mostrado.'
       forum_description_heading: 'Descrição do Fórum'
-      forum_description_text: 'Digite uma ou duas frases curtas que descrevam sua comunidade. Isto aparecerá na meta tag e nos mecanismos de busca.'
+      forum_description_text: 'Digite uma ou duas frases curtas que descrevam seu fórum. Isso aparecerá na meta tag e nos mecanismos de busca.'
       forum_title_heading: 'Título do Fórum'
       home_page_heading: 'Página Inicial'
-      home_page_text: 'Escolha a página que os usuários verão pela primeira vez quando visitarem seu fórum.'
+      home_page_text: 'Escolha a página que os usuários verão primeiro ao visitarem seu fórum.'
       show_language_selector_label: 'Mostrar seletor de idioma'
-      slug_driver_heading: 'Slug Driver: {model}'
-      slug_driver_text: 'Selecione um driver a ser usado para criar URLs amigáveis (slugs) deste modelo.'
+      slug_driver_heading: 'Driver de Slug: {model}'
+      slug_driver_options:
+        discussions:
+          default: 'ID com slug'
+          utf8: 'ID com slug UTF-8'
+        users:
+          default: 'Nome de usuário'
+          id: ID
+          id_with_display_name: 'ID com Nome de Exibição'
+      slug_driver_text: 'Selecione um driver a ser usado para gerar os slugs deste modelo.'
       title: Básico
-      welcome_banner_heading: 'Banner de boas-vindas'
-      welcome_banner_text: 'Configure o texto exibido no banner na página Todas as discussões. Use isso para receber convidados no seu fórum.'
+      welcome_banner_heading: 'Banner de Boas-vindas'
+      welcome_banner_text: 'Configure o texto exibido no banner na página Todas as Discussões. Use isso para receber convidados no seu fórum.'
     create_user:
       email_confirmed_label: 'Exigir que o usuário confirme este e-mail'
       email_placeholder: '=> core.ref.email'
@@ -54,9 +188,31 @@ core:
       use_random_password: 'Gerar senha aleatória'
       username_placeholder: '=> core.ref.username'
     dashboard:
-      clear_cache_button: 'Limpar cache'
+      clear_cache_button: 'Limpar Cache'
+      clear_cache_modal:
+        chunks: 'Chunks de {frontend} reconstruídos ({count} alterados)'
+        cleared: 'Limpo: {name}'
+        cleared_files: 'Limpo: {name} ({count} arquivos)'
+        empty: '{bundle} não tem nada para compilar'
+        failed: 'Não foi possível reconstruir {step}: {message}'
+        rebuilt: 'Reconstruído: {bundle}'
+        reload_button: Recarregar
+        rewritten: 'Reescrito: {bundle}'
+        title: 'Limpando o Cache'
+        took: '{time}ms'
+        unchanged: '{bundle} já estava atualizado'
+        working: 'Reconstruindo os assets compilados. Isso pode demorar em fóruns maiores.'
       description: 'Seu fórum em uma visão geral.'
-      io_error_message: 'Não foi possível escrever no sistema de arquivos. Verifique as permissões e tente novamente ou execute pela linha de comando.'
+      info_button: 'Info do Sistema'
+      info_modal:
+        copy_button: Copiar
+        copy_error: 'Falha ao copiar'
+        copy_success: 'Informações do sistema copiadas'
+        title: 'Informações do Sistema'
+      io_error_message: 'Não foi possível escrever no sistema de arquivos. Verifique as permissões e tente novamente, ou execute pela linha de comando.'
+      queue_paused_all_warning: 'Todo o processamento de filas está pausado. Os jobs se acumularão até ele ser retomado.'
+      queue_paused_manage: Gerenciar
+      queue_paused_warning: 'O processamento da fila está pausado (fila: {queues}). Os jobs se acumularão até ele ser retomado.'
       status:
         headers:
           queue-driver: 'Driver da Fila'
@@ -65,16 +221,23 @@ core:
         scheduler:
           active: Ativo
           inactive: Inativo
-          never-run: 'Nunca rodar'
+          never-run: 'Nunca executado'
       title: Dashboard
+      toggle_advanced_page_button: 'Alternar Página Avançada'
       tools_button: Ferramentas
+    database-driver-mismatch-warning:
+      detail: "Seu <code>config.php</code> está configurado para usar o driver de banco de dados <code>{configured}</code>, mas o Flarum detectou que o servidor de banco de dados na verdade é <code>{actual}</code>.\n\nUsar o driver errado pode causar bugs sutis e difíceis de diagnosticar. Defina <code>'driver' => ''{actual}''</code> na seção <code>database</code> do seu arquivo <code>config.php</code>. Veja a <link>documentação do Flarum</link> para mais informações.\n"
+      label: 'Driver de banco de dados divergente'
+    database-version-warning:
+      below-recommended-detail: "Seu servidor {server} está rodando a versão <code>{version}</code>. Ela é suportada, mas o Flarum recomenda {server} <code>{recommended}</code> ou superior para o melhor desempenho e para permanecer em uma versão mantida. Veja a <link>documentação do Flarum</link> para mais informações.\n"
+      below-recommended-label: 'Versão do banco de dados desatualizada'
     debug-warning:
-      detail: "Quando o modo <code>debug</code> estiver ativo, o Flarum reconstruirá seus ativos <code>JavaScript</code> e <code>CSS</code> em cada solicitação e também poderá vazar outras informações, como banco de dados, variáveis de ambiente, etc.\n\nÉ altamente recomendado desabilitar <code>debug</code> em seu arquivo <code>config.php</code> em produção. Consulte a <link>Documentação do Flarum</link> para obter mais informações.\n"
-      label: 'Modo Debug ativo'
+      detail: "Quando o modo <code>debug</code> está ativo, o Flarum reconstrói seus assets <code>JavaScript</code> e <code>CSS</code> a cada requisição, e também pode vazar outras informações, como segredos do banco de dados, variáveis de ambiente, etc.\n\nÉ altamente recomendado desativar o <code>debug</code> em seu arquivo <code>config.php</code> em produção. Veja a <link>documentação do Flarum</link> para mais informações.\n"
+      label: 'Modo debug ativo'
     edit_css:
-      customize_text: 'Personalize a aparência do seu fórum adicionando seu próprio código Less / CSS para ser aplicado sobre o <a>estilo padrão</a> do Flarum.'
+      customize_text: 'Personalize a aparência do seu fórum adicionando seu próprio código Less/CSS para ser aplicado sobre os <a>estilos padrão</a> do Flarum.'
       submit_button: '=> core.ref.save_changes'
-      title: 'Editar CSS personalizado'
+      title: 'Editar CSS Personalizado'
     edit_footer:
       customize_text: '=> core.ref.custom_footer_text'
       submit_button: '=> core.ref.save_changes'
@@ -97,37 +260,57 @@ core:
       title: '=> core.ref.custom_header_title'
     email:
       addresses_heading: Endereços
-      description: 'Configure o driver, as configurações e os endereços que seu fórum usará para enviar e-mail.'
-      driver_heading: 'Escolha um driver'
+      description: 'Configure o driver, as configurações e os endereços que seu fórum usará para enviar e-mails.'
+      driver_heading: 'Escolha um Driver'
       driver_label: Driver
+      format:
+        html_option: HTML
+        multipart_option: 'Multipart (recomendado)'
+        plain_option: 'Texto Puro'
+      format_heading: 'Formato de E-mail Enviado'
+      format_help: 'Escolha o formato em que os e-mails serão enviados. A opção recomendada é <code>multipart</code>, pois permitirá que o cliente de e-mail do usuário exiba o formato mais apropriado.'
       from_label: Remetente
       mail_encryption_label: Criptografia
+      mail_encryption_none_help: 'Sem criptografia. Não recomendado para uso em produção.'
+      mail_encryption_ssl_help: 'A conexão é criptografada desde o início (TLS Implícito). Geralmente usado com a porta 465.'
+      mail_encryption_tls_help: 'A conexão começa sem criptografia e atualiza para TLS (STARTTLS). Geralmente usado com a porta 587 ou 25.'
       mail_host_label: Host
       mail_mailgun_domain_label: Domínio
       mail_mailgun_region_label: Região
       mail_mailgun_secret_label: 'Chave secreta'
       mail_password_label: '=> core.ref.password'
       mail_port_label: Porta
+      mail_postmark_message_stream_label: 'Fluxo de mensagens'
+      mail_postmark_token_label: 'Token do servidor'
+      mail_smtp_verify_peer_help: 'Verifica o certificado SSL do servidor ao usar criptografia TLS ou SSL. Desative apenas se seu servidor de e-mail usa um certificado autoassinado.'
+      mail_smtp_verify_peer_label: 'Verificar Certificado SSL'
       mail_username_label: '=> core.ref.username'
       mailgun_heading: 'Configurações do Mailgun'
       not_sending_message: 'O Flarum não está enviando e-mails no momento. Isso pode ocorrer devido ao driver selecionado ou erros em sua configuração.'
+      postmark_description: 'Envia e-mails via API HTTP do Postmark. Opcionalmente, especifique um fluxo de mensagens para usar um fluxo não padrão.'
+      postmark_heading: 'Configurações do Postmark'
       send_test_mail_button: Enviar
-      send_test_mail_heading: 'Enviar teste de e-mail'
-      send_test_mail_success: 'Teste de e-mail enviado com sucesso!'
+      send_test_mail_heading: 'Enviar E-mail de Teste'
+      send_test_mail_success: 'E-mail de teste enviado com sucesso!'
       send_test_mail_text: 'Isso enviará um e-mail usando a configuração acima para o seu e-mail, {email}.'
+      smtp_description: 'Configure as definições de conexão SMTP. Configurações comuns: porta 587 com TLS, ou porta 465 com SSL.'
       smtp_heading: 'Configurações SMTP'
       title: '=> core.ref.email'
     extension:
-      configure_scopes: Configurações
-      confirm_purge: 'A limpeza removerá todas as entradas do banco de dados e recursos relacionados à extensão. Ela NÃO desinstalará a extensão; isso deve ser feito via Composer. Tem certeza de que deseja continuar?'
-      disabled: Desabilitada
+      abandoned_no_replacement: 'Esta extensão não é mais mantida pelo autor e pode não receber atualizações.'
+      abandoned_with_replacement: 'Esta extensão foi substituída por {replacement}. Considere migrar para o pacote substituto.'
+      configure_scopes: 'Configurar Escopos'
+      confirm_purge: 'A limpeza removerá todas as entradas do banco de dados e recursos relacionados à extensão. Não desinstalará a extensão; isso deve ser feito via Composer. Tem certeza de que deseja continuar?'
+      database_driver_mismatch: 'Esta extensão não suporta o driver de banco de dados configurado.'
+      deprecated: Obsoleta
+      disabled: Desativada
       enable_to_see: 'Ative a extensão para visualizar e alterar as configurações.'
-      enabled: Habilitada
+      enabled: Ativada
       info_links:
-        discuss: Discussão
+        discuss: Discutir
         documentation: Documentação
         donate: Doar
-        source: Source
+        source: Fonte
         support: Suporte
         website: Website
       no_permissions: 'Esta extensão não tem permissões.'
@@ -138,23 +321,66 @@ core:
       readme:
         button_label: README
         no_readme: 'Esta extensão não parece ter um arquivo README'
-        title: 'Documentação da extensão {extName}'
+        title: 'Documentação de {extName}'
+      replaced: Substituída
+      reset_settings:
+        button: 'Redefinir Configurações'
+        cancel_button: Cancelar
+        confirm_button: Redefinir
+        title: 'Redefinir Configurações'
+        title_extension: 'Redefinir Configurações de {extensionTitle}'
+        warning: 'Esta ação é irreversível. As configurações abaixo serão excluídas permanentemente do banco de dados e voltarão aos padrões. Os dados desta extensão não serão afetados.'
+      safe_mode_warning: 'O modo seguro está ativado. As extensões não são carregadas e suas configurações estão inacessíveis.'
+    extensions-health-widget:
+      abandoned_no_replacement: 'Sem substituto disponível'
+      abandoned_with_replacement: 'Substituída por {replacement}'
+      all_healthy: 'Todas as extensões estão saudáveis.'
+      section_abandoned_empty: 'Nenhum problema.'
+      section_abandoned_heading: 'Precisa de Atenção'
+      section_abandoned_help: 'Estas extensões não são mais mantidas ou podem ter problemas de compatibilidade. Considere atualizar, substituir ou removê-las.'
+      section_disabled_empty: 'Todas as extensões estão ativadas.'
+      section_disabled_heading: Desativadas
+      section_disabled_help: 'Estas extensões estão instaladas mas não ativadas no momento. Ative-as na página de configurações ou remova-as se não forem mais necessárias.'
+      section_suggested_empty: 'Nenhuma sugestão.'
+      section_suggested_heading: Sugeridas
+      section_suggested_help: 'As extensões do Flarum podem adicionar recursos extras opcionais especificando outras extensões ou pacotes. Estes podem adicionar mais recursos ou integrações.'
+      suggested_by: 'Sugerida por {extension}'
+      title: 'Saúde das Extensões'
+    failed_jobs:
+      delete: Excluir
+      details: Detalhes
+      meta: 'Fila {queue} · falhou {time}'
+      none: 'Nenhum job com falha.'
+      retry: Reexecutar
+      retry_all: 'Reexecutar todos'
+      title: 'Jobs com Falha'
     header:
       get_help: 'Obter Ajuda'
       log_out_button: '=> core.ref.log_out'
+      search_placeholder: Buscar...
+      search_role_label: Buscar
     loading:
-      title: 'Por favor, espere...'
+      title: Aguarde...
+    models:
+      discussions: '=> core.ref.discussions'
+      posts: '=> core.ref.posts'
+      users: '=> core.ref.users'
     nav:
+      advanced_button: '=> core.admin.advanced.title'
+      advanced_title: '=> core.admin.advanced.description'
       appearance_button: '=> core.admin.appearance.title'
       appearance_title: '=> core.admin.appearance.description'
       basics_button: '=> core.admin.basics.title'
       basics_title: '=> core.admin.basics.description'
       categories:
+        analytics: Análises
         authentication: Autenticação
         core: 'Configurações Gerais'
         discussion: Discussão
         feature: Recursos
         formatting: Formatação
+        forum-widget: 'Widgets do Fórum'
+        infrastructure: Infraestrutura
         language: Idiomas
         moderation: Moderação
         other: 'Outras Extensões'
@@ -169,7 +395,7 @@ core:
       userlist_button: '=> core.admin.users.title'
       userlist_title: '=> core.admin.users.description'
     permissions:
-      allow_hide_own_posts_label: 'Permitir excluir seus próprios posts'
+      allow_hide_own_posts_label: 'Permitir excluir os próprios posts'
       allow_post_editing_label: 'Permitir edição de posts'
       allow_renaming_label: 'Permitir renomeação'
       create_access_token_label: 'Criar token de acesso'
@@ -179,28 +405,30 @@ core:
       delete_posts_forever_label: 'Excluir posts para sempre'
       delete_posts_label: 'Excluir posts'
       description: 'Configure quem pode ver e fazer o quê.'
+      edit_own_avatar_label: 'Editar o próprio avatar'
       edit_posts_label: 'Editar posts'
       edit_users_credentials_label: 'Editar credenciais de usuário'
       edit_users_groups_label: 'Editar grupos de usuário'
       edit_users_label: 'Editar atributos do usuário'
       global_heading: Global
-      moderate_access_tokens_label: 'Tokens de acesso moderado'
+      moderate_access_tokens_label: 'Moderar Tokens de Acesso'
       moderate_heading: Moderar
-      new_group_button: 'Novo grupo'
+      new_group_button: 'Novo Grupo'
       participate_heading: Participar
-      post_without_throttle_label: 'Responda várias vezes sem esperar'
+      post_without_throttle_label: 'Responder várias vezes sem esperar'
       read_heading: Ler
+      remove_scope_confirmation: 'Tem certeza de que deseja remover o escopo {scope}?'
       remove_scope_label: 'Remover escopo de {scope}'
       rename_discussions_label: 'Renomear discussões'
-      reply_to_discussions_label: 'Responder às discussões'
+      reply_to_discussions_label: 'Responder a discussões'
       search_users_label: '=> core.ref.search_users'
-      sign_up_label: Inscrever-se
+      sign_up_label: Cadastrar-se
       start_discussions_label: 'Iniciar discussões'
       title: Permissões
       view_forum_label: 'Ver fórum (discussões e usuários)'
-      view_hidden_groups_label: 'Ver emblemas de grupo ocultos'
-      view_last_seen_at_label: 'Sempre ver quando o usuário foi visto pela última vez'
-      view_post_ips_label: 'Exibir endereços IP dos posts'
+      view_hidden_groups_label: 'Ver emblemas de grupos ocultos'
+      view_last_seen_at_label: 'Sempre ver a última visita do usuário'
+      view_post_ips_label: 'Ver endereços IP dos posts'
     permissions_controls:
       allow_indefinitely_button: Indefinidamente
       allow_never_button: '=> core.ref.never'
@@ -211,12 +439,22 @@ core:
       members_button: '=> core.group.members'
       signup_closed_button: Fechado
       signup_open_button: Aberto
+    queue_widget:
+      failed: 'Com falha'
+      pending: Pendentes
+      refresh: Atualizar
+      reserved: 'Em andamento'
+      title: Fila
+    search_source:
+      general:
+        heading: Geral
     settings:
       saved_message: 'Suas alterações foram salvas.'
+      select_dropdown_custom_label: Personalizado
       submit_button: '=> core.ref.save_changes'
     upload_image:
       remove_button: '=> core.ref.remove'
-      upload_button: 'Escolha uma imagem...'
+      upload_button: 'Escolher uma Imagem...'
     users:
       create_user_button: 'Novo Usuário'
       description: 'Uma lista paginada de todos os usuários do seu fórum.'
@@ -234,6 +472,9 @@ core:
           join_time:
             title: Entrou
           user_actions:
+            edit_user:
+              button: '=> core.ref.edit'
+              tooltip: 'Editar {username}'
             title: Ações
           user_id:
             title: ID
@@ -249,39 +490,65 @@ core:
       must_be_numeric_message: 'O filtro {filter} deve ser numérico.'
       must_not_be_array_message: 'O filtro {filter} não deve ser um array.'
       must_not_be_multidimensional_array_message: 'O filtro {filter} não deve ser um array multidimensional.'
+    invalid_username_message: 'O nome de usuário pode conter apenas letras, números e traços. Com pelo menos uma letra.'
   email:
+    abandoned_extensions:
+      body_intro: 'A(s) seguinte(s) extensão(ões) instalada(s) foi(ram) sinalizada(s) como abandonada(s):'
+      body_outro: 'Revise estas extensões e considere migrar para alternativas, quando disponíveis.'
+      line_no_replacement: '{package} (sem substituto disponível)'
+      line_with_replacement: '{package} (substituto sugerido: {replacement})'
+      subject: 'Ação necessária: extensão(ões) abandonada(s) detectada(s)'
     activate_account:
+      body: "Alguém (esperamos que você!) se cadastrou em {forum} com este endereço de e-mail.\n\nSe foi você, basta clicar no link abaixo e sua conta será ativada:\n{url}\n\nSe você não se cadastrou, por favor ignore este e-mail.\n"
       subject: 'Ative Sua Nova Conta'
     confirm_email:
+      body: "Alguém (esperamos que você!) alterou o endereço de e-mail em {forum} para este aqui.\n\nSe foi você, basta clicar no link abaixo e seu e-mail será confirmado:\n{url}\n\nSe não foi você, por favor ignore este e-mail.\n"
       subject: 'Confirme Seu Novo Endereço de E-mail'
+    greeting: 'Olá {displayName},'
+    informational:
+      default_title: Informação
+      footer: 'Este e-mail foi enviado para {userEmail} como um serviço informativo relacionado à sua conta em [{forumTitle}]({forumUrl}).'
+      footer_plain: 'Este e-mail foi enviado para {userEmail} como um serviço informativo relacionado à sua conta em {forumTitle}.'
+    notification:
+      default_title: Notificação
+      footer:
+        main_text: 'Este e-mail foi enviado para {email} porque você está inscrito em notificações de "{type}" em [{forumTitle}]({forumUrl}).'
+        main_text_plain: 'Este e-mail foi enviado para {email} porque você está inscrito em notificações de "{type}" em {forumTitle}.'
+        settings_text: 'Gerencie suas configurações de notificação [aqui]({settingsLink}).'
+        settings_text_plain: 'Gerencie suas configurações de notificação aqui: {settingsLink}'
+        unsubscribe_text: 'Se quiser parar de receber este tipo de notificação, [cancele a inscrição aqui]({unsubscribeLink}).'
+        unsubscribe_text_plain: 'Se quiser parar de receber este tipo de notificação, cancele a inscrição aqui: {unsubscribeLink}'
     reset_password:
+      body: "Alguém (esperamos que você!) solicitou a redefinição de senha para sua conta em {forum}.\n\nSe foi você, clique no link abaixo para redefinir sua senha:\n{url}\n\nSe você não quiser alterar sua senha, basta ignorar este e-mail e nada acontecerá.\n"
       subject: '=> core.ref.reset_your_password'
     send_test:
+      body: "Este é um e-mail de teste para confirmar que a configuração de e-mail do seu Flarum está funcionando corretamente.\n\nSe foi você, este e-mail significa que sua configuração funciona!\n\nSe não foi você, por favor ignore este e-mail.\n"
       subject: 'Teste de E-mail do Flarum'
+    signoff: 'A equipe do {forumTitle}'
   forum:
     change_email:
       confirm_password_placeholder: '=> core.ref.confirm_password'
       confirmation_message: '=> core.ref.confirmation_email_sent'
       dismiss_button: '=> core.ref.okay'
-      incorrect_password_message: 'A senha que você digitou está incorreta.'
+      incorrect_password_message: 'A senha digitada está incorreta.'
       submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.change_email'
     change_password:
       send_button: 'Enviar E-mail de Redefinição de Senha'
-      text: 'Clique no botão abaixo e verifique se há um link para alterar sua senha em seu e-mail.'
+      text: 'Clique no botão abaixo e verifique seu e-mail para um link para alterar sua senha.'
       title: '=> core.ref.change_password'
     composer:
       close_tooltip: Fechar
-      exit_full_screen_tooltip: 'Sair da tela cheia'
-      full_screen_tooltip: 'Tela cheia'
+      exit_full_screen_tooltip: 'Sair da Tela Cheia'
+      full_screen_tooltip: 'Tela Cheia'
       minimize_tooltip: Minimizar
       preview_tooltip: Visualizar
     composer_discussion:
-      body_placeholder: 'Escrever um Post...'
+      body_placeholder: 'Escreva um Post...'
       discard_confirmation: 'Você não postou sua discussão. Deseja descartá-la?'
       submit_button: 'Publicar Discussão'
       title: '=> core.ref.start_a_discussion'
-      title_placeholder: 'Título da discussão'
+      title_placeholder: 'Título da Discussão'
     composer_edit:
       discard_confirmation: 'Você não salvou suas alterações. Deseja descartá-las?'
       edited_message: 'Sua edição foi feita.'
@@ -292,7 +559,7 @@ core:
       body_placeholder: '=> core.ref.write_a_reply'
       discard_confirmation: 'Você não postou sua resposta. Deseja descartá-la?'
       posted_message: 'Sua resposta foi postada.'
-      submit_button: 'Publicar Resposta'
+      submit_button: Responder
       view_button: '=> core.ref.view'
     discussion_controls:
       cannot_reply_button: 'Não Pode Responder'
@@ -304,58 +571,71 @@ core:
       rename_button: '=> core.ref.rename'
       reply_button: '=> core.ref.reply'
       restore_button: '=> core.ref.restore'
-      toggle_dropdown_accessible_label: 'Alternar menu suspenso de ações da discussão'
+      toggle_dropdown_accessible_label: 'Alternar menu de ações da discussão'
     discussion_list:
       empty_text: 'Parece que não há discussões aqui.'
       load_more_button: '=> core.ref.load_more'
       replied_text: '{username} respondeu {ago}'
+      skip_discussion_list_pane: 'Pular o painel da lista de discussões'
       started_text: '{username} iniciou {ago}'
       total_replies_a11y_label: '{count, plural, one {# resposta} other {# respostas}}'
-      unread_replies_a11y_label: '{count, plural, one {# resposta não lida} other {# respostas não lidas}}. Marcar {count, plural, one {resposta} other {respostas}} não {count, plural, one {lida} other {lidas}} como {count, plural, one {lida} other {lidas}}'
+      unread_replies_a11y_label: '{count, plural, one {# resposta não lida. Marcar como lida} other {# respostas não lidas. Marcar como lidas}}.'
     forgot_password:
       dismiss_button: '=> core.ref.okay'
       email_placeholder: '=> core.ref.email'
-      email_sent_message: 'Se o email inserido estiver registrado neste site, enviaremos um e-mail contendo um link para redefinir sua senha. Verifique sua pasta de spam se não a receber dentro de um ou dois minutos.'
+      email_sent_message: 'Se o e-mail digitado estiver registrado neste site, enviaremos um e-mail com um link para redefinir sua senha. Verifique sua pasta de spam se não o receber dentro de um ou dois minutos.'
       not_found_message: 'Não há usuário registrado com esse endereço de e-mail.'
       submit_button: 'Recuperar Senha'
       text: 'Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.'
-      title: 'Esqueceu a senha'
+      title: 'Esqueceu a Senha'
     header:
       admin_button: Administração
-      back_to_index_tooltip: 'Voltar à lista de discussão'
+      back_to_index_tooltip: 'Voltar à Lista de Discussões'
       locale_dropdown_accessible_label: 'Alterar idioma do fórum'
       log_in_link: '=> core.ref.log_in'
       log_out_button: '=> core.ref.log_out'
       profile_button: Perfil
-      search_placeholder: 'Pesquisar no Fórum'
-      search_role_label: 'Pesquisar no Fórum'
-      session_dropdown_accessible_label: 'Alternar menu suspenso de opções de sessão'
+      search_placeholder: 'Buscar no Fórum'
+      search_role_label: 'Buscar no Fórum'
+      session_dropdown_accessible_label: 'Alternar menu de opções de sessão'
       settings_button: '=> core.ref.settings'
       sign_up_link: '=> core.ref.sign_up'
+      theme_switcher_accessible_label: 'Alterar tema'
     index:
       all_discussions_link: '=> core.ref.all_discussions'
-      cannot_start_discussion_button: 'Não é Possível Iniciar Discussão'
+      cannot_start_discussion_button: 'Não Pode Iniciar Discussão'
       mark_all_as_read_confirmation: 'Tem certeza de que deseja marcar todas as discussões como lidas?'
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
       meta_title_text: '=> core.ref.all_discussions'
+      refresh_tooltip: '=> core.ref.refresh'
+      skip_to_main_content: 'Pular para o conteúdo principal'
       start_discussion_button: '=> core.ref.start_a_discussion'
-      toggle_sidenav_dropdown_accessible_label: 'Alternar menu suspenso de navegação'
+      toggle_sidenav_dropdown_accessible_label: 'Alternar menu de navegação'
     index_sort:
-      latest_button: 'Mais recentes'
+      az_button: '=> core.ref.title_az'
+      latest_button: '=> core.ref.latest'
+      newest_button: '=> core.ref.newest'
+      oldest_button: '=> core.ref.oldest'
+      relevance_button: '=> core.ref.relevance'
       toggle_dropdown_accessible_label: 'Alterar ordenação da lista de discussões'
-      top_button: Topo
+      top_button: '=> core.ref.top'
+      za_button: '=> core.ref.title_za'
     log_in:
       forgot_password_link: 'Esqueceu a senha?'
+      invalid_login_message: '=> core.ref.invalid_login_message'
       password_placeholder: '=> core.ref.password'
-      sign_up_text: 'Não tem uma conta? <a>Inscreva-se</a>'
+      remember_me_label: '=> core.ref.remember_me_label'
+      sign_up_text: 'Não tem uma conta? <a>Cadastre-se</a>'
       submit_button: '=> core.ref.log_in'
       title: '=> core.ref.log_in'
+      username_or_email_placeholder: '=> core.ref.username_or_email_placeholder'
     notifications:
+      delete_all_confirm: 'Tem certeza de que deseja excluir todas as notificações? Esta ação não pode ser desfeita.'
       delete_all_tooltip: 'Excluir todas as notificações'
       discussion_renamed_text: '{username} alterou o título'
-      empty_text: 'Nenhuma notificação'
+      empty_text: 'Sem Notificações'
       mark_all_as_read_tooltip: '=> core.ref.mark_all_as_read'
-      mark_as_read_tooltip: 'Marcar como Lido'
+      mark_as_read_tooltip: 'Marcar como Lida'
       title: '=> core.ref.notifications'
       toggle_dropdown_accessible_label: 'Ver notificações'
       tooltip: '=> core.ref.notifications'
@@ -365,12 +645,16 @@ core:
       number_tooltip: 'Post #{number}'
     post_controls:
       delete_button: '=> core.ref.delete'
-      delete_confirmation: 'Tem certeza de que deseja excluir este post para sempre? Essa ação não pode ser desfeita.'
+      delete_confirmation: 'Tem certeza de que deseja excluir este post para sempre? Esta ação não pode ser desfeita.'
       delete_forever_button: '=> core.ref.delete_forever'
       edit_button: '=> core.ref.edit'
       hide_confirmation: 'Tem certeza de que deseja excluir este post?'
       restore_button: '=> core.ref.restore'
-      toggle_dropdown_accessible_label: 'Alternar menu suspenso de controles da postagem'
+      toggle_dropdown_accessible_label: 'Alternar menu de controles do post'
+    post_list:
+      empty_text: 'Parece que não há posts aqui.'
+      in_discussion_text: 'Em {discussion}'
+      load_more_button: '=> core.ref.load_more'
     post_scrubber:
       now_link: Agora
       original_post_link: 'Post Original'
@@ -382,14 +666,21 @@ core:
       load_more_button: '=> core.ref.load_more'
       reply_placeholder: '=> core.ref.write_a_reply'
       time_lapsed_text: '{period} depois'
+    posts:
+      meta_title_text: 'Resultados da busca de posts'
+      refresh_tooltip: '=> core.ref.refresh'
+    posts_sort:
+      newest_button: '=> core.ref.newest'
+      oldest_button: '=> core.ref.oldest'
+      relevance_button: '=> core.ref.relevance'
     rename_discussion:
       submit_button: '=> core.ref.rename'
       title: 'Renomear Discussão'
     security:
       browser_on_operating_system: '{browser} em {os}'
-      cannot_terminate_current_session: 'Não é possível encerrar a sessão ativa atual. Em vez disso, efetue logout.'
+      cannot_terminate_current_session: 'Não é possível encerrar a sessão ativa atual. Saia para fazer isso.'
       created: Criado
-      current_active_session: 'Sessão ativa atual'
+      current_active_session: 'Sessão Ativa Atual'
       developer_tokens_heading: 'Tokens de Desenvolvedor'
       empty_text: 'Parece que não há nada para ver aqui.'
       global_logout:
@@ -406,13 +697,13 @@ core:
         title_placeholder: Título
       revoke_access_token: Revogar
       revoke_access_token_confirmation: '=> core.ref.generic_confirmation_message'
-      session_terminated: '{count, plural, one {Sessão terminada} other {# Sessões terminadas}}.'
+      session_terminated: '{count, plural, one {Sessão encerrada} other {# Sessões encerradas}}.'
       session_termination_failed: 'Ocorreu um erro ao encerrar suas sessões.'
       sessions_heading: 'Sessões Ativas'
       show_access_token: 'Ver Token'
-      terminate_all_other_sessions: 'Terminar todas as outras sessões'
+      terminate_all_other_sessions: 'Encerrar todas as outras sessões'
       terminate_all_other_sessions_confirmation: '=> core.ref.generic_confirmation_message'
-      terminate_session: Terminar
+      terminate_session: Encerrar
       title: '=> core.ref.security'
       token_item_title: '{title} - {token}'
       token_revoked: 'Token revogado.'
@@ -421,13 +712,24 @@ core:
       account_heading: Conta
       change_email_button: '=> core.ref.change_email'
       change_password_button: '=> core.ref.change_password'
-      notification_checkbox_a11y_label_template: 'Receba notificações "{description}" por meio de {method}'
+      color_scheme_heading: 'Esquema de Cores'
+      color_schemes:
+        auto_mode_label: 'Preferência do sistema'
+        dark_hc_mode_label: '=> core.ref.dark_hc_mode_label'
+        dark_mode_label: '=> core.ref.dark_mode_label'
+        light_hc_mode_label: '=> core.ref.light_hc_mode_label'
+        light_mode_label: '=> core.ref.light_mode_label'
+      device_heading: Dispositivo
+      haptic_feedback_help: 'Disponível apenas em dispositivos móveis compatíveis'
+      haptic_feedback_label: 'Ativar feedback tátil'
+      notification_checkbox_a11y_label_template: 'Receber notificações de "{description}" via {method}'
       notifications_heading: '=> core.ref.notifications'
       notify_by_email_heading: '=> core.ref.email'
       notify_by_web_heading: Web
-      notify_discussion_renamed_label: 'Alguém renomeia uma discussão que eu iniciei'
-      privacy_disclose_online_label: 'Permitir que outras pessoas vejam quando estou online'
+      notify_discussion_renamed_label: 'Alguém renomeia uma discussão que iniciei'
+      privacy_disclose_online_label: 'Permitir que outros vejam quando estou online'
       privacy_heading: Privacidade
+      reset_notifications_button: 'Restaurar padrões'
       title: '=> core.ref.settings'
     sign_up:
       dismiss_button: '=> core.ref.okay'
@@ -441,10 +743,10 @@ core:
     user:
       avatar_remove_button: '=> core.ref.remove'
       avatar_upload_button: Enviar
-      avatar_upload_tooltip: 'Carregar um novo avatar'
+      avatar_upload_tooltip: 'Enviar um novo avatar'
       discussions_link: '=> core.ref.discussions'
       in_discussion_text: 'Em {discussion}'
-      joined_date_text: 'Entrou em {ago}'
+      joined_date_text: 'Entrou {ago}'
       online_text: Online
       posts_empty_text: 'Parece que não há posts aqui.'
       posts_link: '=> core.ref.posts'
@@ -455,64 +757,113 @@ core:
       button: Controles
       delete_button: '=> core.ref.delete'
       delete_confirmation: 'Tem certeza de que deseja excluir este usuário? Os posts do usuário NÃO serão excluídos.'
-      delete_error_message: 'A exclusão do usuário <i>{username} ({email})</i> falhou'
+      delete_error_message: 'Falha ao excluir o usuário <i>{username} ({email})</i>'
       delete_success_message: 'O usuário <i>{username} ({email})</i> foi excluído'
       edit_button: '=> core.ref.edit'
-      toggle_dropdown_accessible_label: 'Alternar menu suspenso de controles do usuário'
+      toggle_dropdown_accessible_label: 'Alternar menu de controles do usuário'
     user_email_confirmation:
       alert_message: '=> core.ref.confirmation_email_sent'
-      resend_button: 'Reenviar e-mail de confirmação'
+      resend_button: 'Reenviar E-mail de Confirmação'
       sent_message: Enviado
     welcome_hero:
       hide: 'Ocultar mensagem de boas-vindas'
   group:
-    admin: Administrador
-    admins: Administradores
+    admin: Admin
+    admins: Admins
     guest: Convidado
     guests: Convidados
     member: Membro
     members: Membros
-    mod: Moderador
-    mods: Moderadores
+    mod: Mod
+    mods: Mods
   lib:
     alert:
       dismiss_a11y_label: 'Fechar alerta'
+    assets_updated:
+      message: 'Uma versão mais recente desta página está disponível.'
+      reload_button: Recarregar
     badge:
-      hidden_tooltip: Escondido
+      hidden_tooltip: Oculto
+    connection_restored_message: 'Sua conexão foi restabelecida.'
     data_segment:
       label: '{label}:'
     datetime_formats:
+      fullTime: LLLL
       humanTimeLong: ll
       humanTimeShort: 'D MMM'
       scrubber: 'MMMM YYYY'
+      userListJoinDate: LLL
     debug_button: Debug
     dropdown:
       toggle_dropdown_accessible_label: 'Alternar menu suspenso'
     edit_user:
-      activate_button: 'Ativar o usuário'
+      activate_button: 'Ativar Usuário'
       email_heading: '=> core.ref.email'
       email_label: '=> core.ref.email'
       groups_heading: Grupos
       nothing_available: 'Você não tem permissão para editar este usuário.'
       password_heading: '=> core.ref.password'
       password_label: '=> core.ref.password'
-      set_password_label: 'Definir uma nova senha'
+      set_password_label: 'Definir nova senha'
       submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.edit_user'
       username_heading: '=> core.ref.username'
       username_label: '=> core.ref.username'
     error:
       circular_dependencies_message: 'Dependências circulares detectadas: {extensions}. Abortando. Desative uma das extensões e tente novamente.'
+      db_error_message: 'A consulta ao banco de dados falhou. Isso pode ser causado por uma incompatibilidade entre uma extensão e seu driver de banco de dados.'
       dependent_extensions_message: 'Não é possível desativar {extension} até que as seguintes extensões dependentes sejam desativadas: {extensions}'
-      extension_initialiation_failed_message: '{extension} falhou ao inicializar, verifique o console do navegador para mais informações.'
-      generic_cross_origin_message: 'Oops! Algo deu errado durante uma solicitação de origem cruzada. Por favor, recarregue a página e tente novamente.'
-      generic_message: 'Opa! Algo deu errado. Por favor, recarregue a página e tente novamente.'
+      extension_initialiation_failed_message: '{extension} falhou ao inicializar. Verifique o console do navegador para mais informações.'
+      extension_runtime_failed_message: '{extension} encontrou um erro durante a execução. Verifique o console do navegador para mais informações.'
+      generic_cross_origin_message: 'Opa! Algo deu errado durante uma solicitação de origem cruzada. Recarregue a página e tente novamente.'
+      generic_message: 'Opa! Algo deu errado. Recarregue a página e tente novamente.'
       missing_dependencies_message: 'Não é possível ativar {extension} até que as seguintes dependências sejam ativadas: {extensions}'
+      network_message: 'Parece haver algo errado com sua conexão. Verifique sua rede e tente novamente.'
       not_found_message: 'O recurso solicitado não foi encontrado.'
-      payload_too_large_message: 'A carga da solicitação era muito grande.'
+      offline_message: 'Você parece estar offline. Verifique sua conexão e tente novamente.'
+      payload_too_large_message: 'A carga da solicitação foi muito grande.'
       permission_denied_message: 'Você não tem permissão para fazer isso.'
       rate_limit_exceeded_message: 'Você está indo um pouco rápido demais. Tente novamente em alguns segundos.'
-      render_failed_message: 'Desculpe, encontramos um erro ao exibir este conteúdo. Se você é um usuário, por favor tente novamente mais tarde. Se você é um administrador, dê uma olhada em seus arquivos de log Flarum para obter mais informações.'
+      render_failed_message: 'Desculpe, encontramos um erro ao exibir este conteúdo. Se você é um usuário, tente novamente mais tarde. Se você é um administrador, dê uma olhada nos arquivos de log do Flarum para mais informações.'
+    gambits:
+      discussions:
+        author:
+          hint: 'nome de usuário ou lista de nomes separados por vírgula'
+          key: autor
+        created:
+          hint: '2020-12-31 ou 2020-12-31..2021-09-30'
+          key: criado
+        hidden:
+          key: oculto
+        unread:
+          key: não-lido
+      group_keys:
+        allows: permite
+        has: tem
+        is: é
+      posts:
+        discussion:
+          hint: 'o ID da discussão'
+          key: discussão
+      users:
+        email:
+          hint: example@machine.local
+          key: email
+        group:
+          hint: 'nomes de grupo no singular ou plural'
+          key: grupo
+    group_selector:
+      placeholder: 'Escolha um grupo'
+    index_sort:
+      az_button: '=> core.ref.title_az'
+      latest_button: '=> core.ref.latest'
+      newest_button: '=> core.ref.newest'
+      oldest_button: '=> core.ref.oldest'
+      relevance_button: '=> core.ref.relevance'
+      top_button: '=> core.ref.top'
+      za_button: '=> core.ref.title_za'
+    input:
+      clear_button: 'Limpar campo'
     loading_indicator:
       accessible_label: '=> core.ref.loading'
     meta_titles:
@@ -520,99 +871,161 @@ core:
       without_page_title: '{pageNumber, plural, =1 {{forumName}} other {Página # - {forumName}}}'
     modal:
       close: Fechar
+    multi_select:
+      placeholder: 'Selecione várias opções'
     nav:
       drawer_button: 'Abrir Gaveta de Navegação'
+      pin_pane_button: 'Fixar Lista de Discussões'
+    notices:
+      bisecting: 'Executando o processo de bisect para determinar qual extensão está causando um problema.'
+      bisecting_continue: 'Continuar bisect'
+      maintenance_mode_low: 'Em manutenção. Apenas administradores podem acessar o fórum.'
+      maintenance_mode_safe: 'Em manutenção com modo seguro. Apenas administradores podem acessar o fórum e nenhuma extensão é carregada.'
     number_suffix:
       kilo_text: K
       mega_text: M
+    overflowing_list:
+      toggle_accessible_label: 'Mais itens'
+    pagination:
+      back_button: 'Página anterior'
+      first_button: 'Ir para a primeira página'
+      go_to_page_textbox_a11y_label: 'Ir direto para a página'
+      last_button: 'Ir para a última página'
+      next_button: 'Próxima página'
+      page_counter: 'Página {current} de {total}'
+    search:
+      gambit_minus_button_a11y_label: 'Adicionar filtro negativo'
+      gambit_plus_button_a11y_label: 'Adicionar filtro positivo'
+      no_results_text: 'Parece que não há resultados aqui.'
+      no_search_text: 'Você ainda não buscou nada.'
+      options_heading: 'Opções de busca'
+      placeholder: Buscar...
+      preview_heading: 'Prévia da busca'
+      search_active_button_accessible_label: 'Alterar busca: {query}'
+      search_clear_button_accessible_label: 'Limpar busca'
+      title: Busca
+    search_source:
+      discussions:
+        all_button: 'Buscar "{query}" em todas as discussões'
+        heading: '=> core.ref.discussions'
+      posts:
+        all_button: 'Buscar "{query}" em todos os posts'
+        heading: '=> core.ref.posts'
+      users:
+        heading: '=> core.ref.users'
     series:
       glue_text: ', '
-      three_text: '{first}, {second}, e {third}'
+      three_text: '{first}, {second} e {third}'
       two_text: '{first} e {second}'
+    user_selection_modal:
+      empty_results: 'Nenhum usuário encontrado para sua busca.'
+      max_items_to_select: '{count, plural, one {Selecione até # usuário} other {Selecione até # usuários}}'
+      search_placeholder: '=> core.ref.search_users'
+      submit_button: '=> core.ref.okay'
+      title: 'Selecionar usuários relevantes'
     username:
       deleted_text: '[excluído]'
   ref:
     all_discussions: 'Todas as Discussões'
-    change_email: 'Mudar E-mail'
-    change_password: 'Mudar Senha'
+    change_email: 'Alterar E-mail'
+    change_password: 'Alterar Senha'
     color: Cor
     confirm_email: 'Confirmar E-mail'
-    confirm_password: 'Confirme a Senha'
-    confirmation_email_sent: 'Enviamos um e-mail de confirmação para {email}. Se não recebê-lo logo, verifique sua pasta de spam.'
-    custom_footer_text: 'Adicione HTML a ser exibido na parte inferior da página.'
-    custom_footer_title: 'Editar rodapé personalizado'
-    custom_header_text: 'Adicione HTML a ser exibido na parte superior da página, acima do cabeçalho do próprio Flarum.'
-    custom_header_title: 'Editar cabeçalho personalizado'
+    confirm_password: 'Confirmar Senha'
+    confirmation_email_sent: 'Enviamos um e-mail de confirmação para {email}. Se ele não chegar logo, verifique sua pasta de spam.'
+    custom_footer_text: 'Adicione HTML para ser exibido na parte inferior da página.'
+    custom_footer_title: 'Editar Rodapé Personalizado'
+    custom_header_text: 'Adicione HTML para ser exibido na parte superior da página, acima do cabeçalho do próprio Flarum.'
+    custom_header_title: 'Editar Cabeçalho Personalizado'
+    dark_hc_mode_label: 'Modo Escuro de Alto Contraste'
+    dark_mode_label: 'Modo Escuro'
     delete: Excluir
-    delete_forever: 'Excluir Permanentemente'
+    delete_forever: 'Excluir para Sempre'
     discussions: Discussões
     edit: Editar
-    edit_user: 'Editar usuário'
+    edit_user: 'Editar Usuário'
     email: E-mail
     extensions: Extensões
-    generic_confirmation_message: 'Tem certeza de que deseja continuar? Essa ação não pode ser desfeita.'
+    generic_confirmation_message: 'Tem certeza de que deseja continuar? Esta ação não pode ser desfeita.'
     icon: Ícone
-    icon_text: 'Digite o nome de qualquer classe de ícone <a>FontAwesome</a> , <em>incluindo</em> o prefixo <code>fas fa-</code> .'
+    icon_text: 'Digite o nome de qualquer classe de ícone <a>FontAwesome</a>, <em>incluindo</em> o prefixo (ex.: <code>fas fa-flag</code> ou <code>fa-solid fa-flag</code>).'
+    invalid_login_message: 'Suas credenciais de login estão incorretas.'
+    latest: Recentes
+    light_hc_mode_label: 'Modo Claro de Alto Contraste'
+    light_mode_label: 'Modo Claro'
     load_more: 'Carregar Mais'
     loading: Carregando...
     log_in: Entrar
     log_out: Sair
-    mark_all_as_read: 'Marcar tudo como lido'
+    mark_all_as_read: 'Marcar Tudo como Lido'
     never: Nunca
     new_token: 'Novo Token'
-    next_page: 'Próxima página'
+    newest: 'Mais novas'
+    next_page: 'Próxima Página'
     notifications: Notificações
     okay: OK
+    oldest: 'Mais antigas'
     password: Senha
     posts: Posts
-    previous_page: 'Página anterior'
+    previous_page: 'Página Anterior'
+    refresh: Atualizar
+    relevance: Relevância
+    remember_me_label: 'Lembrar de Mim'
     remove: Remover
     rename: Renomear
     reply: Responder
-    reset_your_password: 'Redefinir sua senha'
+    reset_your_password: 'Redefinir Sua Senha'
     restore: Restaurar
     save_changes: 'Salvar Alterações'
-    search_users: 'Pesquisar usuários'
+    search_users: 'Buscar usuários'
     security: Segurança
     settings: Configurações
-    sign_up: Inscrever-se
+    sign_up: Cadastrar-se
     some_others: '{count, plural, one {# outro} other {# outros}}'
     start_a_discussion: 'Iniciar Discussão'
+    title_az: 'Título (A–Z)'
+    title_za: 'Título (Z–A)'
+    top: Populares
     username: 'Nome de usuário'
+    username_or_email_placeholder: 'Nome de Usuário ou E-mail'
     users: Usuários
     view: Ver
-    write_a_reply: 'Escreva uma resposta...'
+    write_a_reply: 'Escreva uma Resposta...'
     you: Você
   views:
     admin:
       extensions:
         caption: '=> core.ref.extensions'
         disable: Desativar
-        empty: 'Sem extensões instaladas'
-        enable: Habilitar
-        name: 'Nome da extensão'
+        empty: 'Nenhuma extensão instalada'
+        enable: Ativar
+        name: 'Nome da Extensão'
         package_name: 'Nome do Pacote'
         version: Versão
       info:
-        caption: 'Informações do Aplicativo'
+        caption: 'Info do Aplicativo'
       title: Administração
     confirm_email:
       submit_button: '=> core.ref.confirm_email'
-      text: 'Clique no botão abaixo para confirmar o endereço de e-mail da sua conta.'
+      text: 'Clique no botão abaixo para confirmar o e-mail da sua conta.'
       title: '=> core.ref.confirm_email'
     content:
       javascript_disabled_message: 'Este site é melhor visualizado em um navegador moderno com JavaScript ativado.'
-      load_error_message: 'Ocorreu um erro ao tentar carregar a versão completa deste site. Tente atualizar essa página para corrigir o erro.'
+      load_error_message: 'Algo deu errado ao tentar carregar a versão completa deste site. Tente forçar a atualização desta página para corrigir o erro.'
       loading_text: '=> core.ref.loading'
     discussion:
       next_page_button: '=> core.ref.next_page'
       previous_page_button: '=> core.ref.previous_page'
     error:
       csrf_token_mismatch: 'Você ficou inativo por muito tempo.'
-      csrf_token_mismatch_return_link: 'Voltar para tentar novamente'
+      csrf_token_mismatch_return_link: 'Voltar e tentar novamente'
       invalid_confirmation_token: 'Este link de confirmação já foi usado ou é inválido.'
+      maintenance_mode_link: 'Login do administrador'
+      maintenance_mode_message: 'Este fórum está em manutenção no momento. Volte mais tarde.'
+      maintenance_mode_title: Manutenção
+      method_not_allowed: 'Esta página não suporta esse método de requisição.'
       not_authenticated: 'Você não tem permissão para acessar esta página. Tente novamente após o login.'
-      not_found: 'A página solicitada não pôde ser encontrada.'
+      not_found: 'A página solicitada não foi encontrada.'
       not_found_return_link: 'Retornar para {forum}'
       permission_denied: 'Você não tem permissão para acessar esta página.'
       unknown: 'Ocorreu um erro ao tentar carregar esta página.'
@@ -620,12 +1033,29 @@ core:
       all_discussions_heading: '=> core.ref.all_discussions'
       next_page_button: '=> core.ref.next_page'
       previous_page_button: '=> core.ref.previous_page'
+    layout:
+      skip_to_content: 'Pular para o conteúdo'
+    log_in:
+      invalid_login_message: '=> core.ref.invalid_login_message'
+      password_placeholder: '=> core.ref.password'
+      remember_me_label: '=> core.ref.remember_me_label'
+      submit_button: '=> core.ref.log_in'
+      title: '=> core.ref.log_in'
+      username_or_email_placeholder: '=> core.ref.username_or_email_placeholder'
     log_out:
       log_out_button: '=> core.ref.log_out'
-      log_out_confirmation: 'Tem certeza de que deseja sair do {forum}?'
+      log_out_confirmation: 'Tem certeza de que deseja sair de {forum}?'
       title: '=> core.ref.log_out'
     reset_password:
       confirm_password_label: 'Confirmar Nova Senha'
-      new_password_label: 'Nova senha'
+      new_password_label: 'Nova Senha'
       submit_button: '=> core.ref.save_changes'
       title: '=> core.ref.reset_your_password'
+    unsubscribe_email:
+      confirm_button: Confirmar
+      confirm_message: 'Você solicitou o cancelamento das notificações por e-mail de "{type}" de {forumTitle}.'
+      immediate_helptext: 'Sua inscrição será cancelada imediatamente após a confirmação.'
+      invalid_message: 'Este link de cancelamento é inválido ou já foi usado. Para qualquer alteração nas suas notificações por e-mail de {forumTitle}, [verifique suas configurações]({settingsLink}).'
+      return_to_forum: 'Voltar para {forumTitle}'
+      success_message: 'Você cancelou a inscrição das notificações de "{type}" de {forumTitle}. Se quiser recebê-las novamente, [atualize suas configurações]({settingsLink}).'
+      title: 'Confirmação de Cancelamento'
