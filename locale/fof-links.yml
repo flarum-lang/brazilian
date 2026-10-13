@@ -9,6 +9,7 @@ fof-links:
       delete_link_confirmation: 'Você tem certeza que quer apagar esse link?'
       everyone-label: Todos
       guests-label: Convidados
+      icon_additional_text: 'Se quiser usar um ícone de marca, o prefixo é <code>fab fa-</code>.'
       icon_label: '=> core.ref.icon'
       icon_text: '=> core.ref.icon_text'
       internal_link: 'É um link interno?'
@@ -25,8 +26,10 @@ fof-links:
     links:
       create_button: '=> fof-links.ref.create_link'
       links: '=> fof-links.ref.links'
+    settings:
+      show_icons_only_on_tablet: 'Mostrar apenas ícones em telas de tablet'
   ref:
-    create_link: 'Criar link'
+    create_link: 'Criar Link'
     links: Links
     title: Título
     url: URL

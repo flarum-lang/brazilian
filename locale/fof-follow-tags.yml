@@ -2,12 +2,33 @@
 # Use https://weblate.rob006.net/projects/flarum/fof-follow-tags/pt_BR/ for translation.
 # You can read more about the process at https://github.com/rob006-software/flarum-translations/wiki.
 
+flarum-gdpr:
+  lib:
+    data:
+      tagsubscription:
+        anonymize_description: 'Remove a inscrição do usuário na tag.'
+        export_description: 'Exporta detalhes do nível de inscrição em uma tag, se houver.'
 fof-follow-tags:
   admin:
+    basics:
+      following_label: '=> flarum-subscriptions.forum.index.following_link'
     settings:
+      all_discussions_on_following_page_for_guests_label: 'Mostrar todas as discussões na página Seguindo para convidados'
       following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
-      following_page_default_label: 'Filtros da página padrão Seguindo'
+      following_page_default_label: 'Filtro Padrão da Página Seguindo'
       following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
+      prompt_button_on_following_page_label: 'Mostrar um botão "Escolher tags para seguir" na página Seguindo'
+      prompt_new_users_help: "Usuários que ainda não confirmaram a escolha verão um modal pedindo que sigam tags. O modal voltará a cada visita até que pressionem \"Continuar para o fórum\".\n"
+      prompt_new_users_label: 'Pedir aos novos usuários que escolham tags para seguir'
+      prompt_tag_ids_label: 'Tags a oferecer'
+      prompt_tag_strategy_label: 'Tags a oferecer no modal'
+      prompt_tag_strategy_options:
+        all: 'Todas as tags'
+        list: 'Tags selecionadas abaixo'
+        primary: 'Tags primárias de primeiro nível'
+        primaryAndChildren: 'Todas as tags primárias de qualquer nível'
+        primaryAndSecondary: 'Tags primárias de primeiro nível e tags secundárias'
+        secondary: 'Apenas tags secundárias'
   email:
     body:
       newDiscussionInTag: "Olá {recipient_display_name},\n\n{actor_display_name} iniciou uma discussão em uma tag que você está seguindo: {discussion_title}\n\nPara ver a nova discussão, confira o link a seguir:\n{discussion_url}\n\n---\n\n{post_content}\n"
@@ -21,34 +42,44 @@ fof-follow-tags:
     badge:
       following_tag_tooltip: Seguindo
       lurking_tag_tooltip: Espiando
+    hero:
+      title: '=> flarum-subscriptions.forum.index.following_link'
     index:
       follow_tag_button: Seguir
       following:
         following_none_label: '=> fof-follow-tags.ref.filtering_options.none'
         following_tags_label: '=> fof-follow-tags.ref.filtering_options.tags'
-      unfollow_tag_button: 'Parar de Seguir'
+      unfollow_tag_button: 'Deixar de Seguir'
     notifications:
       new_discussion_tag_text: '{username} mudou a tag'
       new_discussion_text: '{username} iniciou'
       new_post_text: '{username} postou'
+    prompt:
+      choose_button: 'Escolher tags para seguir'
+      continue_button: 'Continuar para o fórum'
+      later_button: 'Lembrar mais tarde'
+      modal_title: 'Escolher tags para seguir'
     settings:
-      notify_new_discussion_label: 'Alguém criar uma discussão em uma tag que eu sigo'
-      notify_new_discussion_tag_label: 'Alguém atualizar a tag de uma discussão para uma tag que eu sigo'
-      notify_new_post_label: 'Alguém postar em uma tag que eu sigo'
+      notify_new_discussion_label: 'Alguém cria uma discussão em uma tag que estou seguindo'
+      notify_new_discussion_tag_label: 'Alguém muda a tag de uma discussão para uma tag que estou seguindo'
+      notify_new_post_label: 'Alguém posta em uma tag que estou seguindo'
     sub_controls:
       follow_button: '=> fof-follow-tags.ref.follow'
       following_button: '=> fof-follow-tags.ref.following'
-      following_text: 'Ser notificado de todas novas discussões.'
+      following_text: 'Seja notificado de todas as novas discussões.'
+      header: 'Inscrição em {tagName}'
       hiding_button: '=> fof-follow-tags.ref.hiding'
-      hiding_text: 'Esconder discussões da página Todas Discussões.'
+      hiding_text: 'Ocultar discussões da página Todas as Discussões.'
       ignoring_button: '=> fof-follow-tags.ref.ignoring'
-      ignoring_text: 'Nunca ser notificado.'
+      ignoring_text: 'Nunca seja notificado.'
       lurking_button: '=> fof-follow-tags.ref.lurking'
-      lurking_text: 'Ser notificado de todas novas discussões e respostas.'
+      lurking_text: 'Seja notificado de todas as novas discussões e respostas.'
       not_following_button: 'Não Seguindo'
-      not_following_text: 'Ser notificado apenas quando @mencionado.'
-      notify_alert_tooltip: 'Receba uma notificação no fórum quando houver novas discussões ou posts'
-      notify_email_tooltip: 'Receber um email quando houver novas discussões ou posts'
+      not_following_text: 'Seja notificado apenas quando @mencionado.'
+      notify_alert_tooltip: 'Receber uma notificação no fórum quando houver novas discussões ou posts'
+      notify_email_tooltip: 'Receber um e-mail quando houver novas discussões ou posts'
+      submit_button: 'Confirmar inscrição'
+      subscription_label: 'Selecione seu nível de inscrição em {tagName}'
     user:
       settings:
         filter_label: 'O que mostrar por padrão na página Seguindo'
@@ -59,6 +90,6 @@ fof-follow-tags:
       tags: 'Tags Seguidas'
     follow: Seguir
     following: Seguindo
-    hiding: Escondendo
+    hiding: Ocultando
     ignoring: Ignorando
     lurking: Espiando

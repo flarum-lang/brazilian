@@ -5,16 +5,25 @@
 fof-recaptcha:
   admin:
     permissions:
-      post_without_captcha: 'Crie postagens e discussões sem captcha'
+      post_without_captcha: 'Criar posts e discussões sem captcha'
     settings:
+      forgot: '=> core.forum.forgot_password.title'
       help_text: 'Obtenha suas credenciais do Google reCAPTCHA <a>aqui</a>.'
       secret_key_label: 'Chave Secreta'
+      signin: '=> core.forum.log_in.title'
+      signup: '=> core.forum.sign_up.title'
       site_key_label: 'Chave do Site'
       type_help: 'Esta extensão suporta apenas o reCAPTCHA v2. O tipo selecionado deve corresponder ao tipo das suas credenciais do reCAPTCHA.'
-      type_label: 'Tipo reCAPTCHA'
+      type_label: 'Tipo de reCAPTCHA'
     test:
+      help_text: "Este teste usa os valores atuais digitados acima. Recarregue o teste após modificar as configurações e não se esqueça de salvar quando o teste passar!\nO que aparece abaixo pode não refletir as configurações salvas.\n"
+      load_test_button: Carregar
       reload_button: Recarregar
+      submit_button: Enviar
+      success_message: 'Sucesso! O reCAPTCHA está configurado corretamente.'
+      title: 'Testar reCAPTCHA'
   forum:
     error: 'Ocorreu um erro ao enviar o reCAPTCHA. Tente novamente.'
 validation:
   recaptcha: 'Falha na validação do reCAPTCHA.'
+  recaptcha-unknown: 'Ocorreu um erro desconhecido ao validar o reCAPTCHA ({errors}).'

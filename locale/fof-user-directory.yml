@@ -5,40 +5,43 @@
 fof-user-directory:
   admin:
     permissions:
-      view_user_directory: 'Ver Diretório de Usuários'
+      view_user_directory: 'Ver o diretório de usuários'
     settings:
-      default-sort: 'Classificação Padrão'
-      disable-global-search-source: 'Não adicione o diretório de usuários ao campo de pesquisa global do Flarum'
-      link: 'Adicionar link na página inicial para usuários autorizados de ver o diretório'
-      use-small-cards: 'Use cartões de usuário pequenos'
+      default-sort: 'Ordenação padrão'
+      disable-global-search-source: 'Não adicionar o Diretório de Usuários ao campo de busca global do Flarum'
+      link: 'Adicionar link na página inicial para usuários que podem ver o diretório'
+      link-group-mentions: 'Vincular menções de grupo nos posts ao Diretório de Usuários'
+      use-small-cards: 'Usar cartões de usuário pequenos'
   forum:
     header:
       back_to_user_directory_tooltip: 'Voltar ao Diretório de Usuários'
+    hero:
+      title: '=> fof-user-directory.forum.page.nav'
     page:
-      empty_text: 'Não foi possível encontrar nenhum usuário que corresponda à sua pesquisa.'
+      empty_text: 'Não encontramos nenhum usuário para a sua busca.'
       filter_button: 'Filtrar Grupos'
       load_more_button: '=> core.ref.load_more'
       nav: 'Diretório de Usuários'
       refresh_tooltip: '=> core.forum.index.refresh_tooltip'
       usercard:
-        discussion-count: '{count, plural, one { {count} discussão} other {{count} discussões}}'
-        post-count: '{count, plural, one { {count} postagem} other {{count} postagens}}'
+        discussion-count: '{count, plural, one {# discussão} other {# discussões}}'
+        post-count: '{count, plural, one {# post} other {# posts}}'
     search:
       field:
-        placeholder: 'Pesquisar todos os usuários'
+        placeholder: 'Buscar todos os usuários'
       kinds:
         group: Grupo
         text: 'Texto livre'
-      users_heading: 'Pesquise todos os usuários por "{query}"'
+      users_heading: 'Buscar "{query}" em todos os usuários'
   lib:
     sort:
       default: Padrão
-      least_discussions: 'Menos Discussões'
+      least_discussions: 'Menos discussões'
       least_posts: 'Menos Postagens'
-      most_discussions: 'Mais Discussões'
+      most_discussions: 'Mais discussões'
       most_posts: 'Mais Postagens'
-      newest: 'Mais Recente'
-      not_specified: 'Usar padrão Flarum'
-      oldest: 'Mais Antigo'
-      username_az: 'Usuário (a-z)'
-      username_za: 'Usuário (z-a)'
+      newest: 'Mais novos'
+      not_specified: 'Usar o padrão do Flarum'
+      oldest: 'Mais antigos'
+      username_az: 'Nome de usuário (a-z)'
+      username_za: 'Nome de usuário (z-a)'
