@@ -2,6 +2,17 @@ CHANGELOG
 =========
 
 
+2.0.6 (2026-11-23)
+------------------
+
+**General changes**:
+
+* Updated Day.js translations.
+
+
+All changes: [2.0.5...2.0.6](https://github.com/flarum-lang/brazilian/compare/2.0.5...2.0.6).
+
+
 2.0.5 (2026-10-12)
 ------------------
 
