@@ -1,64 +1,44 @@
 {
-   "name":"flarum-lang/brazilian",
-   "type":"flarum-extension",
-   "description":"Pacote de idioma Português do Brasil.",
-   "keywords":[
-      "brazilian",
-      "portuguese",
-      "language",
-      "locale",
-      "português",
-      "extensao",
-      "flarum",
-      "package"
-   ],
-   "license":"MIT",
-   "authors": [
-    {
-        "name": "Ramon Guilherme",
-        "email": "ramon@ramonguilherme.com.br",
-        "homepage": "https://ramonguilherme.com.br",
-        "role": "Maintainer"
-    },
-        
-    {
-        "name": "Santiago Testa Biali",
-        "email": "santiago.t.biali@gmail.com",
-        "role": "Creator"
-    },
-    {
-        "name": "Kassius Mercurius",
-        "email": "kassivs@gmail.com",
-        "homepage": "https://www.kassius.org",
-        "role": "Creator"
-    }
-   ],
-   "support": {
-      "email": "ramon@ramonguilherme.com.br",
-      "issues":"https://github.com/flarum-lang/brazilian/issues",
-      "source":"https://github.com/flarum-lang/brazilian",
-      "forum": "https://discuss.flarum.org/d/18543"
-   },
-   "require": {
-      "flarum/core":"^1.0.0"
-   },
-   "extra": {
-      "flarum-extension": {
-         "title":"Brazilian Portuguese",
+	"name": "flarum-lang/brazilian",
+	"description": "Portuguese (Brazil) Language Pack for Flarum",
+	"type": "flarum-extension",
+	"keywords": [
+		"flarum-locale"
+	],
+	"homepage": "https://github.com/flarum-lang/brazilian",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "ram0ng1",
+			"homepage": "https://github.com/ram0ng1",
+			"role": "Maintainer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/flarum-lang/brazilian/issues",
+		"forum": "https://discuss.flarum.org/d/18543",
+		"source": "https://github.com/flarum-lang/brazilian"
+	},
+	"require": {
+		"flarum/core": "^1.0.0"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "1.x-dev"
+		},
+		"flarum-extension": {
+			"title": "Portuguese (Brazil)",
 			"category": "language",
-         "icon":{
-            "image":"icon.svg",
-            "backgroundColor":"#55a667",
-            "backgroundSize":"cover",
-            "backgroundPosition":"center"
-         }
-      },
-      "flarum-locale": {
-         "code":"pt-BR",
-         "title":"Português Brasileiro"
-      },
-      "branch-alias": {
-         "dev-main": "1.x-dev"
-      }
-   }
+			"icon": {
+				"image": "icon.svg",
+				"backgroundColor": "#55a667",
+				"backgroundSize": "cover",
+				"backgroundPosition": "center"
+			}
+		},
+		"flarum-locale": {
+			"code": "pt-BR",
+			"title": "Português (Brasil)"
+		}
+	}
 }
